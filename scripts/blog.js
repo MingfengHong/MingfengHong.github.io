@@ -440,6 +440,7 @@ style.textContent = `
 
     .blog-sidebar {
         position: relative;
+        max-width: 100%;
     }
 
     .sidebar-widget {
@@ -612,7 +613,7 @@ style.textContent = `
         text-decoration: none;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
         .blog-layout {
             grid-template-columns: 1fr;
             gap: var(--spacing-lg);
@@ -620,7 +621,8 @@ style.textContent = `
 
         .blog-sidebar {
             position: static !important;
-            width: auto !important;
+            width: 100% !important;
+            max-width: 100% !important;
             order: -1;
         }
 

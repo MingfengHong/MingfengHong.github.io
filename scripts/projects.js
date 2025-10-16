@@ -547,6 +547,68 @@ style.textContent = `
         display: block;
     }
 
+    .tools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-md);
+    }
+
+    .tool-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-xs);
+        padding: var(--spacing-md);
+        background: var(--color-background-light);
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+    }
+
+    .tool-item:hover {
+        background: var(--color-accent-blue);
+        color: white;
+        transform: translateY(-3px);
+    }
+
+    .tool-icon {
+        font-size: 2rem;
+    }
+
+    .tool-name {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .code-statement {
+        margin-top: var(--spacing-xl);
+        padding: var(--spacing-xl);
+        background: white;
+        border-left: 4px solid var(--color-accent-blue);
+        border-radius: var(--border-radius);
+        box-shadow: 0 3px 10px var(--color-shadow);
+    }
+
+    .code-statement blockquote {
+        margin: 0;
+        padding: 0;
+    }
+
+    .code-statement p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--color-text);
+        font-style: italic;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .code-statement footer {
+        text-align: right;
+        color: var(--color-text-light);
+        font-size: 1rem;
+        font-style: normal;
+    }
+
     .tooltip {
         position: absolute;
         background: var(--color-primary);
