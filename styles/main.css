@@ -300,6 +300,81 @@ a:hover {
     margin-top: var(--spacing-xl);
 }
 
+/* 扩展的项目卡片 */
+.projects-expanded {
+    grid-column: span 3;
+}
+
+.projects-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.project-category h4 {
+    color: var(--color-accent-blue);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.project-item {
+    background: var(--color-background-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-sm);
+    border-left: 3px solid var(--color-accent-blue);
+    transition: var(--transition);
+}
+
+.project-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.95rem;
+}
+
+.project-desc {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: var(--spacing-xs);
+}
+
+.project-tech {
+    font-size: 0.8rem;
+    color: var(--color-accent-gold);
+    font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+    .projects-expanded {
+        grid-column: span 2;
+    }
+    
+    .projects-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-expanded {
+        grid-column: span 1;
+    }
+    
+    .projects-content {
+        grid-template-columns: 1fr;
+    }
+}
+
 .stat-card {
     background: white;
     padding: var(--spacing-lg);
