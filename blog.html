@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -46,203 +51,35 @@
         <section class="page-header">
             <div class="container">
                 <h1 class="page-title">学术博客</h1>
-                <p class="page-subtitle">科研思考、技术分享、学术观点和生活感悟</p>
+                <p class="page-subtitle">理论分享、技术探索、学术思考</p>
             </div>
         </section>
 
         <section class="page-content">
             <div class="container">
                 <!-- 分类导航 -->
-                <div class="category-nav mb-lg">
-                    <button class="category-btn active" data-category="all">全部文章</button>
-                    <button class="category-btn" data-category="technology">技术分享</button>
-                    <button class="category-btn" data-category="research">学术观点</button>
-                    <button class="category-btn" data-category="tutorial">教程指南</button>
-                    <button class="category-btn" data-category="personal">生活感悟</button>
-                </div>
-
-                <!-- 精选文章 -->
-                <div class="featured-post mb-lg">
-                    <article class="card featured-card">
-                        <div class="featured-label">精选文章</div>
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span class="post-date">2024年3月15日</span>
-                                <span class="post-category">科研方法</span>
-                                <span class="reading-time">15分钟阅读</span>
-                            </div>
-                            <h2 class="post-title">
-                                <a href="#">社会计算研究中的方法论思考：从理论到实践</a>
-                            </h2>
-                            <div class="post-excerpt">
-                                <p>作为一名文科背景的研究生，在探索社会计算领域的过程中，我深刻体会到跨学科研究的挑战与机遇。本文分享我在学习Python、R等计算工具，以及应用于社会科学研究的一些思考和实践经验...</p>
-                            </div>
-                            <div class="post-tags">
-                                <span class="tag">社会计算</span>
-                                <span class="tag">研究方法</span>
-                                <span class="tag">跨学科</span>
-                            </div>
-                        </div>
-                    </article>
+                <div class="category-nav mb-lg" id="category-nav">
+                    <!-- 动态加载分类 -->
                 </div>
 
                 <!-- 博客文章列表 -->
-                <div class="blog-posts">
-                    
-                    <article class="card blog-post" data-category="technology">
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span class="post-date">2024年3月8日</span>
-                                <span class="post-category">技术分享</span>
-                                <span class="reading-time">10分钟阅读</span>
-                            </div>
-                            <h3 class="post-title">
-                                <a href="#">Python在开源创新研究中的应用实践</a>
-                            </h3>
-                            <div class="post-excerpt">
-                                <p>分享使用Python进行开源生态系统数据分析的经验，包括GitHub API数据采集、网络分析、可视化等实用技巧...</p>
-                            </div>
-                            <div class="post-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">开源创新</span>
-                                <span class="tag">数据分析</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="card blog-post" data-category="research">
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span class="post-date">2024年2月28日</span>
-                                <span class="post-category">学术观点</span>
-                                <span class="reading-time">12分钟阅读</span>
-                            </div>
-                            <h3 class="post-title">
-                                <a href="#">人机协同创新：管理学的新视角</a>
-                            </h3>
-                            <div class="post-excerpt">
-                                <p>探讨AI与人类协同工作对组织创新的影响，从管理学角度分析企业如何平衡探索式和利用式创新...</p>
-                            </div>
-                            <div class="post-tags">
-                                <span class="tag">人机协同</span>
-                                <span class="tag">创新管理</span>
-                                <span class="tag">AI</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="card blog-post" data-category="tutorial">
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span class="post-date">2024年2月20日</span>
-                                <span class="post-category">教程指南</span>
-                                <span class="reading-time">20分钟阅读</span>
-                            </div>
-                            <h3 class="post-title">
-                                <a href="#">从零开始构建知识图谱：以政策分析为例</a>
-                            </h3>
-                            <div class="post-excerpt">
-                                <p>详细教程：如何使用Neo4j和Python构建政策文本知识图谱，包括实体抽取、关系构建和可视化的完整流程...</p>
-                            </div>
-                            <div class="post-tags">
-                                <span class="tag">知识图谱</span>
-                                <span class="tag">Neo4j</span>
-                                <span class="tag">教程</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="card blog-post" data-category="personal">
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span class="post-date">2024年2月12日</span>
-                                <span class="post-category">生活感悟</span>
-                                <span class="reading-time">6分钟阅读</span>
-                            </div>
-                            <h3 class="post-title">
-                                <a href="#">文科生学编程的那些事</a>
-                            </h3>
-                            <div class="post-excerpt">
-                                <p>作为市场营销专业转向管理科学与工程的研究生，分享学习Python、R的心路历程和一些感悟...</p>
-                            </div>
-                            <div class="post-tags">
-                                <span class="tag">个人成长</span>
-                                <span class="tag">跨学科</span>
-                                <span class="tag">学习经验</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="card blog-post" data-category="technology">
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span class="post-date">2024年2月5日</span>
-                                <span class="post-category">技术分享</span>
-                                <span class="reading-time">15分钟阅读</span>
-                            </div>
-                            <h3 class="post-title">
-                                <a href="#">系统动力学建模入门：从理论到Vensim实践</a>
-                            </h3>
-                            <div class="post-excerpt">
-                                <p>介绍系统动力学的基本原理和Vensim软件使用，以区域创新系统为例展示建模过程...</p>
-                            </div>
-                            <div class="post-tags">
-                                <span class="tag">系统动力学</span>
-                                <span class="tag">建模仿真</span>
-                                <span class="tag">Vensim</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="card blog-post" data-category="research">
-                        <div class="post-content">
-                            <div class="post-meta">
-                                <span class="post-date">2024年1月28日</span>
-                                <span class="post-category">学术观点</span>
-                                <span class="reading-time">14分钟阅读</span>
-                            </div>
-                            <h3 class="post-title">
-                                <a href="#">开源社区治理：从LangChain看生态系统演化</a>
-                            </h3>
-                            <div class="post-excerpt">
-                                <p>基于对LangChain开源生态的研究，探讨开源社区的治理机制和演化路径...</p>
-                            </div>
-                            <div class="post-tags">
-                                <span class="tag">开源治理</span>
-                                <span class="tag">社区研究</span>
-                                <span class="tag">LangChain</span>
-                            </div>
-                        </div>
-                    </article>
+                <div class="blog-posts" id="blog-posts">
+                    <!-- 动态加载文章列表 -->
+                    <div class="loading">加载中...</div>
                 </div>
 
-                <!-- 分页 -->
-                <div class="pagination">
-                    <button class="btn btn-secondary" disabled>上一页</button>
-                    <span class="page-numbers">
-                        <span class="page-number active">1</span>
-                        <span class="page-number">2</span>
-                        <span class="page-number">3</span>
-                    </span>
-                    <button class="btn btn-secondary">下一页</button>
-                </div>
-
-                <!-- 热门标签 -->
-                <section class="tags-section mt-lg">
-                    <h2 class="section-title">热门标签</h2>
-                    <div class="tag-cloud">
-                        <a href="#" class="blog-tag-link">社会计算</a>
-                        <a href="#" class="blog-tag-link">Python</a>
-                        <a href="#" class="blog-tag-link">开源创新</a>
-                        <a href="#" class="blog-tag-link">R语言</a>
-                        <a href="#" class="blog-tag-link">知识图谱</a>
-                        <a href="#" class="blog-tag-link">系统动力学</a>
-                        <a href="#" class="blog-tag-link">文本分析</a>
-                        <a href="#" class="blog-tag-link">机器学习</a>
-                        <a href="#" class="blog-tag-link">数据可视化</a>
-                        <a href="#" class="blog-tag-link">学术发表</a>
+                <!-- 文章详情模态框 -->
+                <div class="article-modal" id="article-modal" style="display: none;">
+                    <div class="modal-overlay" onclick="closeArticle()"></div>
+                    <div class="modal-content-wrapper">
+                        <button class="modal-close" onclick="closeArticle()">&times;</button>
+                        <div class="modal-content">
+                            <article class="article-detail" id="article-content">
+                                <!-- 文章内容将在这里渲染 -->
+                            </article>
+                        </div>
                     </div>
-                </section>
+                </div>
             </div>
         </section>
     </main>
@@ -254,6 +91,6 @@
     </footer>
 
     <script src="scripts/main.js"></script>
-    <script src="scripts/blog.js"></script>
+    <script src="scripts/blog-dynamic.js"></script>
 </body>
 </html>
