@@ -306,9 +306,17 @@ a:hover {
 }
 
 .projects-content {
+    /* 垂直排列各个分类 */
+}
+
+.project-category {
+    margin-bottom: var(--spacing-xl);
+}
+
+.project-items-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
 }
 
 .project-category h4 {
@@ -359,19 +367,11 @@ a:hover {
     .projects-expanded {
         grid-column: span 2;
     }
-    
-    .projects-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 @media (max-width: 768px) {
     .projects-expanded {
         grid-column: span 1;
-    }
-    
-    .projects-content {
-        grid-template-columns: 1fr;
     }
 }
 
