@@ -1,18 +1,16 @@
 // 博客页面交互功能
 document.addEventListener('DOMContentLoaded', function() {
     const blogPosts = document.querySelectorAll('.blog-post');
-    const categoryLinks = document.querySelectorAll('.category-list a');
-    const searchInput = document.getElementById('blog-search');
-    const tagLinks = document.querySelectorAll('.tag-link');
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const tagLinks = document.querySelectorAll('.blog-tag-link');
 
     // 分类筛选功能
-    categoryLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
             const category = this.getAttribute('data-category');
             
             // 更新激活状态
-            categoryLinks.forEach(l => l.classList.remove('active'));
+            categoryBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             
             // 筛选文章
@@ -21,110 +19,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 文章筛选函数
-    function filterPosts(category, searchTerm = '') {
+    function filterPosts(category) {
         blogPosts.forEach(post => {
             const postCategory = post.getAttribute('data-category');
-            const postTitle = post.querySelector('.post-title').textContent.toLowerCase();
-            const postExcerpt = post.querySelector('.post-excerpt').textContent.toLowerCase();
-            const postTags = Array.from(post.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase()).join(' ');
             
-            const matchesCategory = category === 'all' || postCategory === category;
-            const matchesSearch = searchTerm === '' || 
-                postTitle.includes(searchTerm.toLowerCase()) || 
-                postExcerpt.includes(searchTerm.toLowerCase()) ||
-                postTags.includes(searchTerm.toLowerCase());
-            
-            if (matchesCategory && matchesSearch) {
+            if (category === 'all' || postCategory === category) {
                 post.style.display = 'block';
                 post.style.animation = 'fadeInUp 0.6s ease-out';
             } else {
                 post.style.display = 'none';
             }
         });
-        
-        updatePostCount();
-    }
-
-    // 搜索功能
-    searchInput.addEventListener('input', function() {
-        const searchTerm = this.value;
-        const activeCategory = document.querySelector('.category-list a.active').getAttribute('data-category');
-        filterPosts(activeCategory, searchTerm);
-    });
-
-    // 标签云交互
-    tagLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const tagText = this.textContent;
-            searchInput.value = tagText;
-            
-            // 触发搜索
-            const activeCategory = document.querySelector('.category-list a.active').getAttribute('data-category');
-            filterPosts(activeCategory, tagText);
-        });
-    });
-
-    // 统计数字动画
-    function animateBlogStats() {
-        const statNumbers = document.querySelectorAll('.blog-stats .stat-number');
-        
-        statNumbers.forEach(stat => {
-            const target = parseFloat(stat.textContent.replace('k', ''));
-            const isK = stat.textContent.includes('k');
-            let current = 0;
-            const increment = target / 50;
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                
-                if (isK) {
-                    stat.textContent = (current).toFixed(1) + 'k';
-                } else {
-                    stat.textContent = Math.floor(current);
-                }
-            }, 30);
-        });
-    }
-
-    // 文章统计更新
-    function updatePostCount() {
-        const visiblePosts = document.querySelectorAll('.blog-post[style*="block"], .blog-post:not([style*="none"])');
-        const countSpan = document.querySelector('.category-list a.active .count');
-        if (countSpan) {
-            countSpan.textContent = `(${visiblePosts.length})`;
-        }
     }
 
     // 滚动观察者
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                if (entry.target.classList.contains('blog-stats')) {
-                    animateBlogStats();
-                    observer.unobserve(entry.target);
-                }
-                
-                if (entry.target.classList.contains('blog-post')) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
         });
     }, {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     });
-
-    // 观察统计部分
-    const blogStats = document.querySelector('.blog-stats');
-    if (blogStats) {
-        observer.observe(blogStats);
-    }
 
     // 观察博客文章
     blogPosts.forEach(post => {
@@ -147,152 +66,49 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 分页功能
-    function setupPagination() {
-        const pageNumbers = document.querySelectorAll('.page-number');
-        const prevBtn = document.querySelector('.pagination .btn:first-child');
-        const nextBtn = document.querySelector('.pagination .btn:last-child');
-        
-        pageNumbers.forEach(pageNum => {
-            pageNum.addEventListener('click', function() {
-                if (!this.classList.contains('active')) {
-                    pageNumbers.forEach(p => p.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // 滚动到顶部
-                    document.querySelector('.blog-main').scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+    // 文章悬浮效果
+    blogPosts.forEach(post => {
+        post.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+            this.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.15)';
         });
         
-        nextBtn.addEventListener('click', function() {
-            const activePage = document.querySelector('.page-number.active');
-            const nextPage = activePage.nextElementSibling;
-            if (nextPage && nextPage.classList.contains('page-number')) {
-                activePage.classList.remove('active');
-                nextPage.classList.add('active');
-            }
+        post.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
         });
-        
-        prevBtn.addEventListener('click', function() {
-            const activePage = document.querySelector('.page-number.active');
-            const prevPage = activePage.previousElementSibling;
-            if (prevPage && prevPage.classList.contains('page-number')) {
-                activePage.classList.remove('active');
-                prevPage.classList.add('active');
-            }
-        });
-    }
-
-    // 标签云大小效果
-    function setupTagCloud() {
-        const tagLinks = document.querySelectorAll('.tag-link');
-        
-        tagLinks.forEach(tag => {
-            tag.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.1)';
-                this.style.fontWeight = '600';
-            });
-            
-            tag.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1)';
-                this.style.fontWeight = '500';
-            });
-        });
-    }
-
-    // 侧边栏固定效果
-    function setupStickysidebar() {
-        const sidebar = document.querySelector('.blog-sidebar');
-        const main = document.querySelector('.blog-main');
-        
-        if (sidebar && main) {
-            window.addEventListener('scroll', function() {
-                const sidebarRect = sidebar.getBoundingClientRect();
-                const mainRect = main.getBoundingClientRect();
-                
-                if (window.innerWidth > 1024) {
-                    if (mainRect.top <= 100 && mainRect.bottom > window.innerHeight) {
-                        sidebar.style.position = 'fixed';
-                        sidebar.style.top = '100px';
-                        sidebar.style.width = '300px';
-                    } else {
-                        sidebar.style.position = 'static';
-                        sidebar.style.width = 'auto';
-                    }
-                }
-            });
-        }
-    }
-
-    // 阅读进度条
-    function setupReadingProgress() {
-        const progressBar = document.createElement('div');
-        progressBar.className = 'reading-progress';
-        progressBar.style.cssText = `
-            position: fixed;
-            top: 80px;
-            left: 0;
-            width: 0%;
-            height: 3px;
-            background: var(--color-accent-blue);
-            z-index: 1000;
-            transition: width 0.3s ease;
-        `;
-        document.body.appendChild(progressBar);
-        
-        window.addEventListener('scroll', function() {
-            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            progressBar.style.width = Math.min(scrolled, 100) + '%';
-        });
-    }
-
-    // 初始化所有功能
-    setupPagination();
-    setupTagCloud();
-    setupStickysidebar();
-    setupReadingProgress();
-    
-    // 搜索按钮功能
-    const searchBtn = document.querySelector('.search-btn');
-    if (searchBtn) {
-        searchBtn.addEventListener('click', function() {
-            const activeCategory = document.querySelector('.category-list a.active').getAttribute('data-category');
-            filterPosts(activeCategory, searchInput.value);
-        });
-    }
-
-    // 回车键搜索
-    searchInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            const activeCategory = document.querySelector('.category-list a.active').getAttribute('data-category');
-            filterPosts(activeCategory, this.value);
-        }
     });
 });
 
 // 添加样式
 const style = document.createElement('style');
 style.textContent = `
-    .blog-layout {
-        display: grid;
-        grid-template-columns: 1fr 300px;
-        gap: var(--spacing-xl);
-        margin-top: var(--spacing-lg);
+    .category-nav {
+        display: flex;
+        gap: var(--spacing-sm);
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: var(--spacing-xl);
     }
 
-    .blog-main {
-        min-width: 0;
-    }
-
-    .blog-stats {
-        background: white;
+    .category-btn {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        background: var(--color-background-light);
+        border: 1px solid var(--color-border);
         border-radius: var(--border-radius);
-        padding: var(--spacing-lg);
-        box-shadow: 0 5px 15px var(--color-shadow);
+        font-family: var(--font-primary);
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--color-text);
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    .category-btn:hover,
+    .category-btn.active {
+        background: var(--color-accent-blue);
+        color: white;
+        border-color: var(--color-accent-blue);
     }
 
     .featured-post {
@@ -518,43 +334,40 @@ style.textContent = `
         font-size: 0.9rem;
     }
 
+    .tags-section {
+        padding: var(--spacing-xl) 0;
+        background: var(--color-background-light);
+        border-radius: var(--border-radius);
+    }
+
     .tag-cloud {
         display: flex;
         flex-wrap: wrap;
-        gap: var(--spacing-xs);
+        gap: var(--spacing-sm);
+        justify-content: center;
+        margin-top: var(--spacing-md);
     }
 
-    .tag-link {
-        padding: var(--spacing-xs) var(--spacing-sm);
-        background: var(--color-background-light);
+    .blog-tag-link {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        background: white;
         color: var(--color-text);
         text-decoration: none;
-        border-radius: 20px;
-        font-size: 0.9rem;
+        border-radius: 25px;
+        font-size: 1rem;
         font-weight: 500;
         transition: all 0.3s ease;
         border: 1px solid var(--color-border);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
 
-    .tag-link:hover {
+    .blog-tag-link:hover {
         background: var(--color-accent-blue);
         color: white;
         border-color: var(--color-accent-blue);
         text-decoration: none;
-    }
-
-    .tag-link[data-size="large"] {
-        font-size: 1rem;
-        font-weight: 600;
-    }
-
-    .tag-link[data-size="medium"] {
-        font-size: 0.95rem;
-        font-weight: 550;
-    }
-
-    .tag-link[data-size="small"] {
-        font-size: 0.85rem;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .recent-comments {
