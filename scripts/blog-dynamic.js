@@ -22,17 +22,66 @@ if (typeof marked !== 'undefined') {
 // 加载博客配置
 async function loadBlogConfig() {
     try {
-        const response = await fetch('blog/blog-config.json');
-        blogConfig = await response.json();
+        const response = await fetch('./blog/blog-config.json');
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        const text = await response.text();
+        blogConfig = JSON.parse(text);
+        console.log('博客配置加载成功:', blogConfig);
         initBlog();
     } catch (error) {
         console.error('加载博客配置失败:', error);
-        document.getElementById('blog-posts').innerHTML = '<p class="error">加载失败，请刷新页面重试。</p>';
+        // 显示更详细的错误信息
+        const errorMsg = `加载失败: ${error.message}. 请检查网络连接或刷新页面重试。`;
+        document.getElementById('blog-posts').innerHTML = `<p class="error">${errorMsg}</p>`;
+        
+        // 如果是本地开发环境，提供备用方案
+        if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+            setTimeout(() => {
+                loadFallbackConfig();
+            }, 2000);
+        }
     }
+}
+
+// 备用配置（如果JSON文件加载失败）
+function loadFallbackConfig() {
+    console.log('使用备用配置');
+    blogConfig = {
+        "categories": [
+            {
+                "name": "理论分享",
+                "slug": "theory",
+                "articles": [
+                    {
+                        "title": "诺贝尔经济学奖思考1——是什么推动了今天的世界",
+                        "file": "blog/理论分享/诺贝尔经济学奖思考1——是什么推动了今天的世界.md",
+                        "date": "2025-10-14",
+                        "excerpt": "今年的诺贝尔经济学奖授予了三位杰出的经济学家，我们今天先将目光聚焦于其中一位——乔尔·莫基尔（Joel Mokyr）。",
+                        "tags": ["诺贝尔奖", "经济学", "创新理论"]
+                    },
+                    {
+                        "title": "诺贝尔经济学奖思考2——破坏性创造如何推动经济增长",
+                        "file": "blog/理论分享/诺贝尔经济学奖思考2——破坏性创造如何推动经济增长.md",
+                        "date": "2025-10-15",
+                        "excerpt": "如果说乔尔·莫基尔像一位博学的历史学家，带我们从宏大的时空尺度，探索了现代经济增长这棵参天大树得以生长的深层文化土壤...",
+                        "tags": ["诺贝尔奖", "经济学", "创新理论"]
+                    }
+                ]
+            }
+        ]
+    };
+    initBlog();
 }
 
 // 初始化博客
 function initBlog() {
+    if (!blogConfig || !blogConfig.categories) {
+        console.error('博客配置无效');
+        document.getElementById('blog-posts').innerHTML = '<p class="error">配置数据无效，请联系管理员。</p>';
+        return;
+    }
     renderCategories();
     renderArticleList();
 }
@@ -142,9 +191,25 @@ async function loadArticle(filePath, title) {
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
         
-        // 获取markdown文件
-        const response = await fetch(filePath);
+        // 获取markdown文件，尝试不同的路径
+        let response;
+        try {
+            response = await fetch('./' + filePath);
+        } catch (e) {
+            // 如果相对路径失败，尝试绝对路径
+            response = await fetch(filePath);
+        }
+        
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
         const markdown = await response.text();
+        
+        // 检查marked.js是否可用
+        if (typeof marked === 'undefined') {
+            throw new Error('Markdown渲染器未加载');
+        }
         
         // 渲染markdown
         const html = marked.parse(markdown);
@@ -164,7 +229,8 @@ async function loadArticle(filePath, title) {
         
     } catch (error) {
         console.error('加载文章失败:', error);
-        document.getElementById('article-content').innerHTML = '<p class="error">加载失败，请重试。</p>';
+        const errorMsg = `文章加载失败: ${error.message}`;
+        document.getElementById('article-content').innerHTML = `<p class="error">${errorMsg}</p>`;
     }
 }
 
@@ -193,7 +259,30 @@ document.addEventListener('keydown', (e) => {
 
 // 页面加载完成后初始化
 document.addEventListener('DOMContentLoaded', () => {
-    loadBlogConfig();
+    console.log('页面DOM加载完成');
+    
+    // 检查必要的元素是否存在
+    const requiredElements = ['blog-posts', 'category-nav', 'article-modal'];
+    const missingElements = requiredElements.filter(id => !document.getElementById(id));
+    
+    if (missingElements.length > 0) {
+        console.error('缺少必要的DOM元素:', missingElements);
+        return;
+    }
+    
+    // 检查外部库是否加载
+    const checkLibraries = () => {
+        if (typeof marked === 'undefined') {
+            console.warn('marked.js 未加载，将在3秒后重试');
+            setTimeout(checkLibraries, 3000);
+            return;
+        }
+        
+        console.log('所有依赖已加载，开始初始化博客');
+        loadBlogConfig();
+    };
+    
+    checkLibraries();
 });
 
 // 添加样式
