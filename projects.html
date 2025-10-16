@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开源项目 - 个人学术主页</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="logo-text">W</span>
+                </div>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="publications.html" class="nav-link">出版物</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">作品集</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link active">开源项目</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">博客</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">开源项目</h1>
+                <p class="page-subtitle">科研工具、数据分析包、可视化库和教育资源</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <!-- GitHub统计 -->
+                <div class="github-stats mb-lg">
+                    <div class="grid grid-4">
+                        <div class="stat-item text-center">
+                            <div class="stat-icon">📦</div>
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">公开仓库</div>
+                        </div>
+                        <div class="stat-item text-center">
+                            <div class="stat-icon">⭐</div>
+                            <div class="stat-number">847</div>
+                            <div class="stat-label">总星标数</div>
+                        </div>
+                        <div class="stat-item text-center">
+                            <div class="stat-icon">🍴</div>
+                            <div class="stat-number">156</div>
+                            <div class="stat-label">分叉数量</div>
+                        </div>
+                        <div class="stat-item text-center">
+                            <div class="stat-icon">👥</div>
+                            <div class="stat-number">23</div>
+                            <div class="stat-label">贡献者</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 筛选器 -->
+                <div class="filter-section mb-lg">
+                    <div class="filter-buttons">
+                        <button class="btn filter-btn active" data-filter="all">全部项目</button>
+                        <button class="btn filter-btn" data-filter="python">Python</button>
+                        <button class="btn filter-btn" data-filter="r">R语言</button>
+                        <button class="btn filter-btn" data-filter="javascript">JavaScript</button>
+                        <button class="btn filter-btn" data-filter="data-analysis">数据分析</button>
+                        <button class="btn filter-btn" data-filter="visualization">可视化</button>
+                        <button class="btn filter-btn" data-filter="education">教育工具</button>
+                    </div>
+                </div>
+
+                <!-- 项目列表 -->
+                <div class="projects-grid">
+                    
+                    <!-- 主要项目 -->
+                    <div class="project-item featured" data-category="python data-analysis">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">BioDiversityAnalyzer</h3>
+                                <div class="project-status">
+                                    <span class="status-badge active">活跃维护</span>
+                                    <span class="language-badge python">Python</span>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <p>一个综合的生物多样性数据分析工具包，提供物种分布建模、群落生态学分析和生物多样性指数计算功能。</p>
+                            </div>
+                            <div class="project-features">
+                                <h4>主要功能：</h4>
+                                <ul>
+                                    <li>物种分布模型（SDM）</li>
+                                    <li>Alpha/Beta多样性分析</li>
+                                    <li>群落生态学指标</li>
+                                    <li>空间生态学分析</li>
+                                </ul>
+                            </div>
+                            <div class="project-stats">
+                                <span class="stat">⭐ 245</span>
+                                <span class="stat">🍴 67</span>
+                                <span class="stat">📥 1.2k下载</span>
+                                <span class="stat">🐛 3 issues</span>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">生物学</span>
+                                <span class="tag">数据科学</span>
+                                <span class="tag">机器学习</span>
+                                <span class="tag">科研工具</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn">GitHub 仓库</a>
+                                <a href="#" class="btn btn-secondary">文档</a>
+                                <a href="#" class="btn btn-secondary">示例</a>
+                                <a href="#" class="btn btn-secondary">PyPI</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- R包项目 -->
+                    <div class="project-item" data-category="r data-analysis">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">ecoViz</h3>
+                                <div class="project-status">
+                                    <span class="status-badge active">活跃维护</span>
+                                    <span class="language-badge r">R</span>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <p>专为生态学研究设计的R可视化包，提供美观的生态数据图表和交互式可视化功能。</p>
+                            </div>
+                            <div class="project-stats">
+                                <span class="stat">⭐ 189</span>
+                                <span class="stat">🍴 42</span>
+                                <span class="stat">📥 856下载</span>
+                                <span class="stat">🐛 1 issue</span>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">R包</span>
+                                <span class="tag">数据可视化</span>
+                                <span class="tag">生态学</span>
+                                <span class="tag">ggplot2</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn">GitHub</a>
+                                <a href="#" class="btn btn-secondary">CRAN</a>
+                                <a href="#" class="btn btn-secondary">教程</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript可视化库 -->
+                    <div class="project-item" data-category="javascript visualization">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">BioMap.js</h3>
+                                <div class="project-status">
+                                    <span class="status-badge active">活跃维护</span>
+                                    <span class="language-badge javascript">JavaScript</span>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <p>基于D3.js的交互式生物地理分布图库，支持物种分布、生物多样性热点和保护区可视化。</p>
+                            </div>
+                            <div class="project-stats">
+                                <span class="stat">⭐ 156</span>
+                                <span class="stat">🍴 28</span>
+                                <span class="stat">📥 2.1k下载</span>
+                                <span class="stat">🐛 2 issues</span>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">D3.js</span>
+                                <span class="tag">地图可视化</span>
+                                <span class="tag">交互设计</span>
+                                <span class="tag">Web前端</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn">GitHub</a>
+                                <a href="#" class="btn btn-secondary">演示</a>
+                                <a href="#" class="btn btn-secondary">NPM</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 教育工具 -->
+                    <div class="project-item" data-category="python education">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">EcoLearn</h3>
+                                <div class="project-status">
+                                    <span class="status-badge stable">稳定版本</span>
+                                    <span class="language-badge python">Python</span>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <p>生态学教学工具集，包含交互式教程、模拟实验和可视化演示，帮助学生理解生态学概念。</p>
+                            </div>
+                            <div class="project-stats">
+                                <span class="stat">⭐ 98</span>
+                                <span class="stat">🍴 23</span>
+                                <span class="stat">📥 567下载</span>
+                                <span class="stat">🐛 0 issues</span>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">教育</span>
+                                <span class="tag">交互式教学</span>
+                                <span class="tag">Jupyter</span>
+                                <span class="tag">科学计算</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn">GitHub</a>
+                                <a href="#" class="btn btn-secondary">在线体验</a>
+                                <a href="#" class="btn btn-secondary">教程</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 数据分析工具 -->
+                    <div class="project-item" data-category="r data-analysis">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">phyloTools</h3>
+                                <div class="project-status">
+                                    <span class="status-badge stable">稳定版本</span>
+                                    <span class="language-badge r">R</span>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <p>系统发育分析工具包，提供系统发育树构建、比较和可视化功能，适用于进化生物学研究。</p>
+                            </div>
+                            <div class="project-stats">
+                                <span class="stat">⭐ 76</span>
+                                <span class="stat">🍴 18</span>
+                                <span class="stat">📥 432下载</span>
+                                <span class="stat">🐛 1 issue</span>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">系统发育</span>
+                                <span class="tag">进化生物学</span>
+                                <span class="tag">生物信息学</span>
+                                <span class="tag">统计分析</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn">GitHub</a>
+                                <a href="#" class="btn btn-secondary">文档</a>
+                                <a href="#" class="btn btn-secondary">论文</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web应用 -->
+                    <div class="project-item" data-category="javascript visualization">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">SpeciesExplorer</h3>
+                                <div class="project-status">
+                                    <span class="status-badge beta">测试版本</span>
+                                    <span class="language-badge javascript">JavaScript</span>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <p>物种信息探索Web应用，整合多个生物学数据库，提供物种查询、分布查看和相关研究展示。</p>
+                            </div>
+                            <div class="project-stats">
+                                <span class="stat">⭐ 45</span>
+                                <span class="stat">🍴 12</span>
+                                <span class="stat">📥 234下载</span>
+                                <span class="stat">🐛 5 issues</span>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Web应用</span>
+                                <span class="tag">API集成</span>
+                                <span class="tag">Vue.js</span>
+                                <span class="tag">数据库</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn">GitHub</a>
+                                <a href="#" class="btn btn-secondary">在线版本</a>
+                                <a href="#" class="btn btn-secondary">API文档</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 数据集项目 -->
+                    <div class="project-item" data-category="data-analysis">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">BiodiversityDB</h3>
+                                <div class="project-status">
+                                    <span class="status-badge archive">数据集</span>
+                                    <span class="language-badge data">Data</span>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <p>标准化的生物多样性数据集合，包含物种出现记录、环境变量和地理信息，用于生态学研究。</p>
+                            </div>
+                            <div class="project-stats">
+                                <span class="stat">⭐ 234</span>
+                                <span class="stat">🍴 89</span>
+                                <span class="stat">📥 3.4k下载</span>
+                                <span class="stat">🐛 0 issues</span>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">开放数据</span>
+                                <span class="tag">生物多样性</span>
+                                <span class="tag">元数据</span>
+                                <span class="tag">研究资源</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn">GitHub</a>
+                                <a href="#" class="btn btn-secondary">数据门户</a>
+                                <a href="#" class="btn btn-secondary">使用指南</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 教程项目 -->
+                    <div class="project-item" data-category="education python">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">DataScienceForEcology</h3>
+                                <div class="project-status">
+                                    <span class="status-badge active">活跃更新</span>
+                                    <span class="language-badge jupyter">Jupyter</span>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <p>面向生态学研究者的数据科学教程集，涵盖Python编程、统计分析、机器学习和可视化技术。</p>
+                            </div>
+                            <div class="project-stats">
+                                <span class="stat">⭐ 321</span>
+                                <span class="stat">🍴 87</span>
+                                <span class="stat">📥 1.8k下载</span>
+                                <span class="stat">🐛 2 issues</span>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">教程</span>
+                                <span class="tag">数据科学</span>
+                                <span class="tag">Python教学</span>
+                                <span class="tag">在线课程</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn">GitHub</a>
+                                <a href="#" class="btn btn-secondary">在线阅读</a>
+                                <a href="#" class="btn btn-secondary">练习题</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 贡献统计 -->
+                <section class="contribution-section mt-lg">
+                    <div class="container">
+                        <h2 class="section-title">贡献统计</h2>
+                        <div class="contribution-grid">
+                            <div class="contribution-chart">
+                                <h3>提交活动</h3>
+                                <div class="activity-graph">
+                                    <div class="activity-placeholder">
+                                        <p>📈 过去一年共提交 847 次</p>
+                                        <p>🔥 最长连续提交 23 天</p>
+                                        <p>📅 活跃于 156 天</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="language-stats">
+                                <h3>使用语言</h3>
+                                <div class="language-bars">
+                                    <div class="language-bar">
+                                        <span class="language-name">Python</span>
+                                        <div class="bar-container">
+                                            <div class="bar python-bar" style="width: 45%"></div>
+                                        </div>
+                                        <span class="percentage">45%</span>
+                                    </div>
+                                    <div class="language-bar">
+                                        <span class="language-name">R</span>
+                                        <div class="bar-container">
+                                            <div class="bar r-bar" style="width: 28%"></div>
+                                        </div>
+                                        <span class="percentage">28%</span>
+                                    </div>
+                                    <div class="language-bar">
+                                        <span class="language-name">JavaScript</span>
+                                        <div class="bar-container">
+                                            <div class="bar js-bar" style="width: 18%"></div>
+                                        </div>
+                                        <span class="percentage">18%</span>
+                                    </div>
+                                    <div class="language-bar">
+                                        <span class="language-name">其他</span>
+                                        <div class="bar-container">
+                                            <div class="bar other-bar" style="width: 9%"></div>
+                                        </div>
+                                        <span class="percentage">9%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 开源理念 -->
+                <section class="opensource-philosophy mt-lg">
+                    <div class="container">
+                        <h2 class="section-title">开源理念</h2>
+                        <div class="philosophy-content">
+                            <div class="grid grid-3">
+                                <div class="card philosophy-card">
+                                    <div class="philosophy-icon">🌍</div>
+                                    <h3>知识共享</h3>
+                                    <p>相信开放的科学研究能够加速人类对自然世界的理解，通过分享代码和数据促进科学进步。</p>
+                                </div>
+                                <div class="card philosophy-card">
+                                    <div class="philosophy-icon">🤝</div>
+                                    <h3>协作创新</h3>
+                                    <p>通过开源协作，汇聚全球研究者的智慧，共同解决生态学和环境科学中的复杂问题。</p>
+                                </div>
+                                <div class="card philosophy-card">
+                                    <div class="philosophy-icon">🎓</div>
+                                    <h3>教育普及</h3>
+                                    <p>降低科研工具的使用门槛，让更多学生和研究者能够接触和使用先进的分析方法。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 您的姓名. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/projects.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+# GitHub Pages 配置文件
+
+# 网站基本信息
+title: "洪铭锋 (Mingfeng Hong) - 学术主页"
+description: "中国科学院大学硕士研究生 - 社会计算、开源创新、社会技术系统研究"
+author: "洪铭锋 (Mingfeng Hong)"
+email: "hongmingfeng24@mails.ucas.ac.cn"
+
+# GitHub Pages 设置
+baseurl: "" # 如果部署在子目录，请填写子目录名称，如 "/repository-name"
+url: "https://mingfenghong.github.io" # 替换为您的GitHub Pages URL
+
+# 构建设置
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# 排除文件
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - .git
+  - .gitignore
+
+# 包含文件
+include:
+  - _pages
+
+# 默认设置
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# SEO 设置
+lang: zh-CN
+timezone: Asia/Shanghai
+
+# 社交媒体链接
+social:
+  github: MingfengHong
+  orcid: 0009-0009-1199-4702
+  weibo: hongmingfeng
+  xiaohongshu: https://www.xiaohongshu.com/user/profile/5f58cb96000000000101ebdc
+
+# Google Analytics (可选)
+# google_analytics: UA-XXXXXXXXX-X
+
+# 网站验证 (可选)
+# google_site_verification: "your-verification-code"
+# bing_site_verification: "your-verification-code"

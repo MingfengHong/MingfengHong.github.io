@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 - 个人学术主页</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="logo-text">W</span>
+                </div>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="publications.html" class="nav-link">出版物</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link active">作品集</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">开源项目</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">博客</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">设计作品集</h1>
+                <p class="page-subtitle">视觉设计、品牌标识、数据可视化和用户界面设计</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <!-- 筛选器 -->
+                <div class="filter-section mb-lg">
+                    <div class="filter-buttons">
+                        <button class="btn filter-btn active" data-filter="all">全部作品</button>
+                        <button class="btn filter-btn" data-filter="branding">品牌设计</button>
+                        <button class="btn filter-btn" data-filter="visualization">数据可视化</button>
+                        <button class="btn filter-btn" data-filter="web">网页设计</button>
+                        <button class="btn filter-btn" data-filter="publication">出版物设计</button>
+                        <button class="btn filter-btn" data-filter="presentation">演示设计</button>
+                    </div>
+                </div>
+
+                <!-- 作品集网格 -->
+                <div class="portfolio-grid">
+                    
+                    <!-- 品牌设计作品 -->
+                    <div class="portfolio-item" data-category="branding">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <div class="image-placeholder branding-placeholder">
+                                    <span class="placeholder-text">🎨 生态研究实验室<br>品牌标识设计</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3 class="portfolio-title">生态研究实验室品牌标识</h3>
+                                <p class="portfolio-description">为某大学生态研究实验室设计的完整品牌标识系统，包括logo、色彩系统、字体规范和应用规范。</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">Logo设计</span>
+                                    <span class="tag">品牌系统</span>
+                                    <span class="tag">应用设计</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="btn btn-secondary">查看详情</a>
+                                    <a href="#" class="btn btn-secondary">品牌手册</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 数据可视化作品 -->
+                    <div class="portfolio-item" data-category="visualization">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <div class="image-placeholder visualization-placeholder">
+                                    <span class="placeholder-text">📊 全球生物多样性<br>交互式可视化</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3 class="portfolio-title">全球生物多样性交互式可视化</h3>
+                                <p class="portfolio-description">基于D3.js开发的交互式数据可视化系统，展示全球生物多样性分布模式和变化趋势。</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">D3.js</span>
+                                    <span class="tag">交互设计</span>
+                                    <span class="tag">数据分析</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="btn btn-secondary">在线演示</a>
+                                    <a href="#" class="btn btn-secondary">代码仓库</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 网页设计作品 -->
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <div class="image-placeholder web-placeholder">
+                                    <span class="placeholder-text">🌐 学术会议<br>官方网站</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3 class="portfolio-title">国际生物多样性大会官网</h3>
+                                <p class="portfolio-description">设计并开发的学术会议官方网站，包含会议信息、注册系统、论文提交和日程安排功能。</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">网页设计</span>
+                                    <span class="tag">用户体验</span>
+                                    <span class="tag">响应式设计</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="btn btn-secondary">访问网站</a>
+                                    <a href="#" class="btn btn-secondary">设计文档</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 出版物设计 -->
+                    <div class="portfolio-item" data-category="publication">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <div class="image-placeholder publication-placeholder">
+                                    <span class="placeholder-text">📖 学术期刊<br>版式设计</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3 class="portfolio-title">《生态学前沿》期刊设计</h3>
+                                <p class="portfolio-description">为新创办的学术期刊设计的完整视觉系统，包括封面设计、内页版式、图表规范等。</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">期刊设计</span>
+                                    <span class="tag">版式设计</span>
+                                    <span class="tag">插图设计</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="btn btn-secondary">样本期刊</a>
+                                    <a href="#" class="btn btn-secondary">设计指南</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 数据可视化作品2 -->
+                    <div class="portfolio-item" data-category="visualization">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <div class="image-placeholder visualization-placeholder">
+                                    <span class="placeholder-text">📈 气候变化<br>数据仪表板</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3 class="portfolio-title">气候变化影响监测仪表板</h3>
+                                <p class="portfolio-description">为环保组织设计的实时数据监测仪表板，整合多源环境数据，支持自定义查询和报告生成。</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">仪表板设计</span>
+                                    <span class="tag">实时数据</span>
+                                    <span class="tag">用户界面</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="btn btn-secondary">查看演示</a>
+                                    <a href="#" class="btn btn-secondary">技术文档</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 演示设计 -->
+                    <div class="portfolio-item" data-category="presentation">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <div class="image-placeholder presentation-placeholder">
+                                    <span class="placeholder-text">🎯 学术演讲<br>幻灯片设计</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3 class="portfolio-title">TED演讲幻灯片设计</h3>
+                                <p class="portfolio-description">为TED演讲"生物多样性的未来"设计的专业幻灯片，注重视觉叙事和信息传达效果。</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">演示设计</span>
+                                    <span class="tag">信息图表</span>
+                                    <span class="tag">视觉叙事</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="btn btn-secondary">观看演讲</a>
+                                    <a href="#" class="btn btn-secondary">幻灯片下载</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 品牌设计作品2 -->
+                    <div class="portfolio-item" data-category="branding">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <div class="image-placeholder branding-placeholder">
+                                    <span class="placeholder-text">🌱 环保NGO<br>视觉标识</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3 class="portfolio-title">绿色地球环保组织标识</h3>
+                                <p class="portfolio-description">为环保NGO组织设计的视觉标识系统，传达环保理念和组织使命，应用于各类宣传材料。</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">NGO设计</span>
+                                    <span class="tag">社会影响</span>
+                                    <span class="tag">环保主题</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="btn btn-secondary">品牌故事</a>
+                                    <a href="#" class="btn btn-secondary">应用展示</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 网页设计作品2 -->
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <div class="image-placeholder web-placeholder">
+                                    <span class="placeholder-text">💻 研究门户<br>平台设计</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3 class="portfolio-title">生态研究数据共享平台</h3>
+                                <p class="portfolio-description">为研究机构设计的数据共享平台，支持研究数据上传、搜索、下载和协作功能。</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">平台设计</span>
+                                    <span class="tag">用户体验</span>
+                                    <span class="tag">数据管理</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="btn btn-secondary">平台体验</a>
+                                    <a href="#" class="btn btn-secondary">用户指南</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 出版物设计2 -->
+                    <div class="portfolio-item" data-category="publication">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <div class="image-placeholder publication-placeholder">
+                                    <span class="placeholder-text">📚 科普手册<br>插图设计</span>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3 class="portfolio-title">《城市生物多样性指南》</h3>
+                                <p class="portfolio-description">为科普出版物设计的插图和版式，将复杂的科学概念转化为易懂的视觉内容。</p>
+                                <div class="portfolio-tags">
+                                    <span class="tag">科普设计</span>
+                                    <span class="tag">插图绘制</span>
+                                    <span class="tag">知识可视化</span>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="btn btn-secondary">在线阅读</a>
+                                    <a href="#" class="btn btn-secondary">插图集</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 设计理念 -->
+                <section class="design-philosophy mt-lg">
+                    <div class="container">
+                        <h2 class="section-title">设计理念</h2>
+                        <div class="grid grid-3">
+                            <div class="card philosophy-card">
+                                <div class="philosophy-icon">🎯</div>
+                                <h3>功能优先</h3>
+                                <p>设计服务于内容和功能，每个设计决策都有明确的目的和理由，确保用户体验的优化。</p>
+                            </div>
+                            <div class="card philosophy-card">
+                                <div class="philosophy-icon">🌿</div>
+                                <h3>自然启发</h3>
+                                <p>从自然界汲取设计灵感，将有机形态和自然色彩融入设计中，体现对环境的关注。</p>
+                            </div>
+                            <div class="card philosophy-card">
+                                <div class="philosophy-icon">📖</div>
+                                <h3>知识传播</h3>
+                                <p>致力于将复杂的科学知识转化为易懂的视觉语言，让更多人理解和关注科学研究。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 合作客户 -->
+                <section class="clients-section mt-lg">
+                    <div class="container">
+                        <h2 class="section-title">合作机构</h2>
+                        <div class="clients-grid">
+                            <div class="client-item">
+                                <div class="client-logo">🏛️</div>
+                                <h4>香港大学</h4>
+                                <p>生物科学学院</p>
+                            </div>
+                            <div class="client-item">
+                                <div class="client-logo">🌍</div>
+                                <h4>世界自然保护联盟</h4>
+                                <p>亚太地区</p>
+                            </div>
+                            <div class="client-item">
+                                <div class="client-logo">🔬</div>
+                                <h4>中科院生物多样性中心</h4>
+                                <p>计算生态学实验室</p>
+                            </div>
+                            <div class="client-item">
+                                <div class="client-logo">📊</div>
+                                <h4>生态学数据联盟</h4>
+                                <p>数据可视化项目</p>
+                            </div>
+                            <div class="client-item">
+                                <div class="client-logo">🌱</div>
+                                <h4>绿色和平组织</h4>
+                                <p>环境报告设计</p>
+                            </div>
+                            <div class="client-item">
+                                <div class="client-logo">📚</div>
+                                <h4>科学出版社</h4>
+                                <p>期刊设计顾问</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 您的姓名. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/portfolio.js"></script>
+</body>
+</html>

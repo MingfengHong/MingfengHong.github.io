@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客 - 个人学术主页</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <span class="logo-text">W</span>
+                </div>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="publications.html" class="nav-link">出版物</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">作品集</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">开源项目</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link active">博客</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">学术博客</h1>
+                <p class="page-subtitle">科研思考、技术分享、学术观点和生活感悟</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="blog-layout">
+                    <!-- 主要内容区域 -->
+                    <div class="blog-main">
+                        <!-- 博客统计 -->
+                        <div class="blog-stats mb-lg">
+                            <div class="grid grid-4">
+                                <div class="stat-item text-center">
+                                    <div class="stat-icon">📝</div>
+                                    <div class="stat-number">68</div>
+                                    <div class="stat-label">总文章数</div>
+                                </div>
+                                <div class="stat-item text-center">
+                                    <div class="stat-icon">👀</div>
+                                    <div class="stat-number">150k</div>
+                                    <div class="stat-label">总阅读量</div>
+                                </div>
+                                <div class="stat-item text-center">
+                                    <div class="stat-icon">💬</div>
+                                    <div class="stat-number">1.2k</div>
+                                    <div class="stat-label">总评论数</div>
+                                </div>
+                                <div class="stat-item text-center">
+                                    <div class="stat-icon">❤️</div>
+                                    <div class="stat-number">3.4k</div>
+                                    <div class="stat-label">总点赞数</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 特色文章 -->
+                        <div class="featured-post mb-lg">
+                            <article class="card featured-card">
+                                <div class="featured-label">精选文章</div>
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">2024年3月15日</span>
+                                        <span class="post-category">科研方法</span>
+                                        <span class="reading-time">15分钟阅读</span>
+                                    </div>
+                                    <h2 class="post-title">
+                                        <a href="#">如何在生态学研究中应用机器学习：从理论到实践</a>
+                                    </h2>
+                                    <div class="post-excerpt">
+                                        <p>随着大数据时代的到来，机器学习在生态学研究中的应用越来越广泛。本文将从理论基础出发，结合具体案例，详细介绍如何在生态学研究中有效应用机器学习方法，包括数据预处理、模型选择、参数调优和结果解释等关键环节...</p>
+                                    </div>
+                                    <div class="post-tags">
+                                        <span class="tag">机器学习</span>
+                                        <span class="tag">生态学</span>
+                                        <span class="tag">数据科学</span>
+                                        <span class="tag">研究方法</span>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span class="stat">👀 2.3k</span>
+                                        <span class="stat">💬 45</span>
+                                        <span class="stat">❤️ 186</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- 博客文章列表 -->
+                        <div class="blog-posts">
+                            
+                            <article class="card blog-post" data-category="technology">
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">2024年3月8日</span>
+                                        <span class="post-category">技术分享</span>
+                                        <span class="reading-time">8分钟阅读</span>
+                                    </div>
+                                    <h3 class="post-title">
+                                        <a href="#">Python在生物多样性数据分析中的高级技巧</a>
+                                    </h3>
+                                    <div class="post-excerpt">
+                                        <p>分享一些在处理生物多样性数据时的Python高级技巧，包括pandas的高效操作、数据可视化的最佳实践，以及如何使用Jupyter Notebook进行可重现的研究...</p>
+                                    </div>
+                                    <div class="post-tags">
+                                        <span class="tag">Python</span>
+                                        <span class="tag">数据分析</span>
+                                        <span class="tag">编程技巧</span>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span class="stat">👀 1.8k</span>
+                                        <span class="stat">💬 32</span>
+                                        <span class="stat">❤️ 142</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="card blog-post" data-category="research">
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">2024年2月28日</span>
+                                        <span class="post-category">学术观点</span>
+                                        <span class="reading-time">12分钟阅读</span>
+                                    </div>
+                                    <h3 class="post-title">
+                                        <a href="#">开放科学时代的生态学研究：机遇与挑战</a>
+                                    </h3>
+                                    <div class="post-excerpt">
+                                        <p>探讨开放科学对生态学研究的影响，包括数据共享、开源工具、预印本发表等新趋势如何改变我们的研究方式，以及研究者应该如何适应这些变化...</p>
+                                    </div>
+                                    <div class="post-tags">
+                                        <span class="tag">开放科学</span>
+                                        <span class="tag">学术发表</span>
+                                        <span class="tag">科研思考</span>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span class="stat">👀 1.5k</span>
+                                        <span class="stat">💬 28</span>
+                                        <span class="stat">❤️ 98</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="card blog-post" data-category="tutorial">
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">2024年2月20日</span>
+                                        <span class="post-category">教程指南</span>
+                                        <span class="reading-time">20分钟阅读</span>
+                                    </div>
+                                    <h3 class="post-title">
+                                        <a href="#">从零开始构建生物多样性数据可视化仪表板</a>
+                                    </h3>
+                                    <div class="post-excerpt">
+                                        <p>详细教程：使用D3.js和Vue.js构建交互式生物多样性数据仪表板，包括数据处理、地图可视化、图表交互和响应式设计的完整实现过程...</p>
+                                    </div>
+                                    <div class="post-tags">
+                                        <span class="tag">教程</span>
+                                        <span class="tag">数据可视化</span>
+                                        <span class="tag">Web开发</span>
+                                        <span class="tag">D3.js</span>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span class="stat">👀 2.1k</span>
+                                        <span class="stat">💬 56</span>
+                                        <span class="stat">❤️ 234</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="card blog-post" data-category="personal">
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">2024年2月12日</span>
+                                        <span class="post-category">生活感悟</span>
+                                        <span class="reading-time">6分钟阅读</span>
+                                    </div>
+                                    <h3 class="post-title">
+                                        <a href="#">野外调查中的那些难忘时刻</a>
+                                    </h3>
+                                    <div class="post-excerpt">
+                                        <p>分享几年来野外科考的经历和感悟，从热带雨林到高山草甸，从观鸟到植物调查，每一次的野外工作都带来新的发现和思考...</p>
+                                    </div>
+                                    <div class="post-tags">
+                                        <span class="tag">野外调查</span>
+                                        <span class="tag">科研生活</span>
+                                        <span class="tag">个人感悟</span>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span class="stat">👀 1.2k</span>
+                                        <span class="stat">💬 18</span>
+                                        <span class="stat">❤️ 76</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="card blog-post" data-category="technology">
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">2024年2月5日</span>
+                                        <span class="post-category">技术分享</span>
+                                        <span class="reading-time">10分钟阅读</span>
+                                    </div>
+                                    <h3 class="post-title">
+                                        <a href="#">R语言包开发：从想法到CRAN发布的完整流程</a>
+                                    </h3>
+                                    <div class="post-excerpt">
+                                        <p>详细介绍如何开发一个R语言包，从项目规划、代码编写、文档撰写到测试部署，分享ecoViz包开发过程中的经验和教训...</p>
+                                    </div>
+                                    <div class="post-tags">
+                                        <span class="tag">R语言</span>
+                                        <span class="tag">包开发</span>
+                                        <span class="tag">开源项目</span>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span class="stat">👀 1.6k</span>
+                                        <span class="stat">💬 24</span>
+                                        <span class="stat">❤️ 118</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="card blog-post" data-category="research">
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <span class="post-date">2024年1月28日</span>
+                                        <span class="post-category">学术观点</span>
+                                        <span class="reading-time">14分钟阅读</span>
+                                    </div>
+                                    <h3 class="post-title">
+                                        <a href="#">气候变化对物种分布模型的影响：不确定性与应对策略</a>
+                                    </h3>
+                                    <div class="post-excerpt">
+                                        <p>分析气候变化背景下物种分布模型面临的挑战，探讨如何处理模型不确定性，提出改进建模方法和提高预测可靠性的策略建议...</p>
+                                    </div>
+                                    <div class="post-tags">
+                                        <span class="tag">气候变化</span>
+                                        <span class="tag">物种分布模型</span>
+                                        <span class="tag">生态建模</span>
+                                    </div>
+                                    <div class="post-stats">
+                                        <span class="stat">👀 1.9k</span>
+                                        <span class="stat">💬 34</span>
+                                        <span class="stat">❤️ 156</span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- 分页 -->
+                        <div class="pagination">
+                            <button class="btn btn-secondary" disabled>上一页</button>
+                            <span class="page-numbers">
+                                <span class="page-number active">1</span>
+                                <span class="page-number">2</span>
+                                <span class="page-number">3</span>
+                                <span class="page-dots">...</span>
+                                <span class="page-number">8</span>
+                            </span>
+                            <button class="btn btn-secondary">下一页</button>
+                        </div>
+                    </div>
+
+                    <!-- 侧边栏 -->
+                    <aside class="blog-sidebar">
+                        <!-- 搜索框 -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">搜索文章</h3>
+                            <div class="search-box">
+                                <input type="text" placeholder="搜索..." class="search-input" id="blog-search">
+                                <button class="search-btn">🔍</button>
+                            </div>
+                        </div>
+
+                        <!-- 分类 -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">文章分类</h3>
+                            <ul class="category-list">
+                                <li><a href="#" data-category="all" class="active">全部文章 <span class="count">(68)</span></a></li>
+                                <li><a href="#" data-category="technology">技术分享 <span class="count">(24)</span></a></li>
+                                <li><a href="#" data-category="research">学术观点 <span class="count">(18)</span></a></li>
+                                <li><a href="#" data-category="tutorial">教程指南 <span class="count">(15)</span></a></li>
+                                <li><a href="#" data-category="personal">生活感悟 <span class="count">(11)</span></a></li>
+                            </ul>
+                        </div>
+
+                        <!-- 热门标签 -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">热门标签</h3>
+                            <div class="tag-cloud">
+                                <a href="#" class="tag-link" data-size="large">机器学习</a>
+                                <a href="#" class="tag-link" data-size="medium">Python</a>
+                                <a href="#" class="tag-link" data-size="medium">数据可视化</a>
+                                <a href="#" class="tag-link" data-size="small">R语言</a>
+                                <a href="#" class="tag-link" data-size="large">生态学</a>
+                                <a href="#" class="tag-link" data-size="small">统计分析</a>
+                                <a href="#" class="tag-link" data-size="medium">开源项目</a>
+                                <a href="#" class="tag-link" data-size="small">科研方法</a>
+                                <a href="#" class="tag-link" data-size="medium">数据科学</a>
+                                <a href="#" class="tag-link" data-size="small">学术发表</a>
+                            </div>
+                        </div>
+
+                        <!-- 最新评论 -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">最新评论</h3>
+                            <div class="recent-comments">
+                                <div class="comment-item">
+                                    <div class="comment-author">张三</div>
+                                    <div class="comment-text">非常有用的教程，学到了很多...</div>
+                                    <div class="comment-meta">2天前</div>
+                                </div>
+                                <div class="comment-item">
+                                    <div class="comment-author">李四</div>
+                                    <div class="comment-text">期待更多关于机器学习的内容</div>
+                                    <div class="comment-meta">3天前</div>
+                                </div>
+                                <div class="comment-item">
+                                    <div class="comment-author">王五</div>
+                                    <div class="comment-text">代码示例很清晰，感谢分享</div>
+                                    <div class="comment-meta">5天前</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 外部链接 -->
+                        <div class="sidebar-widget">
+                            <h3 class="widget-title">在这些平台关注我</h3>
+                            <div class="social-links-sidebar">
+                                <a href="#" class="social-link-item">
+                                    <span class="social-icon">💬</span>
+                                    <span>微信公众号</span>
+                                </a>
+                                <a href="#" class="social-link-item">
+                                    <span class="social-icon">📚</span>
+                                    <span>知乎专栏</span>
+                                </a>
+                                <a href="#" class="social-link-item">
+                                    <span class="social-icon">📺</span>
+                                    <span>哔哩哔哩</span>
+                                </a>
+                                <a href="#" class="social-link-item">
+                                    <span class="social-icon">🐦</span>
+                                    <span>Twitter</span>
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 您的姓名. 保留所有权利。</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/blog.js"></script>
+</body>
+</html>
