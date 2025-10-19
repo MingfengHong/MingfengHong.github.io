@@ -99,3 +99,29 @@
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 
+/* === 统计行单行布局 === */
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+}
+
+.stats-row .stat-item {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 768px) {
+    .stats-row {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .stats-row .stat-item {
+        flex: 1 1 calc(50% - 0.5rem);
+        min-width: 120px;
+    }
+}
+
