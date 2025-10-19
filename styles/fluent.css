@@ -1,0 +1,432 @@
+/* Fluent Design System Styles */
+/* Based on Microsoft Fluent 2 Design System */
+
+:root {
+    /* Fluent Design Colors */
+    --fluent-primary: #0078d4;
+    --fluent-primary-hover: #106ebe;
+    --fluent-primary-pressed: #005a9e;
+    --fluent-neutral-background: #ffffff;
+    --fluent-neutral-background-hover: #f5f5f5;
+    --fluent-neutral-background-pressed: #ebebeb;
+    --fluent-neutral-foreground: #242424;
+    --fluent-neutral-foreground-secondary: #605e5c;
+    --fluent-neutral-stroke: #d1d1d1;
+    --fluent-card-background: #ffffff;
+    --fluent-card-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 0 2px rgba(0, 0, 0, 0.04);
+    --fluent-card-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.12), 0 0 2px rgba(0, 0, 0, 0.06);
+    
+    /* Fluent Design Typography - 衬线字体版 */
+    --fluent-font-family: 'Noto Serif SC', 'Crimson Text', Georgia, serif;
+    --fluent-font-family-sans: 'Segoe UI', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    --fluent-font-size-100: 10px;
+    --fluent-font-size-200: 12px;
+    --fluent-font-size-300: 14px;
+    --fluent-font-size-400: 16px;
+    --fluent-font-size-500: 20px;
+    --fluent-font-size-600: 24px;
+    --fluent-font-size-700: 28px;
+    --fluent-font-size-800: 32px;
+    --fluent-font-size-900: 40px;
+    
+    /* Fluent Design Spacing */
+    --fluent-spacing-xs: 4px;
+    --fluent-spacing-sm: 8px;
+    --fluent-spacing-md: 12px;
+    --fluent-spacing-lg: 16px;
+    --fluent-spacing-xl: 20px;
+    --fluent-spacing-xxl: 24px;
+    --fluent-spacing-xxxl: 32px;
+    
+    /* Fluent Design Border Radius */
+    --fluent-border-radius-sm: 2px;
+    --fluent-border-radius-md: 4px;
+    --fluent-border-radius-lg: 8px;
+    --fluent-border-radius-xl: 12px;
+    
+    /* Fluent Design Animation */
+    --fluent-duration-fast: 100ms;
+    --fluent-duration-normal: 200ms;
+    --fluent-duration-slow: 400ms;
+    --fluent-curve-easy-ease: cubic-bezier(0.33, 0, 0.67, 1);
+    --fluent-curve-accelerate: cubic-bezier(0.9, 0.1, 1, 0.2);
+    --fluent-curve-decelerate: cubic-bezier(0.1, 0.9, 0.2, 1);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fluent-primary: #4a9eff;
+        --fluent-primary-hover: #6cb0ff;
+        --fluent-primary-pressed: #2886de;
+        --fluent-neutral-background: #1b1b1b;
+        --fluent-neutral-background-hover: #2b2b2b;
+        --fluent-neutral-background-pressed: #1f1f1f;
+        --fluent-neutral-foreground: #ffffff;
+        --fluent-neutral-foreground-secondary: #c8c6c4;
+        --fluent-neutral-stroke: #414141;
+        --fluent-card-background: #292929;
+        --fluent-card-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+        --fluent-card-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.36), 0 0 2px rgba(0, 0, 0, 0.18);
+    }
+}
+
+/* Global Fluent Styles */
+body {
+    font-family: var(--fluent-font-family);
+    color: var(--fluent-neutral-foreground);
+    background-color: var(--fluent-neutral-background);
+    line-height: 1.5;
+}
+
+/* Fluent Card Component */
+.fluent-card {
+    background: var(--fluent-card-background);
+    border-radius: var(--fluent-border-radius-lg);
+    box-shadow: var(--fluent-card-shadow);
+    padding: var(--fluent-spacing-xxl);
+    transition: all var(--fluent-duration-normal) var(--fluent-curve-easy-ease);
+    border: 1px solid var(--fluent-neutral-stroke);
+}
+
+.fluent-card:hover {
+    box-shadow: var(--fluent-card-shadow-hover);
+    transform: translateY(-2px);
+}
+
+.fluent-card-interactive {
+    cursor: pointer;
+}
+
+.fluent-card-interactive:active {
+    transform: translateY(0);
+}
+
+/* Fluent Button Component */
+.fluent-button {
+    font-family: var(--fluent-font-family);
+    font-size: var(--fluent-font-size-300);
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: var(--fluent-border-radius-md);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all var(--fluent-duration-fast) var(--fluent-curve-easy-ease);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--fluent-spacing-sm);
+    text-decoration: none;
+    line-height: 1.5;
+    min-height: 32px;
+}
+
+.fluent-button-primary {
+    background: var(--fluent-primary);
+    color: #ffffff;
+    border-color: var(--fluent-primary);
+}
+
+.fluent-button-primary:hover {
+    background: var(--fluent-primary-hover);
+    border-color: var(--fluent-primary-hover);
+}
+
+.fluent-button-primary:active {
+    background: var(--fluent-primary-pressed);
+    border-color: var(--fluent-primary-pressed);
+}
+
+.fluent-button-secondary {
+    background: var(--fluent-neutral-background);
+    color: var(--fluent-neutral-foreground);
+    border-color: var(--fluent-neutral-stroke);
+}
+
+.fluent-button-secondary:hover {
+    background: var(--fluent-neutral-background-hover);
+}
+
+.fluent-button-secondary:active {
+    background: var(--fluent-neutral-background-pressed);
+}
+
+.fluent-button-subtle {
+    background: transparent;
+    color: var(--fluent-neutral-foreground);
+    border-color: transparent;
+}
+
+.fluent-button-subtle:hover {
+    background: var(--fluent-neutral-background-hover);
+}
+
+.fluent-button-subtle:active {
+    background: var(--fluent-neutral-background-pressed);
+}
+
+/* Fluent Navigation */
+.fluent-nav {
+    display: flex;
+    align-items: center;
+    gap: var(--fluent-spacing-sm);
+    padding: var(--fluent-spacing-md) 0;
+}
+
+.fluent-nav-link {
+    padding: var(--fluent-spacing-sm) var(--fluent-spacing-lg);
+    border-radius: var(--fluent-border-radius-md);
+    text-decoration: none;
+    color: var(--fluent-neutral-foreground);
+    font-size: var(--fluent-font-size-300);
+    font-weight: 600;
+    transition: all var(--fluent-duration-fast) var(--fluent-curve-easy-ease);
+    position: relative;
+}
+
+.fluent-nav-link:hover {
+    background: var(--fluent-neutral-background-hover);
+}
+
+.fluent-nav-link.active {
+    color: var(--fluent-primary);
+}
+
+.fluent-nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: var(--fluent-spacing-lg);
+    right: var(--fluent-spacing-lg);
+    height: 2px;
+    background: var(--fluent-primary);
+    border-radius: 2px 2px 0 0;
+}
+
+/* Fluent Badge/Tag */
+.fluent-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px var(--fluent-spacing-sm);
+    border-radius: var(--fluent-border-radius-sm);
+    font-size: var(--fluent-font-size-200);
+    font-weight: 600;
+    background: var(--fluent-neutral-background-hover);
+    color: var(--fluent-neutral-foreground-secondary);
+    border: 1px solid var(--fluent-neutral-stroke);
+}
+
+.fluent-badge-primary {
+    background: rgba(0, 120, 212, 0.1);
+    color: var(--fluent-primary);
+    border-color: var(--fluent-primary);
+}
+
+/* Fluent Divider */
+.fluent-divider {
+    height: 1px;
+    background: var(--fluent-neutral-stroke);
+    border: none;
+    margin: var(--fluent-spacing-xxl) 0;
+}
+
+/* Fluent Avatar */
+.fluent-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--fluent-neutral-background-hover);
+    color: var(--fluent-neutral-foreground);
+    font-weight: 600;
+    font-size: var(--fluent-font-size-400);
+}
+
+.fluent-avatar-large {
+    width: 72px;
+    height: 72px;
+    font-size: var(--fluent-font-size-600);
+}
+
+.fluent-avatar-xlarge {
+    width: 120px;
+    height: 120px;
+    font-size: var(--fluent-font-size-800);
+}
+
+/* Fluent Text Styles */
+.fluent-title-1 {
+    font-size: var(--fluent-font-size-900);
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.fluent-title-2 {
+    font-size: var(--fluent-font-size-800);
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.fluent-title-3 {
+    font-size: var(--fluent-font-size-700);
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.fluent-subtitle-1 {
+    font-size: var(--fluent-font-size-500);
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.fluent-subtitle-2 {
+    font-size: var(--fluent-font-size-400);
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.fluent-body-1 {
+    font-size: var(--fluent-font-size-400);
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.fluent-body-2 {
+    font-size: var(--fluent-font-size-300);
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.fluent-caption {
+    font-size: var(--fluent-font-size-200);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--fluent-neutral-foreground-secondary);
+    margin: 0;
+}
+
+/* Fluent Link */
+.fluent-link {
+    color: var(--fluent-primary);
+    text-decoration: none;
+    transition: color var(--fluent-duration-fast) var(--fluent-curve-easy-ease);
+}
+
+.fluent-link:hover {
+    color: var(--fluent-primary-hover);
+    text-decoration: underline;
+}
+
+/* Fluent Acrylic Effect (subtle background blur) */
+.fluent-acrylic {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+@media (prefers-color-scheme: dark) {
+    .fluent-acrylic {
+        background: rgba(44, 44, 44, 0.7);
+    }
+}
+
+/* Fluent Reveal Effect (hover highlight) */
+.fluent-reveal {
+    position: relative;
+    overflow: hidden;
+}
+
+.fluent-reveal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.1), transparent 50%);
+    opacity: 0;
+    transition: opacity var(--fluent-duration-fast) var(--fluent-curve-easy-ease);
+    pointer-events: none;
+}
+
+.fluent-reveal:hover::before {
+    opacity: 1;
+}
+
+/* Fluent Focus Styles */
+*:focus-visible {
+    outline: 2px solid var(--fluent-primary);
+    outline-offset: 2px;
+    border-radius: var(--fluent-border-radius-sm);
+}
+
+/* Fluent List */
+.fluent-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fluent-list-item {
+    padding: var(--fluent-spacing-md) var(--fluent-spacing-lg);
+    border-radius: var(--fluent-border-radius-md);
+    transition: background var(--fluent-duration-fast) var(--fluent-curve-easy-ease);
+}
+
+.fluent-list-item:hover {
+    background: var(--fluent-neutral-background-hover);
+}
+
+/* Fluent Grid System */
+.fluent-grid {
+    display: grid;
+    gap: var(--fluent-spacing-xxl);
+}
+
+.fluent-grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.fluent-grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.fluent-grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .fluent-grid-2,
+    .fluent-grid-3,
+    .fluent-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Fluent Stack (Flexbox utilities) */
+.fluent-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--fluent-spacing-lg);
+}
+
+.fluent-stack-horizontal {
+    flex-direction: row;
+    align-items: center;
+}
+
+.fluent-stack-wrap {
+    flex-wrap: wrap;
+}
+
