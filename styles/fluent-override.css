@@ -136,21 +136,50 @@ p {
     text-align: center;
 }
 
-/* ===== 按钮 - Fluent Design ===== */
+/* ===== 按钮 - Fluent Design 统一圆角 ===== */
 .btn {
     padding: 8px 16px !important;
     font-weight: 600 !important;
     border-radius: 4px !important;
     font-size: 14px !important;
     min-height: 32px !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.33, 0, 0.67, 1) !important;
 }
 
 .btn:hover {
     transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
 }
 
 .btn:active {
     transform: translateY(0);
+}
+
+/* 主按钮样式 */
+.btn-primary {
+    background: #0078d4 !important;
+    color: #ffffff !important;
+    border: 1px solid #0078d4 !important;
+}
+
+.btn-primary:hover {
+    background: #106ebe !important;
+    border-color: #106ebe !important;
+}
+
+/* 次要按钮样式 */
+.btn-secondary {
+    background: #f3f2f1 !important;
+    color: #242424 !important;
+    border: 1px solid #e1dfdd !important;
+}
+
+.btn-secondary:hover {
+    background: #e1dfdd !important;
+    border-color: #c8c6c4 !important;
 }
 
 /* ===== 标签/徽章 - 圆角设计 ===== */
@@ -167,26 +196,34 @@ p {
     background: #e1dfdd !important;
 }
 
-/* ===== 筛选按钮 - Fluent Design ===== */
-.filter-btn {
-    padding: 8px 16px !important;
-    border-radius: 16px !important;
+/* ===== 筛选按钮 - Fluent Design 统一样式 ===== */
+.filter-btn, .filter-buttons .btn {
+    padding: 8px 20px !important;
+    border-radius: 20px !important;
     font-weight: 600 !important;
     font-size: 14px !important;
-    background: #ffffff;
-    border: 1px solid #edebe9 !important;
-    transition: all 0.2s cubic-bezier(0.33, 0, 0.67, 1);
-}
-
-.filter-btn:hover {
     background: #f3f2f1 !important;
-    border-color: #c8c6c4 !important;
+    color: #242424 !important;
+    border: 1px solid #e1dfdd !important;
+    transition: all 0.2s cubic-bezier(0.33, 0, 0.67, 1) !important;
+    cursor: pointer;
 }
 
-.filter-btn.active {
+.filter-btn:hover, .filter-buttons .btn:hover {
+    background: #e1dfdd !important;
+    border-color: #c8c6c4 !important;
+    transform: translateY(-1px);
+}
+
+.filter-btn.active, .filter-buttons .btn.active {
     background: #0078d4 !important;
     color: #ffffff !important;
     border-color: #0078d4 !important;
+}
+
+.filter-btn.active:hover, .filter-buttons .btn.active:hover {
+    background: #106ebe !important;
+    border-color: #106ebe !important;
 }
 
 /* ===== 社交链接 - 圆角卡片 ===== */
@@ -372,6 +409,45 @@ p {
     .tag {
         background: #2f2f2f !important;
         border-color: #3b3b3b !important;
+    }
+    
+    /* 暗黑模式按钮 */
+    .filter-btn, .filter-buttons .btn {
+        background: #2f2f2f !important;
+        color: #ffffff !important;
+        border-color: #3b3b3b !important;
+    }
+    
+    .filter-btn:hover, .filter-buttons .btn:hover {
+        background: #3b3b3b !important;
+        border-color: #4a4a4a !important;
+    }
+    
+    .filter-btn.active, .filter-buttons .btn.active {
+        background: #4a9eff !important;
+        color: #ffffff !important;
+        border-color: #4a9eff !important;
+    }
+    
+    .btn-secondary {
+        background: #2f2f2f !important;
+        color: #ffffff !important;
+        border-color: #3b3b3b !important;
+    }
+    
+    .btn-secondary:hover {
+        background: #3b3b3b !important;
+        border-color: #4a4a4a !important;
+    }
+    
+    .btn-primary {
+        background: #4a9eff !important;
+        border-color: #4a9eff !important;
+    }
+    
+    .btn-primary:hover {
+        background: #6cb0ff !important;
+        border-color: #6cb0ff !important;
     }
     
     .social-link {
