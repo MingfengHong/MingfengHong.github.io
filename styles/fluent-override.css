@@ -188,17 +188,33 @@ p {
 }
 
 /* ===== 标签/徽章 - 圆角设计 ===== */
-.tag {
+.tag, .meta-tag {
     padding: 4px 12px !important;
     border-radius: 12px !important;
     font-size: 12px !important;
     font-weight: 600 !important;
     background: #f3f2f1 !important;
     border: 1px solid #edebe9 !important;
+    display: inline-block;
+    margin: 4px 4px 4px 0;
 }
 
 .tag:hover {
     background: #e1dfdd !important;
+}
+
+/* 作品集元信息 */
+.portfolio-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 !important;
+}
+
+.meta-tag {
+    background: rgba(0, 120, 212, 0.08) !important;
+    color: #0078d4 !important;
+    border-color: rgba(0, 120, 212, 0.2) !important;
 }
 
 /* ===== 筛选按钮 - Fluent Design 统一样式 ===== */
