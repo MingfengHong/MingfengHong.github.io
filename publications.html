@@ -56,21 +56,26 @@
             <div class="container">
                 <!-- 统计信息 -->
                 <div class="stats-summary mb-lg">
-                    <div class="grid grid-4">
+                    <div class="grid grid-5">
                         <div class="stat-item text-center">
                             <div class="stat-icon">📝</div>
                             <div class="stat-number">2</div>
-                            <div class="stat-label">期刊论文</div>
+                            <div class="stat-label">已发表</div>
                         </div>
                         <div class="stat-item text-center">
                             <div class="stat-icon">📄</div>
-                            <div class="stat-number">4</div>
-                            <div class="stat-label">工作论文</div>
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">审稿中</div>
                         </div>
                         <div class="stat-item text-center">
                             <div class="stat-icon">🎤</div>
-                            <div class="stat-number">2</div>
-                            <div class="stat-label">会议论文</div>
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">已参会汇报</div>
+                        </div>
+                        <div class="stat-item text-center">
+                            <div class="stat-icon">🔬</div>
+                            <div class="stat-number">1</div>
+                            <div class="stat-label">进行中</div>
                         </div>
                         <div class="stat-item text-center">
                             <div class="stat-icon">📋</div>
@@ -84,9 +89,10 @@
                 <div class="filter-section mb-lg">
                     <div class="filter-buttons">
                         <button class="btn filter-btn active" data-filter="all">全部</button>
-                        <button class="btn filter-btn" data-filter="journal">期刊论文</button>
-                        <button class="btn filter-btn" data-filter="working">工作论文</button>
-                        <button class="btn filter-btn" data-filter="conference">会议论文</button>
+                        <button class="btn filter-btn" data-filter="journal">已发表</button>
+                        <button class="btn filter-btn" data-filter="working">审稿中</button>
+                        <button class="btn filter-btn" data-filter="conference">已参会口头汇报</button>
+                        <button class="btn filter-btn" data-filter="ongoing">进行中的工作</button>
                         <button class="btn filter-btn" data-filter="report">上报信息</button>
                     </div>
                 </div>
@@ -143,9 +149,9 @@
                         </article>
                     </div>
 
-                    <!-- 工作论文 -->
+                    <!-- 审稿中 -->
                     <div class="year-section">
-                        <h2 class="year-title">工作论文 (Working Papers)</h2>
+                        <h2 class="year-title">审稿中 (Under Review)</h2>
                         
                         <article class="card publication-item featured" data-type="working">
                             <div class="publication-content">
@@ -218,7 +224,13 @@
                             </div>
                         </article>
 
-                        <article class="card publication-item" data-type="working">
+                    </div>
+
+                    <!-- 已参会口头汇报 -->
+                    <div class="year-section">
+                        <h2 class="year-title">已参会口头汇报 (Conference Oral Presentations)</h2>
+                        
+                        <article class="card publication-item" data-type="conference">
                             <div class="publication-content">
                                 <h3 class="card-title">Releasing the Crown Jewels? Unveiling the Paradox of LLM Open-source Strategy via LLM-Assisted Grounded Theory</h3>
                                 <div class="authors">
@@ -228,7 +240,7 @@
                                     Accepted by CNAIS 2025 (Oral Presentation)
                                 </div>
                                 <div class="publication-meta">
-                                    <span class="tag">会议论文</span>
+                                    <span class="tag">口头汇报</span>
                                     <span class="tag">大语言模型</span>
                                     <span class="tag">开源策略</span>
                                     <span class="tag">扎根理论</span>
@@ -241,11 +253,6 @@
                                 </div>
                             </div>
                         </article>
-                    </div>
-
-                    <!-- 会议论文 -->
-                    <div class="year-section">
-                        <h2 class="year-title">会议论文与报告 (Conference Papers & Presentations)</h2>
                         
                         <article class="card publication-item featured" data-type="conference">
                             <div class="publication-content">
@@ -285,6 +292,40 @@
                                 </div>
                                 <div class="publication-abstract">
                                     <p>研究品牌拟人化形象类型（能力型vs热情型）对消费者分享意愿的差异化影响...</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- 进行中的工作 -->
+                    <div class="year-section">
+                        <h2 class="year-title">进行中的工作 (Work in Progress)</h2>
+                        
+                        <article class="card publication-item" data-type="ongoing">
+                            <div class="publication-content">
+                                <h3 class="card-title">Performativity of Openness: How Narratives of Anti-Monopoly and Democratization Reorganize Attention and Discursive Authority</h3>
+                                <div class="authors">
+                                    <strong>Mingfeng Hong</strong>, Zhisheng Hong*
+                                </div>
+                                <div class="journal-info">
+                                    Work in Progress (计算传播方向博士研究计划)
+                                </div>
+                                <div class="publication-meta">
+                                    <span class="tag">Work in Progress</span>
+                                    <span class="tag">制度创业</span>
+                                    <span class="tag">述行性理论</span>
+                                    <span class="tag">计算文本分析</span>
+                                    <span class="tag">因果推断</span>
+                                </div>
+                                <div class="publication-abstract">
+                                    <p><strong>研究问题：</strong>挑战者企业（如Meta）如何通过"述行性"(Performativity)构建"开放理论"，将AI领域的合法性标准从"模型能力"重塑为"开放程度"，从而实现竞争场域的结构性转变与权力中心化？</p>
+                                    <p><strong>核心论点：</strong>开源LLM的发布是一种"述行性政治行动"。挑战者通过发布关于"AI未来应如何发展"的理论（如"AI民主化"），构建了一个"叙事发动机"，成功转移了竞争焦点并激活了大规模的"社会信号"。</p>
+                                    <p><strong>理论框架：</strong>制度创业 (Institutional Entrepreneurship) × 经济社会学的述行性理论 (Performativity) × 注意力与社会信号理论</p>
+                                    <p><strong>研究方法：</strong>混合方法设计，融合计算文本分析、准实验因果推断（DID/RDD）和动态网络分析，对2023年初至今的LLM市场演变进行纵向分析。</p>
+                                    <p><strong>理论贡献：</strong>实证检验"述行性"理论在AI战略中的应用，揭示话语作为"引擎"重塑竞争场域的机制，深化对"制度创业"的理解。</p>
+                                </div>
+                                <div class="publication-links">
+                                    <a href="#" class="btn btn-secondary" onclick="alert('完整研究计划准备中'); return false;">Research Proposal (准备中)</a>
                                 </div>
                             </div>
                         </article>
