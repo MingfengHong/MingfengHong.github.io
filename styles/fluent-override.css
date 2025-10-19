@@ -130,8 +130,12 @@ p {
 }
 
 /* ===== 区域间距 - Fluent Design ===== */
-.hero, .info-section, .stats-section, .research-interests-section, .find-me-section, .page-content {
+.hero, .info-section, .stats-section, .research-interests-section, .find-me-section {
     padding: 64px 0 !important;
+}
+
+.page-content {
+    padding: 32px 0 64px 0 !important;
 }
 
 .section-title {
@@ -392,8 +396,12 @@ p {
         font-size: 2rem !important;
     }
     
-    .hero, .info-section, .stats-section, .page-content {
+    .hero, .info-section, .stats-section {
         padding: 40px 0 !important;
+    }
+    
+    .page-content {
+        padding: 24px 0 40px 0 !important;
     }
 }
 
