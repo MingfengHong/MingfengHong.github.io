@@ -1,9 +1,14 @@
 /* ===== Fluent Design 完整样式覆盖 ===== */
 /* 确保 Fluent Design 风格贯彻到底 */
 
-/* 全局字体加粗 */
+/* 全局字体强制替换为无衬线字体 */
+* {
+    font-family: 'Segoe UI', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
+}
+
 body {
     font-weight: 500 !important;
+    font-family: 'Segoe UI', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -197,7 +202,7 @@ p {
 }
 
 /* ===== 筛选按钮 - Fluent Design 统一样式 ===== */
-.filter-btn, .filter-buttons .btn {
+.filter-btn, .filter-buttons .btn, .category-btn {
     padding: 8px 20px !important;
     border-radius: 20px !important;
     font-weight: 600 !important;
@@ -207,21 +212,22 @@ p {
     border: 1px solid #e1dfdd !important;
     transition: all 0.2s cubic-bezier(0.33, 0, 0.67, 1) !important;
     cursor: pointer;
+    font-family: 'Segoe UI', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif !important;
 }
 
-.filter-btn:hover, .filter-buttons .btn:hover {
+.filter-btn:hover, .filter-buttons .btn:hover, .category-btn:hover {
     background: #e1dfdd !important;
     border-color: #c8c6c4 !important;
     transform: translateY(-1px);
 }
 
-.filter-btn.active, .filter-buttons .btn.active {
+.filter-btn.active, .filter-buttons .btn.active, .category-btn.active {
     background: #0078d4 !important;
     color: #ffffff !important;
     border-color: #0078d4 !important;
 }
 
-.filter-btn.active:hover, .filter-buttons .btn.active:hover {
+.filter-btn.active:hover, .filter-buttons .btn.active:hover, .category-btn.active:hover {
     background: #106ebe !important;
     border-color: #106ebe !important;
 }
@@ -412,18 +418,18 @@ p {
     }
     
     /* 暗黑模式按钮 */
-    .filter-btn, .filter-buttons .btn {
+    .filter-btn, .filter-buttons .btn, .category-btn {
         background: #2f2f2f !important;
         color: #ffffff !important;
         border-color: #3b3b3b !important;
     }
     
-    .filter-btn:hover, .filter-buttons .btn:hover {
+    .filter-btn:hover, .filter-buttons .btn:hover, .category-btn:hover {
         background: #3b3b3b !important;
         border-color: #4a4a4a !important;
     }
     
-    .filter-btn.active, .filter-buttons .btn.active {
+    .filter-btn.active, .filter-buttons .btn.active, .category-btn.active {
         background: #4a9eff !important;
         color: #ffffff !important;
         border-color: #4a9eff !important;
