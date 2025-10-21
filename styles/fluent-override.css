@@ -392,6 +392,17 @@ p {
     margin-bottom: 12px !important;
 }
 
+/* ===== 特殊标签（部长批示等）===== */
+.special-tag {
+    background: linear-gradient(135deg, #d13438 0%, #c239b3 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    font-weight: 600 !important;
+    padding: 4px 12px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 4px rgba(209, 52, 56, 0.3) !important;
+}
+
 /* ===== Footer ===== */
 .footer {
     padding: 40px 0 !important;
