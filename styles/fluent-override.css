@@ -252,6 +252,20 @@ p {
     border-color: rgba(0, 120, 212, 0.2) !important;
 }
 
+/* 作品集操作按钮 */
+.portfolio-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px !important;
+    padding-top: 16px;
+    border-top: 1px solid #edebe9;
+}
+
+.portfolio-actions .btn {
+    flex: 1;
+    min-width: 140px;
+}
+
 /* ===== 筛选按钮 - Fluent Design 统一样式 ===== */
 .filter-btn, .filter-buttons .btn, .category-btn {
     padding: 8px 20px !important;
@@ -539,6 +553,10 @@ p {
     
     .footer {
         background: #1b1b1b;
+        border-top-color: #3b3b3b;
+    }
+    
+    .portfolio-actions {
         border-top-color: #3b3b3b;
     }
 }
