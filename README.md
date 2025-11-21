@@ -71,7 +71,7 @@
 - 📧 Email: [hongmingfeng24@mails.ucas.ac.cn](mailto:hongmingfeng24@mails.ucas.ac.cn)
 - 🎓 ORCID: [0009-0009-1199-4702](https://orcid.org/0009-0009-1199-4702)
 - 💻 GitHub: [@MingfengHong](https://github.com/MingfengHong)
-- 📕 小红书: [洪铭锋的小红书主页](https://www.xiaohongshu.com/user/profile/5f58cb96000000000101ebdc)
+- 📕 小红书: [汤圆键盘坏了不能写论文](https://www.xiaohongshu.com/user/profile/5f58cb96000000000101ebdc)
 - 🐦 微博: [@hongmingfeng](https://weibo.com/hongmingfeng)
 
 ## 🎯 申博意向
