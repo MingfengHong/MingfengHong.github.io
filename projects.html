@@ -3,472 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>开源项目 - 洪铭锋 Mingfeng Hong</title>
+    <title>项目 - 洪铭锋 Mingfeng Hong</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/fluent.css">
-    <link rel="stylesheet" href="styles/fluent-override.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <div class="logo">
-                    <span class="logo-text">H</span>
-                </div>
+                <a href="index.html">HM</a>
             </div>
             <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">首页</a>
-                </li>
-                <li class="nav-item">
-                    <a href="publications.html" class="nav-link">出版物</a>
-                </li>
-                <li class="nav-item">
-                    <a href="portfolio.html" class="nav-link">作品集</a>
-                </li>
-                <li class="nav-item">
-                    <a href="projects.html" class="nav-link active">开源项目</a>
-                </li>
-                <li class="nav-item">
-                    <a href="blog.html" class="nav-link">博客</a>
-                </li>
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="publications.html" class="nav-link">出版物</a></li>
+                <li><a href="portfolio.html" class="nav-link">作品集</a></li>
+                <li><a href="projects.html" class="nav-link active">项目</a></li>
+                <li><a href="blog.html" class="nav-link">博客</a></li>
             </ul>
-            <div class="nav-toggle" id="nav-toggle">
+            <button class="nav-toggle" id="nav-toggle" aria-label="菜单">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </nav>
     </header>
 
     <main class="main">
         <section class="page-header">
             <div class="container">
-                <h1 class="page-title">开源项目</h1>
+                <h1 class="page-title">项目</h1>
                 <p class="page-subtitle">社会计算、政策分析与开源创新的代码实现</p>
             </div>
         </section>
 
         <section class="page-content">
             <div class="container">
-                <!-- GitHub 统计 -->
-                <div class="github-stats mb-lg">
-                    <div class="grid grid-4">
-                        <div class="stat-item text-center">
-                            <div class="stat-icon">📦</div>
-                            <div class="stat-number">14</div>
-                            <div class="stat-label">公开仓库</div>
-                        </div>
-                        <div class="stat-item text-center">
-                            <div class="stat-icon">⭐</div>
-                            <div class="stat-number">3</div>
-                            <div class="stat-label">获得星标</div>
-                        </div>
-                        <div class="stat-item text-center">
-                            <div class="stat-icon">🔗</div>
-                            <div class="stat-number">13</div>
-                            <div class="stat-label">关注项目</div>
-                        </div>
-                        <div class="stat-item text-center">
-                            <div class="stat-icon">💻</div>
-                            <div class="stat-number">8</div>
-                            <div class="stat-label">主要语言</div>
-                        </div>
+                <div class="stats-row">
+                    <div class="stat">
+                        <div class="stat-num">14</div>
+                        <div class="stat-label">公开仓库</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num">3</div>
+                        <div class="stat-label">获得星标</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num">13</div>
+                        <div class="stat-label">关注项目</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-num">8</div>
+                        <div class="stat-label">主要语言</div>
                     </div>
                 </div>
 
-                <!-- 筛选器 -->
-                <div class="filter-section mb-lg">
-                    <div class="filter-buttons">
-                        <button class="btn filter-btn active" data-filter="all">全部项目</button>
-                        <button class="btn filter-btn" data-filter="research">研究项目</button>
-                        <button class="btn filter-btn" data-filter="web">网页开发</button>
-                        <button class="btn filter-btn" data-filter="course">课程作业</button>
-                    </div>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="research">研究项目</button>
+                    <button class="filter-btn" data-filter="web">网页开发</button>
+                    <button class="filter-btn" data-filter="course">课程作业</button>
                 </div>
 
-                <!-- 我的开源项目 -->
-                <div class="projects-grid">
-                    <!-- 项目1：个人主页 -->
-                    <div class="project-item" data-category="web">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <div class="project-icon">🌐</div>
-                                <div class="project-status">
-                                    <span class="status-badge active">个人项目</span>
-                                    <span class="language-badge html">HTML</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">
-                                    <a href="https://github.com/MingfengHong/MingfengHong.github.io" target="_blank">MingfengHong.github.io</a>
-                                </h3>
-                                <p class="project-description">个人学术主页，展示研究成果、学术经历和项目作品。采用响应式设计，支持多设备访问，集成动态博客系统。</p>
-                                <div class="project-tags">
-                                    <span class="tag">个人主页</span>
-                                    <span class="tag">学术展示</span>
-                                    <span class="tag">响应式设计</span>
-                                    <span class="tag">GitHub Pages</span>
-                                </div>
-                                <div class="project-stats">
-                                    <span class="stat">🔗 <a href="https://github.com/MingfengHong/MingfengHong.github.io" target="_blank">GitHub</a></span>
-                                    <span class="stat">🌐 <a href="https://mingfenghong.github.io" target="_blank">Live Demo</a></span>
-                                    <span class="stat">📅 2024</span>
-                                </div>
-                            </div>
+                <div class="project-list">
+                    <article class="project-row" data-category="web">
+                        <div class="project-row-header">
+                            <h3><a href="https://github.com/MingfengHong/MingfengHong.github.io" target="_blank">MingfengHong.github.io</a></h3>
+                            <span class="project-lang">HTML</span>
                         </div>
-                    </div>
+                        <p class="project-row-desc">个人学术主页，展示研究成果、学术经历和项目作品。采用响应式设计，支持多设备访问，集成动态博客系统。</p>
+                        <div class="project-row-tags">
+                            <span class="tag">个人主页</span>
+                            <span class="tag">学术展示</span>
+                            <span class="tag">响应式设计</span>
+                        </div>
+                        <div class="project-row-meta">
+                            <a href="https://github.com/MingfengHong/MingfengHong.github.io" target="_blank">GitHub</a>
+                            <a href="https://mingfenghong.github.io" target="_blank">Live Demo</a>
+                            <span>2024</span>
+                        </div>
+                    </article>
 
-                    <!-- 项目2：开源创新生态系统 -->
-                    <div class="project-item" data-category="research">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <div class="project-icon">🔗</div>
-                                <div class="project-status">
-                                    <span class="status-badge active">研究项目</span>
-                                    <span class="language-badge python">Python</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">
-                                    <a href="https://github.com/MingfengHong/open_source_innovation_ecosystem" target="_blank">open_source_innovation_ecosystem</a>
-                                </h3>
-                                <p class="project-description">本项目旨在深入分析开源生态系统（以LangChain为例）的组织结构与创新模式，通过多维度的网络分析、用户行为分析和因果推断，揭示开源社区的内在动力学机制。</p>
-                                <div class="project-tags">
-                                    <span class="tag">开源生态</span>
-                                    <span class="tag">网络分析</span>
-                                    <span class="tag">创新研究</span>
-                                    <span class="tag">LangChain</span>
-                                </div>
-                                <div class="project-stats">
-                                    <span class="stat">🔗 <a href="https://github.com/MingfengHong/open_source_innovation_ecosystem" target="_blank">GitHub</a></span>
-                                    <span class="stat">📜 GPL-3.0</span>
-                                    <span class="stat">📅 Sep 2024</span>
-                                </div>
-                            </div>
+                    <article class="project-row" data-category="research">
+                        <div class="project-row-header">
+                            <h3><a href="https://github.com/MingfengHong/open_source_innovation_ecosystem" target="_blank">open_source_innovation_ecosystem</a></h3>
+                            <span class="project-lang">Python</span>
                         </div>
-                    </div>
+                        <p class="project-row-desc">深入分析开源生态系统（以LangChain为例）的组织结构与创新模式，通过多维度的网络分析、用户行为分析和因果推断，揭示开源社区的内在动力学机制。</p>
+                        <div class="project-row-tags">
+                            <span class="tag">开源生态</span>
+                            <span class="tag">网络分析</span>
+                            <span class="tag">创新研究</span>
+                        </div>
+                        <div class="project-row-meta">
+                            <a href="https://github.com/MingfengHong/open_source_innovation_ecosystem" target="_blank">GitHub</a>
+                            <span>GPL-3.0</span>
+                            <span>Sep 2024</span>
+                        </div>
+                    </article>
 
-                    <!-- 项目3：政策分析智能体 -->
-                    <div class="project-item" data-category="research">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <div class="project-icon">🤖</div>
-                                <div class="project-status">
-                                    <span class="status-badge active">研究项目</span>
-                                    <span class="language-badge python">Python</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">
-                                    <a href="https://github.com/MingfengHong/policy_analysis_agent" target="_blank">policy_analysis_agent</a>
-                                </h3>
-                                <p class="project-description">一个基于LLM的自动化政策分析系统，能够对政策文本进行三维量化分析：政策结构(SNA) → 政策工具(演绎法编码) → 政策效力(PMC模型)。</p>
-                                <div class="project-tags">
-                                    <span class="tag">LLM</span>
-                                    <span class="tag">政策分析</span>
-                                    <span class="tag">自动化</span>
-                                    <span class="tag">PMC模型</span>
-                                </div>
-                                <div class="project-stats">
-                                    <span class="stat">🔗 <a href="https://github.com/MingfengHong/policy_analysis_agent" target="_blank">GitHub</a></span>
-                                    <span class="stat">📜 GPL-3.0</span>
-                                    <span class="stat">📅 Sep 2024</span>
-                                </div>
-                            </div>
+                    <article class="project-row" data-category="research">
+                        <div class="project-row-header">
+                            <h3><a href="https://github.com/MingfengHong/policy_analysis_agent" target="_blank">policy_analysis_agent</a></h3>
+                            <span class="project-lang">Python</span>
                         </div>
-                    </div>
+                        <p class="project-row-desc">基于LLM的自动化政策分析系统，能够对政策文本进行三维量化分析：政策结构(SNA) - 政策工具(演绎法编码) - 政策效力(PMC模型)。</p>
+                        <div class="project-row-tags">
+                            <span class="tag">LLM</span>
+                            <span class="tag">政策分析</span>
+                            <span class="tag">PMC模型</span>
+                        </div>
+                        <div class="project-row-meta">
+                            <a href="https://github.com/MingfengHong/policy_analysis_agent" target="_blank">GitHub</a>
+                            <span>GPL-3.0</span>
+                            <span>Sep 2024</span>
+                        </div>
+                    </article>
 
-                    <!-- 项目4：LLM辅助扎根理论 -->
-                    <div class="project-item" data-category="research">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <div class="project-icon">🧠</div>
-                                <div class="project-status">
-                                    <span class="status-badge active">研究项目</span>
-                                    <span class="language-badge python">Python</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">
-                                    <a href="https://github.com/MingfengHong/llm_assisted_gt" target="_blank">llm_assisted_gt</a>
-                                </h3>
-                                <p class="project-description">使用大语言模型辅助扎根理论分析的项目。以"开源案例"为研究主题，通过多个自动化阶段实现质性研究的计算化。</p>
-                                <div class="project-tags">
-                                    <span class="tag">扎根理论</span>
-                                    <span class="tag">社会科学研究</span>
-                                    <span class="tag">LLM</span>
-                                    <span class="tag">质性研究</span>
-                                </div>
-                                <div class="project-stats">
-                                    <span class="stat">🔗 <a href="https://github.com/MingfengHong/llm_assisted_gt" target="_blank">GitHub</a></span>
-                                    <span class="stat">📜 GPL-3.0</span>
-                                    <span class="stat">📅 Aug 2024</span>
-                                </div>
-                            </div>
+                    <article class="project-row" data-category="research">
+                        <div class="project-row-header">
+                            <h3><a href="https://github.com/MingfengHong/llm_assisted_gt" target="_blank">llm_assisted_gt</a></h3>
+                            <span class="project-lang">Python</span>
                         </div>
-                    </div>
+                        <p class="project-row-desc">使用大语言模型辅助扎根理论分析的项目。以"开源案例"为研究主题，通过多个自动化阶段实现质性研究的计算化。</p>
+                        <div class="project-row-tags">
+                            <span class="tag">扎根理论</span>
+                            <span class="tag">质性研究</span>
+                            <span class="tag">LLM</span>
+                        </div>
+                        <div class="project-row-meta">
+                            <a href="https://github.com/MingfengHong/llm_assisted_gt" target="_blank">GitHub</a>
+                            <span>GPL-3.0</span>
+                            <span>Aug 2024</span>
+                        </div>
+                    </article>
 
-                    <!-- 项目5：知识图谱政策分析 -->
-                    <div class="project-item" data-category="research">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <div class="project-icon">📊</div>
-                                <div class="project-status">
-                                    <span class="status-badge active">研究项目</span>
-                                    <span class="language-badge python">Python</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">
-                                    <a href="https://github.com/MingfengHong/KnowledgeGraph_4_Private_Economy_Policy" target="_blank">KnowledgeGraph_4_Private_Economy_Policy</a>
-                                </h3>
-                                <p class="project-description">知识图谱在民营经济政策薄弱环节识别与量化评估中的应用。运用Neo4j构建政策知识图谱，结合NLP技术进行政策文本分析。</p>
-                                <div class="project-tags">
-                                    <span class="tag">知识图谱</span>
-                                    <span class="tag">Neo4j</span>
-                                    <span class="tag">政策分析</span>
-                                    <span class="tag">NLP</span>
-                                </div>
-                                <div class="project-stats">
-                                    <span class="stat">🔗 <a href="https://github.com/MingfengHong/KnowledgeGraph_4_Private_Economy_Policy" target="_blank">GitHub</a></span>
-                                    <span class="stat">⭐ 1</span>
-                                    <span class="stat">📅 Jul 2024</span>
-                                </div>
-                            </div>
+                    <article class="project-row" data-category="research">
+                        <div class="project-row-header">
+                            <h3><a href="https://github.com/MingfengHong/KnowledgeGraph_4_Private_Economy_Policy" target="_blank">KnowledgeGraph_4_Private_Economy_Policy</a></h3>
+                            <span class="project-lang">Python</span>
                         </div>
-                    </div>
+                        <p class="project-row-desc">知识图谱在民营经济政策薄弱环节识别与量化评估中的应用。运用Neo4j构建政策知识图谱，结合NLP技术进行政策文本分析。</p>
+                        <div class="project-row-tags">
+                            <span class="tag">知识图谱</span>
+                            <span class="tag">Neo4j</span>
+                            <span class="tag">政策分析</span>
+                        </div>
+                        <div class="project-row-meta">
+                            <a href="https://github.com/MingfengHong/KnowledgeGraph_4_Private_Economy_Policy" target="_blank">GitHub</a>
+                            <span>Jul 2024</span>
+                        </div>
+                    </article>
 
-                    <!-- 项目6：绿色金融投资策略 -->
-                    <div class="project-item" data-category="research">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <div class="project-icon">💚</div>
-                                <div class="project-status">
-                                    <span class="status-badge active">研究项目</span>
-                                    <span class="language-badge python">Python</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">
-                                    <a href="https://github.com/MingfengHong/GreenFinance-Investment-Strategy-ML-CVaR" target="_blank">GreenFinance-Investment-Strategy-ML-CVaR</a>
-                                </h3>
-                                <p class="project-description">基于跳跃扩散、机器学习与CVaR优化的多资产绿色金融投资策略研究。结合金融工程和机器学习方法优化投资组合。</p>
-                                <div class="project-tags">
-                                    <span class="tag">绿色金融</span>
-                                    <span class="tag">机器学习</span>
-                                    <span class="tag">CVaR优化</span>
-                                    <span class="tag">投资策略</span>
-                                </div>
-                                <div class="project-stats">
-                                    <span class="stat">🔗 <a href="https://github.com/MingfengHong/GreenFinance-Investment-Strategy-ML-CVaR" target="_blank">GitHub</a></span>
-                                    <span class="stat">📅 Jul 2024</span>
-                                </div>
-                            </div>
+                    <article class="project-row" data-category="research">
+                        <div class="project-row-header">
+                            <h3><a href="https://github.com/MingfengHong/GreenFinance-Investment-Strategy-ML-CVaR" target="_blank">GreenFinance-Investment-Strategy-ML-CVaR</a></h3>
+                            <span class="project-lang">Python</span>
                         </div>
-                    </div>
+                        <p class="project-row-desc">基于跳跃扩散、机器学习与CVaR优化的多资产绿色金融投资策略研究。结合金融工程和机器学习方法优化投资组合。</p>
+                        <div class="project-row-tags">
+                            <span class="tag">绿色金融</span>
+                            <span class="tag">机器学习</span>
+                            <span class="tag">CVaR优化</span>
+                        </div>
+                        <div class="project-row-meta">
+                            <a href="https://github.com/MingfengHong/GreenFinance-Investment-Strategy-ML-CVaR" target="_blank">GitHub</a>
+                            <span>Jul 2024</span>
+                        </div>
+                    </article>
 
-                    <!-- 项目7：核废水旅游影响分析 -->
-                    <div class="project-item" data-category="research">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <div class="project-icon">🌊</div>
-                                <div class="project-status">
-                                    <span class="status-badge active">研究项目</span>
-                                    <span class="language-badge python">Python</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">
-                                    <a href="https://github.com/MingfengHong/Nuclear-Wastewater-Tourism-Impact-Analysis" target="_blank">Nuclear-Wastewater-Tourism-Impact-Analysis</a>
-                                </h3>
-                                <p class="project-description">从风险感知到游客决策：核废水排放对赴日旅游的事件分析研究。运用事件研究法分析突发事件对旅游业的影响。</p>
-                                <div class="project-tags">
-                                    <span class="tag">事件分析</span>
-                                    <span class="tag">旅游研究</span>
-                                    <span class="tag">风险感知</span>
-                                    <span class="tag">消费者行为</span>
-                                </div>
-                                <div class="project-stats">
-                                    <span class="stat">🔗 <a href="https://github.com/MingfengHong/Nuclear-Wastewater-Tourism-Impact-Analysis" target="_blank">GitHub</a></span>
-                                    <span class="stat">📅 Jul 2024</span>
-                                </div>
-                            </div>
+                    <article class="project-row" data-category="research">
+                        <div class="project-row-header">
+                            <h3><a href="https://github.com/MingfengHong/Nuclear-Wastewater-Tourism-Impact-Analysis" target="_blank">Nuclear-Wastewater-Tourism-Impact-Analysis</a></h3>
+                            <span class="project-lang">Python</span>
                         </div>
-                    </div>
+                        <p class="project-row-desc">从风险感知到游客决策：核废水排放对赴日旅游的事件分析研究。运用事件研究法分析突发事件对旅游业的影响。</p>
+                        <div class="project-row-tags">
+                            <span class="tag">事件分析</span>
+                            <span class="tag">旅游研究</span>
+                            <span class="tag">消费者行为</span>
+                        </div>
+                        <div class="project-row-meta">
+                            <a href="https://github.com/MingfengHong/Nuclear-Wastewater-Tourism-Impact-Analysis" target="_blank">GitHub</a>
+                            <span>Jul 2024</span>
+                        </div>
+                    </article>
 
-                    <!-- 项目8：文本分析代码集 -->
-                    <div class="project-item" data-category="course">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <div class="project-icon">📝</div>
-                                <div class="project-status">
-                                    <span class="status-badge active">课程项目</span>
-                                    <span class="language-badge jupyter">Jupyter</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">
-                                    <a href="https://github.com/MingfengHong/code_for_textAnalysis" target="_blank">code_for_textAnalysis</a>
-                                </h3>
-                                <p class="project-description">文本分析相关的代码集合，包含各种NLP技术的实现和应用案例。</p>
-                                <div class="project-tags">
-                                    <span class="tag">文本分析</span>
-                                    <span class="tag">NLP</span>
-                                    <span class="tag">Jupyter</span>
-                                    <span class="tag">教学代码</span>
-                                </div>
-                                <div class="project-stats">
-                                    <span class="stat">🔗 <a href="https://github.com/MingfengHong/code_for_textAnalysis" target="_blank">GitHub</a></span>
-                                    <span class="stat">📅 Jul 2024</span>
-                                </div>
-                            </div>
+                    <article class="project-row" data-category="course">
+                        <div class="project-row-header">
+                            <h3><a href="https://github.com/MingfengHong/code_for_textAnalysis" target="_blank">code_for_textAnalysis</a></h3>
+                            <span class="project-lang">Jupyter</span>
                         </div>
-                    </div>
+                        <p class="project-row-desc">文本分析相关的代码集合，包含各种NLP技术的实现和应用案例。</p>
+                        <div class="project-row-tags">
+                            <span class="tag">文本分析</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">教学代码</span>
+                        </div>
+                        <div class="project-row-meta">
+                            <a href="https://github.com/MingfengHong/code_for_textAnalysis" target="_blank">GitHub</a>
+                            <span>Jul 2024</span>
+                        </div>
+                    </article>
 
-                    <!-- 项目9：复杂系统代码 -->
-                    <div class="project-item" data-category="course">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <div class="project-icon">🔄</div>
-                                <div class="project-status">
-                                    <span class="status-badge active">课程项目</span>
-                                    <span class="language-badge python">Python</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">
-                                    <a href="https://github.com/MingfengHong/code_for_complexSystem" target="_blank">code_for_complexSystem</a>
-                                </h3>
-                                <p class="project-description">复杂系统相关的代码实现，包含系统动力学、网络分析等复杂系统建模方法。</p>
-                                <div class="project-tags">
-                                    <span class="tag">复杂系统</span>
-                                    <span class="tag">系统动力学</span>
-                                    <span class="tag">网络分析</span>
-                                    <span class="tag">建模仿真</span>
-                                </div>
-                                <div class="project-stats">
-                                    <span class="stat">🔗 <a href="https://github.com/MingfengHong/code_for_complexSystem" target="_blank">GitHub</a></span>
-                                    <span class="stat">⭐ 1</span>
-                                    <span class="stat">📅 Jul 2024</span>
-                                </div>
-                            </div>
+                    <article class="project-row" data-category="course">
+                        <div class="project-row-header">
+                            <h3><a href="https://github.com/MingfengHong/code_for_complexSystem" target="_blank">code_for_complexSystem</a></h3>
+                            <span class="project-lang">Python</span>
                         </div>
-                    </div>
+                        <p class="project-row-desc">复杂系统相关的代码实现，包含系统动力学、网络分析等复杂系统建模方法。</p>
+                        <div class="project-row-tags">
+                            <span class="tag">复杂系统</span>
+                            <span class="tag">系统动力学</span>
+                            <span class="tag">建模仿真</span>
+                        </div>
+                        <div class="project-row-meta">
+                            <a href="https://github.com/MingfengHong/code_for_complexSystem" target="_blank">GitHub</a>
+                            <span>Jul 2024</span>
+                        </div>
+                    </article>
 
-                    <!-- 项目10：决策理论代码 -->
-                    <div class="project-item" data-category="course">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <div class="project-icon">🎯</div>
-                                <div class="project-status">
-                                    <span class="status-badge active">课程项目</span>
-                                    <span class="language-badge python">Python</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">
-                                    <a href="https://github.com/MingfengHong/code_for_decisionTheory" target="_blank">code_for_decisionTheory</a>
-                                </h3>
-                                <p class="project-description">决策理论相关的代码实现，包含各种决策分析方法和算法。</p>
-                                <div class="project-tags">
-                                    <span class="tag">决策理论</span>
-                                    <span class="tag">决策分析</span>
-                                    <span class="tag">算法实现</span>
-                                    <span class="tag">优化方法</span>
-                                </div>
-                                <div class="project-stats">
-                                    <span class="stat">🔗 <a href="https://github.com/MingfengHong/code_for_decisionTheory" target="_blank">GitHub</a></span>
-                                    <span class="stat">📅 Jul 2024</span>
-                                </div>
-                            </div>
+                    <article class="project-row" data-category="course">
+                        <div class="project-row-header">
+                            <h3><a href="https://github.com/MingfengHong/code_for_decisionTheory" target="_blank">code_for_decisionTheory</a></h3>
+                            <span class="project-lang">Python</span>
                         </div>
-                    </div>
+                        <p class="project-row-desc">决策理论相关的代码实现，包含各种决策分析方法和算法。</p>
+                        <div class="project-row-tags">
+                            <span class="tag">决策理论</span>
+                            <span class="tag">决策分析</span>
+                            <span class="tag">优化方法</span>
+                        </div>
+                        <div class="project-row-meta">
+                            <a href="https://github.com/MingfengHong/code_for_decisionTheory" target="_blank">GitHub</a>
+                            <span>Jul 2024</span>
+                        </div>
+                    </article>
 
-                    <!-- 项目11：预测理论代码 -->
-                    <div class="project-item" data-category="course">
-                        <div class="project-card">
-                            <div class="project-header">
-                                <div class="project-icon">📈</div>
-                                <div class="project-status">
-                                    <span class="status-badge active">课程项目</span>
-                                    <span class="language-badge jupyter">Jupyter</span>
-                                </div>
-                            </div>
-                            <div class="project-content">
-                                <h3 class="project-title">
-                                    <a href="https://github.com/MingfengHong/code_for_forecasting" target="_blank">code_for_forecasting</a>
-                                </h3>
-                                <p class="project-description">预测理论相关的代码实现，包含时间序列分析、机器学习预测等方法。</p>
-                                <div class="project-tags">
-                                    <span class="tag">预测理论</span>
-                                    <span class="tag">时间序列</span>
-                                    <span class="tag">机器学习</span>
-                                    <span class="tag">数据分析</span>
-                                </div>
-                                <div class="project-stats">
-                                    <span class="stat">🔗 <a href="https://github.com/MingfengHong/code_for_forecasting" target="_blank">GitHub</a></span>
-                                    <span class="stat">📅 Jul 2024</span>
-                                </div>
-                            </div>
+                    <article class="project-row" data-category="course">
+                        <div class="project-row-header">
+                            <h3><a href="https://github.com/MingfengHong/code_for_forecasting" target="_blank">code_for_forecasting</a></h3>
+                            <span class="project-lang">Jupyter</span>
                         </div>
-                    </div>
+                        <p class="project-row-desc">预测理论相关的代码实现，包含时间序列分析、机器学习预测等方法。</p>
+                        <div class="project-row-tags">
+                            <span class="tag">预测理论</span>
+                            <span class="tag">时间序列</span>
+                            <span class="tag">机器学习</span>
+                        </div>
+                        <div class="project-row-meta">
+                            <a href="https://github.com/MingfengHong/code_for_forecasting" target="_blank">GitHub</a>
+                            <span>Jul 2024</span>
+                        </div>
+                    </article>
                 </div>
 
-                <!-- 技术栈与工具 -->
-                <section class="tech-stack mt-lg">
-                    <div class="container">
-                        <h2 class="section-title">技术栈与工具</h2>
-                        <div class="tools-grid">
-                            <div class="tool-item">
-                                <div class="tool-icon">🐍</div>
-                                <div class="tool-name">Python</div>
-                            </div>
-                            <div class="tool-item">
-                                <div class="tool-icon">📊</div>
-                                <div class="tool-name">R</div>
-                            </div>
-                            <div class="tool-item">
-                                <div class="tool-icon">🗃️</div>
-                                <div class="tool-name">SQL</div>
-                            </div>
-                            <div class="tool-item">
-                                <div class="tool-icon">🔗</div>
-                                <div class="tool-name">Cypher</div>
-                            </div>
-                            <div class="tool-item">
-                                <div class="tool-icon">🌐</div>
-                                <div class="tool-name">Neo4j</div>
-                            </div>
-                            <div class="tool-item">
-                                <div class="tool-icon">🐳</div>
-                                <div class="tool-name">Docker</div>
-                            </div>
-                            <div class="tool-item">
-                                <div class="tool-icon">📓</div>
-                                <div class="tool-name">Jupyter</div>
-                            </div>
-                            <div class="tool-item">
-                                <div class="tool-icon">💻</div>
-                                <div class="tool-name">PyCharm</div>
-                            </div>
-                            <div class="tool-item">
-                                <div class="tool-icon">🔧</div>
-                                <div class="tool-name">Git</div>
-                            </div>
-                        </div>
+                <div class="section">
+                    <h2 class="section-title">技术栈与工具</h2>
+                    <div class="tools-list">
+                        <span class="tool">Python</span>
+                        <span class="tool">R</span>
+                        <span class="tool">SQL</span>
+                        <span class="tool">Cypher</span>
+                        <span class="tool">Neo4j</span>
+                        <span class="tool">Docker</span>
+                        <span class="tool">Jupyter</span>
+                        <span class="tool">PyCharm</span>
+                        <span class="tool">Git</span>
                     </div>
-                </section>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 洪铭锋 (Mingfeng Hong). Le vent se lève, il faut tenter de vivre.</p>
+            <p>2025 洪铭锋. Le vent se lève, il faut tenter de vivre.</p>
         </div>
     </footer>
 

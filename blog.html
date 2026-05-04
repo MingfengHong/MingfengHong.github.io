@@ -5,44 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>博客 - 洪铭锋 Mingfeng Hong</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/fluent.css">
-    <link rel="stylesheet" href="styles/fluent-override.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Highlight.js for code syntax highlighting -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <div class="logo">
-                    <span class="logo-text">H</span>
-                </div>
+                <a href="index.html">HM</a>
             </div>
             <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">首页</a>
-                </li>
-                <li class="nav-item">
-                    <a href="publications.html" class="nav-link">出版物</a>
-                </li>
-                <li class="nav-item">
-                    <a href="portfolio.html" class="nav-link">作品集</a>
-                </li>
-                <li class="nav-item">
-                    <a href="projects.html" class="nav-link">开源项目</a>
-                </li>
-                <li class="nav-item">
-                    <a href="blog.html" class="nav-link active">博客</a>
-                </li>
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="publications.html" class="nav-link">出版物</a></li>
+                <li><a href="portfolio.html" class="nav-link">作品集</a></li>
+                <li><a href="projects.html" class="nav-link">项目</a></li>
+                <li><a href="blog.html" class="nav-link active">博客</a></li>
             </ul>
-            <div class="nav-toggle" id="nav-toggle">
+            <button class="nav-toggle" id="nav-toggle" aria-label="菜单">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </nav>
     </header>
 
@@ -56,44 +41,37 @@
 
         <section class="page-content">
             <div class="container">
-                <!-- 分类导航 -->
-                <div class="category-nav mb-lg" id="category-nav">
-                    <!-- 动态加载分类 -->
+                <div class="filters" id="category-nav">
                 </div>
 
-                <!-- 博客文章列表 -->
-                <div class="blog-posts" id="blog-posts">
-                    <!-- 动态加载文章列表 -->
-                    <div class="loading">加载中...</div>
-                </div>
-
-                <!-- 文章详情模态框 -->
-                <div class="article-modal" id="article-modal" style="display: none;">
-                    <div class="modal-overlay" onclick="closeArticle()"></div>
-                    <div class="modal-content-wrapper">
-                        <button class="modal-close" onclick="closeArticle()">&times;</button>
-                        <div class="modal-content">
-                            <article class="article-detail" id="article-content">
-                                <!-- 文章内容将在这里渲染 -->
-                            </article>
-                        </div>
+                <div class="blog-list" id="blog-posts">
+                    <div class="blog-row">
+                        <div class="blog-date">加载中...</div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <div id="article-modal" style="display: none;">
+        <div class="modal-overlay" onclick="closeArticle()"></div>
+        <div class="modal">
+            <div class="modal-inner">
+                <button class="modal-close" onclick="closeArticle()">&times;</button>
+                <article class="article" id="article-content">
+                </article>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 洪铭锋 (Mingfeng Hong). Le vent se lève, il faut tenter de vivre.</p>
+            <p>2025 洪铭锋. Le vent se lève, il faut tenter de vivre.</p>
         </div>
     </footer>
 
-    <!-- 外部库 -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    
-    <!-- 本地脚本 -->
     <script src="scripts/main.js"></script>
     <script src="scripts/blog-dynamic.js"></script>
 </body>

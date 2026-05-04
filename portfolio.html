@@ -5,42 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>作品集 - 洪铭锋 Mingfeng Hong</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/fluent.css">
-    <link rel="stylesheet" href="styles/fluent-override.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="nav-brand">
-                <div class="logo">
-                    <span class="logo-text">H</span>
-                </div>
+                <a href="index.html">HM</a>
             </div>
             <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">首页</a>
-                </li>
-                <li class="nav-item">
-                    <a href="publications.html" class="nav-link">出版物</a>
-                </li>
-                <li class="nav-item">
-                    <a href="portfolio.html" class="nav-link active">作品集</a>
-                </li>
-                <li class="nav-item">
-                    <a href="projects.html" class="nav-link">开源项目</a>
-                </li>
-                <li class="nav-item">
-                    <a href="blog.html" class="nav-link">博客</a>
-                </li>
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="publications.html" class="nav-link">出版物</a></li>
+                <li><a href="portfolio.html" class="nav-link active">作品集</a></li>
+                <li><a href="projects.html" class="nav-link">项目</a></li>
+                <li><a href="blog.html" class="nav-link">博客</a></li>
             </ul>
-            <div class="nav-toggle" id="nav-toggle">
+            <button class="nav-toggle" id="nav-toggle" aria-label="菜单">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </nav>
     </header>
 
@@ -54,149 +40,95 @@
 
         <section class="page-content">
             <div class="container">
-                <!-- 筛选器 -->
-                <div class="filter-section mb-lg">
-                    <div class="filter-buttons">
-                        <button class="btn filter-btn active" data-filter="all">全部作品</button>
-                        <button class="btn filter-btn" data-filter="marketing">营销策划</button>
-                        <button class="btn filter-btn" data-filter="analysis">商业分析</button>
-                        <button class="btn filter-btn" data-filter="innovation">创新创业</button>
-                    </div>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="marketing">营销策划</button>
+                    <button class="filter-btn" data-filter="analysis">商业分析</button>
+                    <button class="filter-btn" data-filter="innovation">创新创业</button>
                 </div>
 
-                <!-- 作品集网格 -->
-                <div class="portfolio-grid">
-                    
-                    <!-- 作品一：喜茶网络品牌传播报告 -->
-                    <div class="portfolio-item" data-category="marketing">
-                        <div class="portfolio-card">
-                            <div class="portfolio-image">
-                                <div class="image-placeholder marketing-placeholder">
-                                    <span class="placeholder-icon">📊</span>
-                                </div>
+                <div class="work-list">
+                    <article class="work-item" data-category="marketing">
+                        <div class="work-thumb">Marketing</div>
+                        <div class="work-info">
+                            <h3>如何俘获年轻人的心——喜茶网络品牌传播报告</h3>
+                            <p class="work-desc">在后疫情时代消费复苏的背景下，深入分析茶饮品牌"喜茶"的网络营销策略，探讨其如何成功吸引占新式茶饮消费者近八成的年轻群体。报告剖析了品牌跨界联名、社交媒体用户参与、私域流量运营三大核心策略。</p>
+                            <div class="work-meta">
+                                <span>品牌营销</span>
+                                <span>社交媒体</span>
+                                <span>私域运营</span>
                             </div>
-                            <div class="portfolio-content">
-                                <h3 class="portfolio-title">如何俘获年轻人的心——喜茶网络品牌传播报告</h3>
-                                <p class="portfolio-description">在后疫情时代消费复苏的背景下，深入分析茶饮品牌"喜茶"的网络营销策略，探讨其如何成功吸引占新式茶饮消费者近八成的年轻群体。报告剖析了品牌跨界联名、社交媒体用户参与、私域流量运营三大核心策略。</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">品牌营销</span>
-                                    <span class="tag">社交媒体</span>
-                                    <span class="tag">私域运营</span>
-                                    <span class="tag">跨界联名</span>
-                                </div>
-                                <div class="portfolio-highlights">
-                                    <div class="highlight-item">
-                                        <strong>核心发现：</strong>喜茶与超过120个品牌联名合作，"#喜茶logo全身图#"获得4.1亿阅读量
-                                    </div>
-                                    <div class="highlight-item">
-                                        <strong>商业价值：</strong>喜茶GO小程序会员超6300万，瓶装饮料618、双十一均获天猫茶饮料品类销售额第一
-                                    </div>
-                                </div>
-                                <div class="portfolio-actions">
-                                    <a href="files/portfolio/xicha-report.pdf" class="btn btn-primary" download>📥 下载</a>
-                                </div>
+                            <div class="work-highlights">
+                                <p><strong>核心发现：</strong>喜茶与超过120个品牌联名合作，"#喜茶logo全身图#"获得4.1亿阅读量</p>
+                                <p><strong>商业价值：</strong>喜茶GO小程序会员超6300万，瓶装饮料618、双十一均获天猫茶饮料品类销售额第一</p>
+                            </div>
+                            <div class="work-actions">
+                                <a href="files/portfolio/xicha-report.pdf" class="btn btn-small" download>下载报告</a>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- 作品二：区块链赋能文创IP授权交易 -->
-                    <div class="portfolio-item" data-category="innovation">
-                        <div class="portfolio-card">
-                            <div class="portfolio-image">
-                                <div class="image-placeholder innovation-placeholder">
-                                    <span class="placeholder-icon">🔗</span>
-                                </div>
+                    <article class="work-item" data-category="innovation">
+                        <div class="work-thumb">Innovation</div>
+                        <div class="work-info">
+                            <h3>区块链赋能文创IP授权交易</h3>
+                            <p class="work-desc">基于区块链技术的文创IP授权交易平台，通过智能合约和NFT技术，解决传统IP授权市场中介费高、信任缺失、知识产权保护不足等问题。特别关注为民间艺术等传统版权法未能充分保护的文化IP建立激励机制。</p>
+                            <div class="work-meta">
+                                <span>区块链</span>
+                                <span>智能合约</span>
+                                <span>NFT</span>
                             </div>
-                            <div class="portfolio-content">
-                                <h3 class="portfolio-title">区块链赋能文创IP授权交易</h3>
-                                <p class="portfolio-description">基于区块链技术的文创IP授权交易平台，通过智能合约和NFT技术，解决传统IP授权市场中介费高、信任缺失、知识产权保护不足等问题。特别关注为民间艺术等传统版权法未能充分保护的文化IP建立激励机制。</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">区块链</span>
-                                    <span class="tag">智能合约</span>
-                                    <span class="tag">NFT</span>
-                                    <span class="tag">知识产权</span>
-                                </div>
-                                <div class="portfolio-highlights">
-                                    <div class="highlight-item">
-                                        <strong>获奖荣誉：</strong>互联网+大赛陕西赛区银奖、微软创新杯区域复赛优秀奖、电商三创赛陕西省一等奖
-                                    </div>
-                                    <div class="highlight-item">
-                                        <strong>商业前景：</strong>预计2024年合作版权150个，终端用户1500人，预期年营收85万元
-                                    </div>
-                                </div>
-                                <div class="portfolio-actions">
-                                    <a href="files/portfolio/blockchain-project-report.pdf" class="btn btn-primary" download>📥 结题报告</a>
-                                    <a href="files/portfolio/blockchain-project-demo.pdf" class="btn btn-secondary" target="_blank">🔗 演示</a>
-                                </div>
+                            <div class="work-highlights">
+                                <p><strong>获奖荣誉：</strong>互联网+大赛陕西赛区银奖、微软创新杯区域复赛优秀奖、电商三创赛陕西省一等奖</p>
+                                <p><strong>商业前景：</strong>预计2024年合作版权150个，终端用户1500人，预期年营收85万元</p>
+                            </div>
+                            <div class="work-actions">
+                                <a href="files/portfolio/blockchain-project-report.pdf" class="btn btn-small" download>结题报告</a>
+                                <a href="files/portfolio/blockchain-project-demo.pdf" class="btn btn-small" target="_blank">演示</a>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- 作品三：泡泡玛特企业调研 -->
-                    <div class="portfolio-item" data-category="analysis">
-                        <div class="portfolio-card">
-                            <div class="portfolio-image">
-                                <div class="image-placeholder analysis-placeholder">
-                                    <span class="placeholder-icon">📈</span>
-                                </div>
+                    <article class="work-item" data-category="analysis">
+                        <div class="work-thumb">Analysis</div>
+                        <div class="work-info">
+                            <h3>消费下行背景下，文创新消费的未来——泡泡玛特调研报告</h3>
+                            <p class="work-desc">针对泡泡玛特2022年上半年首次净利润下滑现象的深度分析，探讨外部经营环境（新冠疫情影响、非必需品消费萎缩）和内部优缺点（单一产品线、线下零售布局集中），运用PEST、STP、SWOT等商业分析框架，提出战略性解决方案。</p>
+                            <div class="work-meta">
+                                <span>商业分析</span>
+                                <span>SWOT分析</span>
+                                <span>消费研究</span>
                             </div>
-                            <div class="portfolio-content">
-                                <h3 class="portfolio-title">消费下行背景下，文创新消费的未来——泡泡玛特调研报告</h3>
-                                <p class="portfolio-description">针对泡泡玛特2022年上半年首次净利润下滑现象的深度分析，探讨外部经营环境（新冠疫情影响、非必需品消费萎缩）和内部优缺点（单一产品线、线下零售布局集中），运用PEST、STP、SWOT等商业分析框架，提出战略性解决方案。</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">商业分析</span>
-                                    <span class="tag">SWOT分析</span>
-                                    <span class="tag">战略规划</span>
-                                    <span class="tag">消费研究</span>
-                                </div>
-                                <div class="portfolio-highlights">
-                                    <div class="highlight-item">
-                                        <strong>核心洞察：</strong>过度依赖少数头部IP，供应链脆弱，库存水平攀升
-                                    </div>
-                                    <div class="highlight-item">
-                                        <strong>战略建议：</strong>效仿迪士尼模式丰富IP内容，拓展海外业务，投资自建工厂提升品控
-                                    </div>
-                                </div>
-                                <div class="portfolio-actions">
-                                    <a href="files/portfolio/popmart-analysis.pdf" class="btn btn-primary" download>📥 下载</a>
-                                </div>
+                            <div class="work-highlights">
+                                <p><strong>核心洞察：</strong>过度依赖少数头部IP，供应链脆弱，库存水平攀升</p>
+                                <p><strong>战略建议：</strong>效仿迪士尼模式丰富IP内容，拓展海外业务，投资自建工厂提升品控</p>
+                            </div>
+                            <div class="work-actions">
+                                <a href="files/portfolio/popmart-analysis.pdf" class="btn btn-small" download>下载报告</a>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- 作品四：微软笔电与办公软件营销策划案 -->
-                    <div class="portfolio-item" data-category="marketing">
-                        <div class="portfolio-card">
-                            <div class="portfolio-image">
-                                <div class="image-placeholder marketing-placeholder">
-                                    <span class="placeholder-icon">💻</span>
-                                </div>
+                    <article class="work-item" data-category="marketing">
+                        <div class="work-thumb">Marketing</div>
+                        <div class="work-info">
+                            <h3>亚历山大逃跑计划——Microsoft 365 & Surface 整合营销方案</h3>
+                            <p class="work-desc">针对Microsoft 365与Surface在中国市场表现不佳的问题，提出整合营销传播(IMC)策略，将产品核心优势（高效、便携、全能）与目标受众减轻工作和学习压力的核心需求相结合。基于1476份问卷调研，精准定位大学生和白领群体。</p>
+                            <div class="work-meta">
+                                <span>整合营销</span>
+                                <span>创意策划</span>
+                                <span>KOL营销</span>
                             </div>
-                            <div class="portfolio-content">
-                                <h3 class="portfolio-title">亚历山大逃跑计划——Microsoft 365 & Surface 整合营销方案</h3>
-                                <p class="portfolio-description">针对Microsoft 365与Surface在中国市场表现不佳的问题，提出整合营销传播(IMC)策略，将产品核心优势（高效、便携、全能）与目标受众减轻工作和学习压力的核心需求相结合。基于1476份问卷调研，精准定位大学生和白领群体。</p>
-                                <div class="portfolio-tags">
-                                    <span class="tag">整合营销</span>
-                                    <span class="tag">创意策划</span>
-                                    <span class="tag">KOL营销</span>
-                                    <span class="tag">用户洞察</span>
-                                </div>
-                                <div class="portfolio-highlights">
-                                    <div class="highlight-item">
-                                        <strong>创意核心：</strong>"亚历山大逃跑计划"，将产品定位为高效轻松生活的工具
-                                    </div>
-                                    <div class="highlight-item">
-                                        <strong>预期效果：</strong>全网曝光1.2亿次，Surface新客户5万，Microsoft 365新客户64万
-                                    </div>
-                                </div>
-                                <div class="portfolio-actions">
-                                    <a href="files/portfolio/microsoft-marketing-plan.pdf" class="btn btn-primary" download>📥 策划案</a>
-                                    <a href="files/portfolio/microsoft-marketing-demo.pdf" class="btn btn-secondary" target="_blank">🎬 演示</a>
-                                </div>
+                            <div class="work-highlights">
+                                <p><strong>创意核心：</strong>"亚历山大逃跑计划"，将产品定位为高效轻松生活的工具</p>
+                                <p><strong>预期效果：</strong>全网曝光1.2亿次，Surface新客户5万，Microsoft 365新客户64万</p>
+                            </div>
+                            <div class="work-actions">
+                                <a href="files/portfolio/microsoft-marketing-plan.pdf" class="btn btn-small" download>策划案</a>
+                                <a href="files/portfolio/microsoft-marketing-demo.pdf" class="btn btn-small" target="_blank">演示</a>
                             </div>
                         </div>
-                    </div>
-
+                    </article>
                 </div>
             </div>
         </section>
@@ -204,7 +136,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 洪铭锋 (Mingfeng Hong). Le vent se lève, il faut tenter de vivre.</p>
+            <p>2025 洪铭锋. Le vent se lève, il faut tenter de vivre.</p>
         </div>
     </footer>
 
