@@ -16,7 +16,7 @@
 - [研究成果](https://mingfenghong.github.io/publications.html)：已发表论文、政策研究、会议论文与工作论文。
 - [研究项目](https://mingfenghong.github.io/projects.html)：科研项目、政府委托项目，以及参与编写的理论专著与书稿。
 - [实习经历](https://mingfenghong.github.io/internships.html)：上海人工智能实验室、艾瑞咨询与和君咨询的研究和咨询实践。
-- [开源与社区](https://mingfenghong.github.io/portfolio.html)：开源科研工具、GitHub 项目与计算能力。
+- [开源项目](https://mingfenghong.github.io/portfolio.html)：开源科研工具、桌面应用与内容创作工具。
 - [研究笔记](https://mingfenghong.github.io/blog.html)：发布于小红书、魔搭社区、知乎和公众号的社区作品精选。
 
 网站内容依据当前简历整理，主要包括：
@@ -25,7 +25,7 @@
 - 4 项参与的科研或政府委托项目；
 - 4 部参与编写的理论专著与书稿；
 - 3 段研究和咨询实习经历；
-- PaperSeek、CSS Research Skills 等开源科研项目；
+- PaperSeek、CSS Research Skills、PetPack 等开源项目；
 - 13 篇跨平台社区作品精选。
 
 最新版简历可在网站首页下载，也可直接查看 [`files/Hong_Mingfeng_CV.pdf`](files/Hong_Mingfeng_CV.pdf)。
@@ -53,7 +53,7 @@
 ├── publications.html          # 研究成果
 ├── projects.html              # 研究项目与专著书稿
 ├── internships.html           # 实习经历
-├── portfolio.html             # 开源与社区
+├── portfolio.html             # 开源项目
 ├── blog.html                  # 社区作品精选
 ├── styles/
 │   └── main.css               # 当前视觉系统与响应式样式

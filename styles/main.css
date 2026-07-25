@@ -862,6 +862,10 @@ button {
     gap: 24px;
 }
 
+.repo-grid-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .project-card,
 .book-card,
 .repo-card {
@@ -959,6 +963,90 @@ button {
 .repo-card {
     min-height: 270px;
     transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.featured-repo {
+    display: grid;
+    grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
+    overflow: hidden;
+    margin-bottom: 24px;
+    border: 3px solid var(--ink);
+    border-radius: 24px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.featured-repo-visual {
+    display: flex;
+    min-height: 410px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: clamp(28px, 4vw, 54px);
+    border-right: 3px solid var(--ink);
+    background: var(--yellow);
+}
+
+.featured-repo-logo {
+    display: block;
+    width: 100%;
+    max-width: 580px;
+    height: auto;
+    border: 3px solid var(--ink);
+    border-radius: 18px;
+    background: var(--white);
+    box-shadow: var(--shadow-small);
+}
+
+.featured-repo-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(30px, 4vw, 56px);
+}
+
+.featured-repo-copy h3 {
+    margin: 8px 0 0;
+    font-size: clamp(1.55rem, 2.5vw, 2.55rem);
+    font-weight: 900;
+    letter-spacing: -0.045em;
+    line-height: 1.08;
+}
+
+.featured-repo-copy > p:not(.repo-name) {
+    margin: 16px 0 0;
+    color: var(--muted);
+}
+
+.featured-repo-points,
+.featured-repo-visual-actions,
+.featured-repo-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.featured-repo-visual-actions {
+    width: 100%;
+    justify-content: center;
+}
+
+.featured-repo-points {
+    margin-top: 22px;
+}
+
+.featured-repo-points span {
+    padding: 0.45rem 0.7rem;
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    background: var(--mint);
+    font-size: 0.82rem;
+    font-weight: 900;
+}
+
+.featured-repo-actions {
+    margin-top: 26px;
 }
 
 .repo-card:hover {
@@ -1239,6 +1327,16 @@ button {
         grid-template-columns: 1fr;
     }
 
+    .featured-repo {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-repo-visual {
+        min-height: 300px;
+        border-right: 0;
+        border-bottom: 3px solid var(--ink);
+    }
+
     .portrait-card {
         width: min(100%, 520px);
         justify-self: center;
@@ -1356,6 +1454,20 @@ button {
 
     .brand strong {
         display: none;
+    }
+
+    .featured-repo-visual,
+    .featured-repo-copy {
+        padding: 22px;
+    }
+
+    .featured-repo-visual {
+        min-height: 220px;
+    }
+
+    .featured-repo-visual-actions .button,
+    .featured-repo-actions .button {
+        width: 100%;
     }
 
     .identity-title {

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="洪铭锋参与的理论专著、开源科研工具与计算社会科学社区实践。">
-    <meta property="og:title" content="开源与社区 · 洪铭锋 Mingfeng Hong">
-    <meta property="og:description" content="理论专著、开源科研工具与计算社会科学社区实践。">
+    <meta name="description" content="洪铭锋维护与参与的开源科研工具、桌面应用与创作工具。">
+    <meta property="og:title" content="开源项目 · 洪铭锋 Mingfeng Hong">
+    <meta property="og:description" content="从科研工作流到桌面与创作工具，浏览洪铭锋维护与参与的开源项目。">
     <meta property="og:image" content="https://mingfenghong.github.io/images/og.png">
     <meta name="twitter:card" content="summary_large_image">
-    <title>开源与社区 · 洪铭锋 Mingfeng Hong</title>
+    <title>开源项目 · 洪铭锋 Mingfeng Hong</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
                 <li><a class="nav-link" href="publications.html">研究成果</a></li>
                 <li><a class="nav-link" href="projects.html">研究项目</a></li>
                 <li><a class="nav-link" href="internships.html">实习经历</a></li>
-                <li><a class="nav-link active" aria-current="page" href="portfolio.html">开源与社区</a></li>
+                <li><a class="nav-link active" aria-current="page" href="portfolio.html">开源项目</a></li>
                 <li><a class="nav-link" href="blog.html">研究笔记</a></li>
             </ul>
         </nav>
@@ -35,10 +35,10 @@
         <section class="page-hero">
             <div class="container">
                 <div class="page-hero-panel purple">
-                    <p class="eyebrow">Open source &amp; community</p>
-                    <h1 class="page-title">开源与社区</h1>
-                    <p class="page-lede">把研究方法做成可复用的工具与工作流，在 GitHub 与 ModelScope 社区持续参与开放协作。</p>
-                    <div class="quick-stats" aria-label="实践统计"><span class="quick-stat">3 个重点开源项目</span><span class="quick-stat">PaperSeek 200+ Stars</span><span class="quick-stat">ModelScope 社区共建者</span></div>
+                    <p class="eyebrow">Open source projects</p>
+                    <h1 class="page-title">开源项目</h1>
+                    <p class="page-lede">从科研工作流到桌面工具，把方法、创意与日常需求做成可复用的开源软件。</p>
+                    <div class="quick-stats" aria-label="项目概览"><span class="quick-stat">4 个开源科研项目</span><span class="quick-stat">4 个其他开源项目</span><span class="quick-stat">GitHub 持续更新</span></div>
                     <span class="page-hero-number" aria-hidden="true">OS</span>
                 </div>
             </div>
@@ -48,42 +48,84 @@
             <div class="container">
                 <div class="section-heading">
                     <div><p class="section-kicker">Build in public</p><h2 class="section-title" id="open-source-title">开源科研项目</h2></div>
-                    <p class="section-note">Stars 数量为简历记录时的社区数据。</p>
+                    <p class="section-note">面向文献发现、计算社会科学与 AI 辅助科研的开放工具。</p>
                 </div>
-                <div class="repo-grid">
+                <article class="featured-repo" aria-labelledby="paperseek-title">
+                    <div class="featured-repo-visual">
+                        <img class="featured-repo-logo" src="images/paperseek-logo.png" alt="PaperSeek，LLM based Literature Search Agent">
+                        <div class="featured-repo-visual-actions">
+                            <a class="button button-primary" href="https://www.paperseek.xyz/" target="_blank" rel="noopener noreferrer">访问官网 ↗</a>
+                            <a class="button" href="https://docs.paperseek.xyz/" target="_blank" rel="noopener noreferrer">访问文档站 ↗</a>
+                        </div>
+                    </div>
+                    <div class="featured-repo-copy">
+                        <p class="repo-name">旗舰开源科研项目 · MingfengHong/paperseek</p>
+                        <h3 id="paperseek-title">基于大模型意图识别与检索式扩展的智能文献发现工具</h3>
+                        <p>PaperSeek 是面向研究者的 AI 文献检索与发现工具。输入自然语言研究问题后，它会自动生成并迭代检索式、扩展引用网络、排序候选论文，最终导出可复查的结果。</p>
+                        <p>它适用于开题、文献综述、跨学科选题与日常文献追踪，让检索过程中的生成、调整与排序都清晰可见。</p>
+                        <div class="featured-repo-points" aria-label="PaperSeek 核心能力">
+                            <span>多源检索</span><span>自适应迭代</span><span>引用扩展</span><span>可复核导出</span>
+                        </div>
+                        <div class="featured-repo-actions">
+                            <a class="button button-primary" href="https://github.com/MingfengHong/paperseek" target="_blank" rel="noopener noreferrer">访问 GitHub · 220+ Stars ↗</a>
+                            <a class="button" href="https://mp.weixin.qq.com/s/EDjSVFFVnXN2OPU5sVJuNQ" target="_blank" rel="noopener noreferrer">社区推荐 ↗</a>
+                        </div>
+                    </div>
+                </article>
+                <div class="repo-grid repo-grid-three">
                     <a class="repo-card" href="https://github.com/modelscope/Awesome-Vibe-Research" target="_blank" rel="noopener noreferrer">
                         <p class="repo-name">modelscope/Awesome-Vibe-Research</p>
                         <h3>开源科研工具合集</h3>
                         <p>作为贡献者参与汇集 AI 辅助科研的工作流、工具与实践资源。</p>
-                        <span class="repo-stat">300+ Stars ↗</span>
-                    </a>
-                    <a class="repo-card" href="https://github.com/MingfengHong/paperseek" target="_blank" rel="noopener noreferrer">
-                        <p class="repo-name">MingfengHong/paperseek</p>
-                        <h3>PaperSeek</h3>
-                        <p>开源智能文献检索引擎，把检索、筛选与研究工作流连接起来。</p>
-                        <span class="repo-stat">200+ Stars ↗</span>
+                        <span class="repo-stat">370+ Stars · Python ↗</span>
                     </a>
                     <a class="repo-card" href="https://github.com/MingfengHong/css-research-skills" target="_blank" rel="noopener noreferrer">
                         <p class="repo-name">MingfengHong/css-research-skills</p>
                         <h3>社会科学研究 Skills</h3>
                         <p>面向计算社会科学研究流程的可复用 Skills 与方法实践。</p>
-                        <span class="repo-stat">30+ Stars ↗</span>
+                        <span class="repo-stat">40+ Stars · Python ↗</span>
                     </a>
-                    <a class="repo-card" href="https://github.com/MingfengHong" target="_blank" rel="noopener noreferrer">
-                        <p class="repo-name">github.com/MingfengHong</p>
-                        <h3>更多代码与研究工具</h3>
-                        <p>查看正在维护的仓库、贡献记录与最新开源实践。</p>
-                        <span class="repo-stat">GitHub Profile ↗</span>
+                    <a class="repo-card" href="https://github.com/MingfengHong/paperradar" target="_blank" rel="noopener noreferrer">
+                        <p class="repo-name">MingfengHong/paperradar</p>
+                        <h3>PaperRadar</h3>
+                        <p>研究主题驱动的每日论文雷达，结合文献库与可选 LLM 分析，自动筛选并推送值得阅读的论文。</p>
+                        <span class="repo-stat">文献订阅 · 自动推送 ↗</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <section class="section section-yellow" aria-labelledby="skills-title">
+        <section class="section section-soft" aria-labelledby="other-projects-title">
             <div class="container">
-                <div class="section-heading"><div><p class="section-kicker">Toolkit</p><h2 class="section-title" id="skills-title">计算与语言能力</h2></div><p class="section-note">语言水平：CET-6 503。</p></div>
-                <div class="skill-cloud" aria-label="编程技能">
-                    <span class="skill-chip">C</span><span class="skill-chip">Python</span><span class="skill-chip">R</span><span class="skill-chip">LaTeX</span><span class="skill-chip">SQL</span><span class="skill-chip">Cypher</span>
+                <div class="section-heading">
+                    <div><p class="section-kicker">Built for curiosity</p><h2 class="section-title" id="other-projects-title">其他开源项目</h2></div>
+                    <p class="section-note">从公开仓库中选出的桌面应用、内容创作与轻量工具。</p>
+                </div>
+                <div class="repo-grid">
+                    <a class="repo-card" href="https://github.com/MingfengHong/petpack" target="_blank" rel="noopener noreferrer">
+                        <p class="repo-name">MingfengHong/petpack</p>
+                        <h3>PetPack Studio</h3>
+                        <p>让 Codex / Petdex 宠物走出 Codex：导入宠物包、预览动作，并打包为跨平台独立桌宠。</p>
+                        <span class="repo-stat">70+ Stars · Rust / Tauri ↗</span>
+                    </a>
+                    <a class="repo-card" href="https://github.com/MingfengHong/xhs-poster-generator" target="_blank" rel="noopener noreferrer">
+                        <p class="repo-name">MingfengHong/xhs-poster-generator</p>
+                        <h3>Markdown 图文海报生成器</h3>
+                        <p>面向科研与学习分享的轻量海报工具，支持 Markdown、数学公式、代码高亮及图片或 PDF 导出。</p>
+                        <span class="repo-stat">在线创作 · 多格式导出 ↗</span>
+                    </a>
+                    <a class="repo-card" href="https://github.com/MingfengHong/md-to-minimal-pdf" target="_blank" rel="noopener noreferrer">
+                        <p class="repo-name">MingfengHong/md-to-minimal-pdf</p>
+                        <h3>Markdown 极简 PDF</h3>
+                        <p>基于 HTML、CSS 与 Paged.js，把技术教程转换为带目录、页眉页脚和跨页代码块的瑞士风格 PDF。</p>
+                        <span class="repo-stat">HTML · CSS · Paged.js ↗</span>
+                    </a>
+                    <a class="repo-card" href="https://github.com/MingfengHong/xhs-resource-widget" target="_blank" rel="noopener noreferrer">
+                        <p class="repo-name">MingfengHong/xhs-resource-widget</p>
+                        <h3>学术资源分享小组件</h3>
+                        <p>无需后端的数据驱动小组件，支持热更新、实时搜索、多维筛选与深色模式。</p>
+                        <span class="repo-stat">JavaScript · 零后端 ↗</span>
+                    </a>
                 </div>
             </div>
         </section>
