@@ -3,227 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>出版物 - 洪铭锋 Mingfeng Hong</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <meta name="description" content="洪铭锋的已发表论文、政策建议、会议论文与工作论文。">
+    <meta property="og:title" content="研究成果 · 洪铭锋 Mingfeng Hong">
+    <meta property="og:description" content="已发表论文、政策建议、会议论文与工作论文。">
+    <meta property="og:image" content="https://mingfenghong.github.io/images/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>研究成果 · 洪铭锋 Mingfeng Hong</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <a href="index.html">HM</a>
-            </div>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <header class="site-header">
+        <nav class="nav-shell container" aria-label="主导航">
+            <a class="brand" href="index.html" aria-label="洪铭锋首页"><span class="brand-mark" aria-hidden="true">洪</span><strong>Mingfeng Hong</strong></a>
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="打开导航菜单"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link">首页</a></li>
-                <li><a href="publications.html" class="nav-link active">出版物</a></li>
-                <li><a href="portfolio.html" class="nav-link">作品集</a></li>
-                <li><a href="projects.html" class="nav-link">项目</a></li>
-                <li><a href="blog.html" class="nav-link">博客</a></li>
+                <li><a class="nav-link" href="index.html">首页</a></li>
+                <li><a class="nav-link active" aria-current="page" href="publications.html">研究成果</a></li>
+                <li><a class="nav-link" href="projects.html">研究项目</a></li>
+                <li><a class="nav-link" href="internships.html">实习经历</a></li>
+                <li><a class="nav-link" href="portfolio.html">开源与社区</a></li>
+                <li><a class="nav-link" href="blog.html">研究笔记</a></li>
             </ul>
-            <button class="nav-toggle" id="nav-toggle" aria-label="菜单">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
         </nav>
     </header>
 
-    <main class="main">
-        <section class="page-header">
+    <main class="main" id="main-content">
+        <section class="page-hero">
             <div class="container">
-                <h1 class="page-title">出版物</h1>
-                <p class="page-subtitle">Publications, Working Papers & Conference Presentations</p>
+                <div class="page-hero-panel coral">
+                    <p class="eyebrow">Publications &amp; working papers</p>
+                    <h1 class="page-title">研究成果</h1>
+                    <p class="page-lede">围绕开源创新、科技政策、数字技术生态与组织治理展开的论文和政策研究。作者列表中的 * 代表通讯作者，投稿状态依据当前简历更新。</p>
+                    <div class="quick-stats" aria-label="成果统计">
+                        <span class="quick-stat">2 篇已发表论文</span>
+                        <span class="quick-stat">2 项政策研究</span>
+                        <span class="quick-stat">6 篇会议／工作论文</span>
+                    </div>
+                    <span class="page-hero-number" aria-hidden="true">10</span>
+                </div>
             </div>
         </section>
 
-        <section class="page-content">
+        <section class="section">
             <div class="container">
-                <div class="stats-row">
-                    <div class="stat">
-                        <div class="stat-num">2</div>
-                        <div class="stat-label">已发表</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-num">3</div>
-                        <div class="stat-label">审稿中</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-num">3</div>
-                        <div class="stat-label">会议汇报</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-num">1</div>
-                        <div class="stat-label">进行中</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-num">1</div>
-                        <div class="stat-label">上报信息</div>
-                    </div>
+                <div class="filters" aria-label="成果筛选">
+                    <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">全部成果</button>
+                    <button class="filter-btn" type="button" data-filter="journal" aria-pressed="false">已发表论文</button>
+                    <button class="filter-btn" type="button" data-filter="policy" aria-pressed="false">政策研究</button>
+                    <button class="filter-btn" type="button" data-filter="working" aria-pressed="false">会议／工作论文</button>
                 </div>
 
-                <div class="filters">
-                    <button class="filter-btn active" data-filter="all">全部</button>
-                    <button class="filter-btn" data-filter="journal">已发表</button>
-                    <button class="filter-btn" data-filter="working">审稿中</button>
-                    <button class="filter-btn" data-filter="conference">会议汇报</button>
-                    <button class="filter-btn" data-filter="ongoing">进行中</button>
-                    <button class="filter-btn" data-filter="report">上报信息</button>
-                </div>
+                <section class="collection-group" aria-labelledby="journals-title">
+                    <h2 class="group-title" id="journals-title">已发表论文</h2>
+                    <div class="pub-list">
+                        <article class="pub-item" data-type="journal">
+                            <div>
+                                <h3 class="pub-title">人与 AI 协同背景下企业二元创新倾向的前因研究——基于 TOE 框架的组态分析</h3>
+                                <p class="pub-authors">洪志生，<strong>洪铭锋</strong>，郑文江 *</p>
+                                <p class="pub-venue">《东北财经大学学报》，2025（3）：14-29</p>
+                            </div>
+                            <div class="pub-side"><span class="status">已发表 · 2025</span><span class="tag">导师一作</span></div>
+                        </article>
+                        <article class="pub-item" data-type="journal">
+                            <div>
+                                <h3 class="pub-title">面向数字企业的知识管理</h3>
+                                <p class="pub-authors">洪志生，阳镇，<strong>洪铭锋 *</strong></p>
+                                <p class="pub-venue">《清华管理评论》，2024（11）：81-89</p>
+                            </div>
+                            <div class="pub-side"><span class="status">已发表 · 2024</span><span class="tag">通讯作者</span></div>
+                        </article>
+                    </div>
+                </section>
 
-                <div class="pub-list">
-                    <h2 class="year-title">期刊论文</h2>
+                <section class="collection-group" aria-labelledby="policy-title">
+                    <h2 class="group-title" id="policy-title">上报信息与政策建议</h2>
+                    <div class="pub-list">
+                        <article class="pub-item" data-type="policy">
+                            <div>
+                                <h3 class="pub-title">新一轮科技革命和产业变革趋势及对我国农业农村发展影响研究</h3>
+                                <p class="pub-authors">洪志生，<strong>洪铭锋</strong>，孙文华，孙颖</p>
+                                <p class="pub-venue">刊登于农业农村部内部刊物《乡村振兴文稿》，2025</p>
+                            </div>
+                            <div class="pub-side"><span class="status status-award">获部长批示</span><span class="tag">导师一作</span></div>
+                        </article>
+                        <article class="pub-item" data-type="policy">
+                            <div>
+                                <h3 class="pub-title">我国物联网发展情况、存在的问题困难及对策建议</h3>
+                                <p class="pub-authors">洪志生，<strong>洪铭锋</strong>，周城雄</p>
+                                <p class="pub-venue">政策建议，2026</p>
+                            </div>
+                            <div class="pub-side"><span class="status">政策研究</span><span class="tag">导师一作</span></div>
+                        </article>
+                    </div>
+                </section>
 
-                    <article class="pub-item" data-type="journal">
-                        <div class="pub-title">人与AI协同背景下企业二元创新倾向的前因研究——基于TOE框架的组态分析</div>
-                        <div class="pub-authors">洪志生, <strong>洪铭锋</strong>, 郑文江*</div>
-                        <div class="pub-venue">东北财经大学学报, 2025, (03): 14-29</div>
-                        <div class="pub-tags">
-                            <span class="tag">期刊论文</span>
-                            <span class="tag">学生二作</span>
-                            <span class="tag">TOE框架</span>
-                            <span class="tag">组态分析</span>
-                        </div>
-                        <div class="pub-abstract">
-                            <p>探讨人与AI协同背景下企业二元创新倾向的驱动因素，基于TOE（技术-组织-环境）框架进行组态分析。</p>
-                        </div>
-                        <div class="pub-links">
-                            <a href="https://doi.org/10.19653/j.cnki.dbcjdxxb.2025.03.002" target="_blank">DOI</a>
-                        </div>
-                    </article>
-
-                    <article class="pub-item" data-type="journal">
-                        <div class="pub-title">面向数字企业的知识管理</div>
-                        <div class="pub-authors">洪志生, 阳镇, <strong>洪铭锋*</strong></div>
-                        <div class="pub-venue">清华管理评论, 2024, (11): 81-89</div>
-                        <div class="pub-tags">
-                            <span class="tag">通讯作者</span>
-                            <span class="tag">知识管理</span>
-                            <span class="tag">数字化转型</span>
-                        </div>
-                        <div class="pub-abstract">
-                            <p>探讨数字化时代企业知识管理的新特征、新挑战和新方法。</p>
-                        </div>
-                    </article>
-
-                    <h2 class="year-title">审稿中</h2>
-
-                    <article class="pub-item" data-type="working">
-                        <div class="pub-tags">
-                            <span class="tag accent">最佳论文奖</span>
-                        </div>
-                        <div class="pub-title">From Stars to the Galaxy: A System Dynamics Approach to Open-Source Community Governance</div>
-                        <div class="pub-authors"><strong>Mingfeng Hong</strong>, Zhisheng Hong*, Zixiang Wei</div>
-                        <div class="pub-venue">Submitted to Technological Forecasting and Social Change</div>
-                        <div class="pub-tags">
-                            <span class="tag">开源治理</span>
-                            <span class="tag">系统动力学</span>
-                        </div>
-                        <div class="pub-abstract">
-                            <p>Using system dynamics modeling to analyze the governance mechanisms in open-source communities and their evolution from star projects to galaxy ecosystems.</p>
-                        </div>
-                    </article>
-
-                    <article class="pub-item" data-type="working">
-                        <div class="pub-title">在位者的自我颠覆：传统装备制造企业如何实现颠覆式创新</div>
-                        <div class="pub-authors">韩亮, 雷辉, <strong>洪铭锋</strong>, 洪志生*</div>
-                        <div class="pub-venue">投稿至 科技进步与对策 (外审阶段)</div>
-                        <div class="pub-tags">
-                            <span class="tag">颠覆式创新</span>
-                            <span class="tag">案例研究</span>
-                        </div>
-                    </article>
-
-                    <article class="pub-item" data-type="working">
-                        <div class="pub-title">Shaping the Satisfaction Journey: The Role of Dynamic Will and Should Expectations Across On-Premise Service Stages</div>
-                        <div class="pub-authors">Zhisheng Hong, <strong>Mingfeng Hong</strong>, Zhen Wang, Jiazhen Huo*</div>
-                        <div class="pub-venue">Submitted to Journal of Service Marketing</div>
-                        <div class="pub-tags">
-                            <span class="tag">服务营销</span>
-                            <span class="tag">顾客满意度</span>
-                        </div>
-                    </article>
-
-                    <h2 class="year-title">会议汇报</h2>
-
-                    <article class="pub-item" data-type="conference">
-                        <div class="pub-title">Releasing the Crown Jewels? Unveiling the Paradox of LLM Open-source Strategy via LLM-Assisted Grounded Theory</div>
-                        <div class="pub-authors"><strong>Mingfeng Hong</strong>, Zhisheng Hong, Pengbo Liu</div>
-                        <div class="pub-venue">Accepted by CNAIS 2025 (Oral Presentation)</div>
-                        <div class="pub-tags">
-                            <span class="tag">大语言模型</span>
-                            <span class="tag">开源策略</span>
-                            <span class="tag">扎根理论</span>
-                        </div>
-                    </article>
-
-                    <article class="pub-item" data-type="conference">
-                        <div class="pub-tags">
-                            <span class="tag accent">优秀论文奖</span>
-                        </div>
-                        <div class="pub-title">区域创新系统中的多主体协同机制研究——基于合肥市的系统动力学仿真</div>
-                        <div class="pub-authors">孙颖, <strong>洪铭锋*</strong>, 洪志生</div>
-                        <div class="pub-venue">第十六届（2025）中国创新与企业成长学术年会</div>
-                        <div class="pub-tags">
-                            <span class="tag">区域创新系统</span>
-                            <span class="tag">系统动力学</span>
-                        </div>
-                    </article>
-
-                    <article class="pub-item" data-type="conference">
-                        <div class="pub-title">能力还是热情？品牌拟人化形象类型对消费者分享意愿的影响</div>
-                        <div class="pub-authors"><strong>洪铭锋</strong>, 洪志生*</div>
-                        <div class="pub-venue">第8届营销科学与创新国际高峰论坛</div>
-                        <div class="pub-tags">
-                            <span class="tag">品牌拟人化</span>
-                            <span class="tag">消费者行为</span>
-                        </div>
-                    </article>
-
-                    <h2 class="year-title">进行中</h2>
-
-                    <article class="pub-item" data-type="ongoing">
-                        <div class="pub-title">Performativity of Openness: How Narratives of Anti-Monopoly and Democratization Reorganize Attention and Discursive Authority</div>
-                        <div class="pub-authors"><strong>Mingfeng Hong</strong>, Zhisheng Hong*</div>
-                        <div class="pub-venue">Work in Progress (计算传播方向博士研究计划)</div>
-                        <div class="pub-tags">
-                            <span class="tag">制度创业</span>
-                            <span class="tag">述行性理论</span>
-                            <span class="tag">计算文本分析</span>
-                        </div>
-                        <div class="pub-abstract">
-                            <p><strong>研究问题：</strong>挑战者企业如何通过"述行性"构建"开放理论"，将AI领域的合法性标准从"模型能力"重塑为"开放程度"？</p>
-                            <p><strong>理论框架：</strong>制度创业 x 经济社会学的述行性理论 x 注意力与社会信号理论</p>
-                            <p><strong>研究方法：</strong>混合方法设计，融合计算文本分析、准实验因果推断（DID/RDD）和动态网络分析</p>
-                        </div>
-                    </article>
-
-                    <h2 class="year-title">上报信息</h2>
-
-                    <article class="pub-item" data-type="report">
-                        <div class="pub-tags">
-                            <span class="tag accent">部长批示</span>
-                        </div>
-                        <div class="pub-title">抢抓新一轮科技革命机遇推进"十五五"农业高质量发展</div>
-                        <div class="pub-authors">洪志生, <strong>洪铭锋</strong>, 孙文华, 孙颖</div>
-                        <div class="pub-venue">乡村振兴文稿（农业农村部内部刊物）</div>
-                        <div class="pub-tags">
-                            <span class="tag">政策建议</span>
-                            <span class="tag">农业发展</span>
-                        </div>
-                    </article>
-                </div>
+                <section class="collection-group" aria-labelledby="working-title">
+                    <h2 class="group-title" id="working-title">会议论文与工作论文</h2>
+                    <div class="pub-list">
+                        <article class="pub-item" data-type="working">
+                            <div>
+                                <h3 class="pub-title">From Stars to the Galaxy: Polycentric Governance, Digital Labor Division and Social Signaling as an Organizational Proxy in an Open-Source AI Ecosystem</h3>
+                                <p class="pub-authors"><strong>Mingfeng Hong</strong>, Zhisheng Hong *, Zixiang Wei</p>
+                                <p class="pub-venue">Technological Forecasting and Social Change · Revise &amp; Resubmit (Major Revision) 已修回</p>
+                                <p class="pub-note">2025 中国技术未来分析论坛 TFSC Workshop；第九届清华大学公共管理青年学者论坛</p>
+                            </div>
+                            <div class="pub-side"><span class="status status-award">Best Paper · 前 1%</span><span class="tag">一作</span></div>
+                        </article>
+                        <article class="pub-item" data-type="working">
+                            <div>
+                                <h3 class="pub-title">Releasing the Crown Jewels? Unveiling the Paradox of LLM Open-Source Strategy via LLM-Assisted Grounded Theory</h3>
+                                <p class="pub-authors"><strong>Mingfeng Hong</strong>, Zhisheng Hong *, Pengbo Liu</p>
+                                <p class="pub-venue">Preparing for submission to Information Systems Research (Special Issue)</p>
+                                <p class="pub-note">中国系统工程学会信息系统工程专业委员会 2025 学术年会</p>
+                            </div>
+                            <div class="pub-side"><span class="status status-review">准备投稿</span><span class="tag">一作</span></div>
+                        </article>
+                        <article class="pub-item" data-type="working">
+                            <div>
+                                <h3 class="pub-title">委托—代理视角下的智能体风险识别与运行时治理——基于 OpenClaw 开源社区的分析</h3>
+                                <p class="pub-authors">洪志生，<strong>洪铭锋</strong></p>
+                                <p class="pub-venue">Preparing for submission to《公共管理评论》</p>
+                                <p class="pub-note">2026 年中国科学院大学“智能经济新形态与科研新范式”经济学暑期学校</p>
+                            </div>
+                            <div class="pub-side"><span class="status status-review">准备投稿</span><span class="tag">导师一作</span></div>
+                        </article>
+                        <article class="pub-item" data-type="working">
+                            <div>
+                                <h3 class="pub-title">开放协作能否塑造数字技术生态韧性——来自全球开源贡献网络的证据</h3>
+                                <p class="pub-authors">洪志生，<strong>洪铭锋</strong></p>
+                                <p class="pub-venue">Preparing for submission to《科学学研究》</p>
+                                <p class="pub-note">中国“双法”研究会网络科学分会第七届学术年会</p>
+                            </div>
+                            <div class="pub-side"><span class="status status-review">准备投稿</span><span class="tag">导师一作</span></div>
+                        </article>
+                        <article class="pub-item" data-type="working">
+                            <div>
+                                <h3 class="pub-title">需求侧刚性约束如何驱动在位装备制造企业架构创新——中车株洲所智轨的纵向案例研究</h3>
+                                <p class="pub-authors">韩亮，雷辉，<strong>洪铭锋</strong>，洪志生 *</p>
+                                <p class="pub-venue">《科技进步与对策》外审</p>
+                            </div>
+                            <div class="pub-side"><span class="status status-review">外审</span><span class="tag">案例研究</span></div>
+                        </article>
+                        <article class="pub-item" data-type="working">
+                            <div>
+                                <h3 class="pub-title">区域创新系统中的多主体协同机制研究——基于合肥市的系统动力学仿真</h3>
+                                <p class="pub-authors">孙颖，<strong>洪铭锋</strong>，洪志生 *</p>
+                                <p class="pub-venue">2025 中国创新与企业成长学术年会</p>
+                            </div>
+                            <div class="pub-side"><span class="status status-award">优秀论文</span><span class="tag">系统动力学</span></div>
+                        </article>
+                    </div>
+                </section>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>2025 洪铭锋. Le vent se lève, il faut tenter de vivre.</p>
+    <footer class="site-footer">
+        <div class="container footer-shell">
+            <div><p class="footer-name">洪铭锋 · Mingfeng Hong</p><p class="footer-note">研究成果与投稿状态更新于 2026 年 7 月简历。</p></div>
+            <div class="footer-links"><a href="files/Hong_Mingfeng_CV.pdf" download>下载简历</a><a href="https://orcid.org/0009-0009-1199-4702" target="_blank" rel="noopener noreferrer">ORCID</a><a href="mailto:hongmingfeng@outlook.com">Email</a></div>
         </div>
     </footer>
-
     <script src="scripts/main.js"></script>
     <script src="scripts/publications.js"></script>
 </body>

@@ -3,144 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作品集 - 洪铭锋 Mingfeng Hong</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <meta name="description" content="洪铭锋参与的理论专著、开源科研工具与计算社会科学社区实践。">
+    <meta property="og:title" content="开源与社区 · 洪铭锋 Mingfeng Hong">
+    <meta property="og:description" content="理论专著、开源科研工具与计算社会科学社区实践。">
+    <meta property="og:image" content="https://mingfenghong.github.io/images/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>开源与社区 · 洪铭锋 Mingfeng Hong</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <a href="index.html">HM</a>
-            </div>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <header class="site-header">
+        <nav class="nav-shell container" aria-label="主导航">
+            <a class="brand" href="index.html" aria-label="洪铭锋首页"><span class="brand-mark" aria-hidden="true">洪</span><strong>Mingfeng Hong</strong></a>
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="打开导航菜单"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link">首页</a></li>
-                <li><a href="publications.html" class="nav-link">出版物</a></li>
-                <li><a href="portfolio.html" class="nav-link active">作品集</a></li>
-                <li><a href="projects.html" class="nav-link">项目</a></li>
-                <li><a href="blog.html" class="nav-link">博客</a></li>
+                <li><a class="nav-link" href="index.html">首页</a></li>
+                <li><a class="nav-link" href="publications.html">研究成果</a></li>
+                <li><a class="nav-link" href="projects.html">研究项目</a></li>
+                <li><a class="nav-link" href="internships.html">实习经历</a></li>
+                <li><a class="nav-link active" aria-current="page" href="portfolio.html">开源与社区</a></li>
+                <li><a class="nav-link" href="blog.html">研究笔记</a></li>
             </ul>
-            <button class="nav-toggle" id="nav-toggle" aria-label="菜单">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
         </nav>
     </header>
 
-    <main class="main">
-        <section class="page-header">
+    <main class="main" id="main-content">
+        <section class="page-hero">
             <div class="container">
-                <h1 class="page-title">作品集</h1>
-                <p class="page-subtitle">营销策划、商业分析、创新创业项目</p>
+                <div class="page-hero-panel purple">
+                    <p class="eyebrow">Open source &amp; community</p>
+                    <h1 class="page-title">开源与社区</h1>
+                    <p class="page-lede">把研究方法做成可复用的工具与工作流，在 GitHub 与 ModelScope 社区持续参与开放协作。</p>
+                    <div class="quick-stats" aria-label="实践统计"><span class="quick-stat">3 个重点开源项目</span><span class="quick-stat">PaperSeek 200+ Stars</span><span class="quick-stat">ModelScope 社区共建者</span></div>
+                    <span class="page-hero-number" aria-hidden="true">OS</span>
+                </div>
             </div>
         </section>
 
-        <section class="page-content">
+        <section class="section" aria-labelledby="open-source-title">
             <div class="container">
-                <div class="filters">
-                    <button class="filter-btn active" data-filter="all">全部</button>
-                    <button class="filter-btn" data-filter="marketing">营销策划</button>
-                    <button class="filter-btn" data-filter="analysis">商业分析</button>
-                    <button class="filter-btn" data-filter="innovation">创新创业</button>
+                <div class="section-heading">
+                    <div><p class="section-kicker">Build in public</p><h2 class="section-title" id="open-source-title">开源科研项目</h2></div>
+                    <p class="section-note">Stars 数量为简历记录时的社区数据。</p>
                 </div>
+                <div class="repo-grid">
+                    <a class="repo-card" href="https://github.com/modelscope/Awesome-Vibe-Research" target="_blank" rel="noopener noreferrer">
+                        <p class="repo-name">modelscope/Awesome-Vibe-Research</p>
+                        <h3>开源科研工具合集</h3>
+                        <p>作为贡献者参与汇集 AI 辅助科研的工作流、工具与实践资源。</p>
+                        <span class="repo-stat">300+ Stars ↗</span>
+                    </a>
+                    <a class="repo-card" href="https://github.com/MingfengHong/paperseek" target="_blank" rel="noopener noreferrer">
+                        <p class="repo-name">MingfengHong/paperseek</p>
+                        <h3>PaperSeek</h3>
+                        <p>开源智能文献检索引擎，把检索、筛选与研究工作流连接起来。</p>
+                        <span class="repo-stat">200+ Stars ↗</span>
+                    </a>
+                    <a class="repo-card" href="https://github.com/MingfengHong/css-research-skills" target="_blank" rel="noopener noreferrer">
+                        <p class="repo-name">MingfengHong/css-research-skills</p>
+                        <h3>社会科学研究 Skills</h3>
+                        <p>面向计算社会科学研究流程的可复用 Skills 与方法实践。</p>
+                        <span class="repo-stat">30+ Stars ↗</span>
+                    </a>
+                    <a class="repo-card" href="https://github.com/MingfengHong" target="_blank" rel="noopener noreferrer">
+                        <p class="repo-name">github.com/MingfengHong</p>
+                        <h3>更多代码与研究工具</h3>
+                        <p>查看正在维护的仓库、贡献记录与最新开源实践。</p>
+                        <span class="repo-stat">GitHub Profile ↗</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-                <div class="work-list">
-                    <article class="work-item" data-category="marketing">
-                        <div class="work-thumb">Marketing</div>
-                        <div class="work-info">
-                            <h3>如何俘获年轻人的心——喜茶网络品牌传播报告</h3>
-                            <p class="work-desc">在后疫情时代消费复苏的背景下，深入分析茶饮品牌"喜茶"的网络营销策略，探讨其如何成功吸引占新式茶饮消费者近八成的年轻群体。报告剖析了品牌跨界联名、社交媒体用户参与、私域流量运营三大核心策略。</p>
-                            <div class="work-meta">
-                                <span>品牌营销</span>
-                                <span>社交媒体</span>
-                                <span>私域运营</span>
-                            </div>
-                            <div class="work-highlights">
-                                <p><strong>核心发现：</strong>喜茶与超过120个品牌联名合作，"#喜茶logo全身图#"获得4.1亿阅读量</p>
-                                <p><strong>商业价值：</strong>喜茶GO小程序会员超6300万，瓶装饮料618、双十一均获天猫茶饮料品类销售额第一</p>
-                            </div>
-                            <div class="work-actions">
-                                <a href="files/portfolio/xicha-report.pdf" class="btn btn-small" download>下载报告</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="work-item" data-category="innovation">
-                        <div class="work-thumb">Innovation</div>
-                        <div class="work-info">
-                            <h3>区块链赋能文创IP授权交易</h3>
-                            <p class="work-desc">基于区块链技术的文创IP授权交易平台，通过智能合约和NFT技术，解决传统IP授权市场中介费高、信任缺失、知识产权保护不足等问题。特别关注为民间艺术等传统版权法未能充分保护的文化IP建立激励机制。</p>
-                            <div class="work-meta">
-                                <span>区块链</span>
-                                <span>智能合约</span>
-                                <span>NFT</span>
-                            </div>
-                            <div class="work-highlights">
-                                <p><strong>获奖荣誉：</strong>互联网+大赛陕西赛区银奖、微软创新杯区域复赛优秀奖、电商三创赛陕西省一等奖</p>
-                                <p><strong>商业前景：</strong>预计2024年合作版权150个，终端用户1500人，预期年营收85万元</p>
-                            </div>
-                            <div class="work-actions">
-                                <a href="files/portfolio/blockchain-project-report.pdf" class="btn btn-small" download>结题报告</a>
-                                <a href="files/portfolio/blockchain-project-demo.pdf" class="btn btn-small" target="_blank">演示</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="work-item" data-category="analysis">
-                        <div class="work-thumb">Analysis</div>
-                        <div class="work-info">
-                            <h3>消费下行背景下，文创新消费的未来——泡泡玛特调研报告</h3>
-                            <p class="work-desc">针对泡泡玛特2022年上半年首次净利润下滑现象的深度分析，探讨外部经营环境（新冠疫情影响、非必需品消费萎缩）和内部优缺点（单一产品线、线下零售布局集中），运用PEST、STP、SWOT等商业分析框架，提出战略性解决方案。</p>
-                            <div class="work-meta">
-                                <span>商业分析</span>
-                                <span>SWOT分析</span>
-                                <span>消费研究</span>
-                            </div>
-                            <div class="work-highlights">
-                                <p><strong>核心洞察：</strong>过度依赖少数头部IP，供应链脆弱，库存水平攀升</p>
-                                <p><strong>战略建议：</strong>效仿迪士尼模式丰富IP内容，拓展海外业务，投资自建工厂提升品控</p>
-                            </div>
-                            <div class="work-actions">
-                                <a href="files/portfolio/popmart-analysis.pdf" class="btn btn-small" download>下载报告</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="work-item" data-category="marketing">
-                        <div class="work-thumb">Marketing</div>
-                        <div class="work-info">
-                            <h3>亚历山大逃跑计划——Microsoft 365 & Surface 整合营销方案</h3>
-                            <p class="work-desc">针对Microsoft 365与Surface在中国市场表现不佳的问题，提出整合营销传播(IMC)策略，将产品核心优势（高效、便携、全能）与目标受众减轻工作和学习压力的核心需求相结合。基于1476份问卷调研，精准定位大学生和白领群体。</p>
-                            <div class="work-meta">
-                                <span>整合营销</span>
-                                <span>创意策划</span>
-                                <span>KOL营销</span>
-                            </div>
-                            <div class="work-highlights">
-                                <p><strong>创意核心：</strong>"亚历山大逃跑计划"，将产品定位为高效轻松生活的工具</p>
-                                <p><strong>预期效果：</strong>全网曝光1.2亿次，Surface新客户5万，Microsoft 365新客户64万</p>
-                            </div>
-                            <div class="work-actions">
-                                <a href="files/portfolio/microsoft-marketing-plan.pdf" class="btn btn-small" download>策划案</a>
-                                <a href="files/portfolio/microsoft-marketing-demo.pdf" class="btn btn-small" target="_blank">演示</a>
-                            </div>
-                        </div>
-                    </article>
+        <section class="section section-yellow" aria-labelledby="skills-title">
+            <div class="container">
+                <div class="section-heading"><div><p class="section-kicker">Toolkit</p><h2 class="section-title" id="skills-title">计算与语言能力</h2></div><p class="section-note">语言水平：CET-6 503。</p></div>
+                <div class="skill-cloud" aria-label="编程技能">
+                    <span class="skill-chip">C</span><span class="skill-chip">Python</span><span class="skill-chip">R</span><span class="skill-chip">LaTeX</span><span class="skill-chip">SQL</span><span class="skill-chip">Cypher</span>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>2025 洪铭锋. Le vent se lève, il faut tenter de vivre.</p>
+    <footer class="site-footer">
+        <div class="container footer-shell">
+            <div><p class="footer-name">洪铭锋 · Mingfeng Hong</p><p class="footer-note">Research in public, tools in the open.</p></div>
+            <div class="footer-links"><a href="https://github.com/MingfengHong" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:hongmingfeng@outlook.com">Email</a></div>
         </div>
     </footer>
-
     <script src="scripts/main.js"></script>
-    <script src="scripts/portfolio.js"></script>
 </body>
 </html>

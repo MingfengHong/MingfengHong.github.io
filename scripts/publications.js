@@ -1,34 +1,27 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const pubItems = document.querySelectorAll('.pub-item');
-    const yearTitles = document.querySelectorAll('.year-title');
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = [...document.querySelectorAll('.filter-btn[data-filter]')];
+    const items = [...document.querySelectorAll('.pub-item[data-type]')];
+    const groups = [...document.querySelectorAll('.collection-group')];
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const filter = this.getAttribute('data-filter');
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
+    if (!buttons.length || !items.length) return;
 
-            pubItems.forEach(item => {
-                const itemType = item.getAttribute('data-type');
-                item.style.display = (filter === 'all' || filter === itemType) ? 'block' : 'none';
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const filter = button.dataset.filter;
+
+            buttons.forEach((candidate) => {
+                const active = candidate === button;
+                candidate.classList.toggle('active', active);
+                candidate.setAttribute('aria-pressed', String(active));
             });
 
-            updateYearTitles();
+            items.forEach((item) => {
+                item.hidden = filter !== 'all' && item.dataset.type !== filter;
+            });
+
+            groups.forEach((group) => {
+                group.hidden = !group.querySelector('.pub-item:not([hidden])');
+            });
         });
     });
-
-    function updateYearTitles() {
-        yearTitles.forEach(title => {
-            let next = title.nextElementSibling;
-            let hasVisible = false;
-            while (next && !next.classList.contains('year-title')) {
-                if (next.classList.contains('pub-item') && next.style.display !== 'none') {
-                    hasVisible = true;
-                }
-                next = next.nextElementSibling;
-            }
-            title.style.display = hasVisible ? 'block' : 'none';
-        });
-    }
 });

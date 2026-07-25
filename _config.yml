@@ -2,9 +2,9 @@
 
 # 网站基本信息
 title: "洪铭锋 (Mingfeng Hong) - 学术主页"
-description: "中国科学院大学硕士研究生 - 社会计算、开源创新、社会技术系统研究"
+description: "中国科学院大学管理科学与工程硕士研究生，关注科技政策与创新管理、开源创新与开源社区治理"
 author: "洪铭锋 (Mingfeng Hong)"
-email: "hongmingfeng24@mails.ucas.ac.cn"
+email: "hongmingfeng@outlook.com"
 
 # GitHub Pages 设置
 baseurl: "" # 如果部署在子目录，请填写子目录名称，如 "/repository-name"

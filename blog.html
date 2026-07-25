@@ -3,76 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>博客 - 洪铭锋 Mingfeng Hong</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <meta name="description" content="洪铭锋在小红书、魔搭社区、知乎与公众号发布的社区作品精选。">
+    <meta property="og:title" content="社区作品精选 · 洪铭锋 Mingfeng Hong">
+    <meta property="og:description" content="计算社会科学、AI 辅助科研与创新理论相关内容精选。">
+    <meta property="og:image" content="https://mingfenghong.github.io/images/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>社区作品精选 · 洪铭锋 Mingfeng Hong</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <a href="index.html">HM</a>
-            </div>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <header class="site-header">
+        <nav class="nav-shell container" aria-label="主导航">
+            <a class="brand" href="index.html" aria-label="洪铭锋首页"><span class="brand-mark" aria-hidden="true">洪</span><strong>Mingfeng Hong</strong></a>
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="打开导航菜单"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link">首页</a></li>
-                <li><a href="publications.html" class="nav-link">出版物</a></li>
-                <li><a href="portfolio.html" class="nav-link">作品集</a></li>
-                <li><a href="projects.html" class="nav-link">项目</a></li>
-                <li><a href="blog.html" class="nav-link active">博客</a></li>
+                <li><a class="nav-link" href="index.html">首页</a></li>
+                <li><a class="nav-link" href="publications.html">研究成果</a></li>
+                <li><a class="nav-link" href="projects.html">研究项目</a></li>
+                <li><a class="nav-link" href="internships.html">实习经历</a></li>
+                <li><a class="nav-link" href="portfolio.html">开源与社区</a></li>
+                <li><a class="nav-link active" aria-current="page" href="blog.html">研究笔记</a></li>
             </ul>
-            <button class="nav-toggle" id="nav-toggle" aria-label="菜单">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
         </nav>
     </header>
 
-    <main class="main">
-        <section class="page-header">
+    <main class="main" id="main-content">
+        <section class="page-hero">
             <div class="container">
-                <h1 class="page-title">学术博客</h1>
-                <p class="page-subtitle">理论分享、技术探索、学术思考</p>
+                <div class="page-hero-panel">
+                    <p class="eyebrow">Selected community works</p>
+                    <h1 class="page-title">社区作品精选</h1>
+                    <p class="page-lede">集中呈现在不同平台发布的计算社会科学、AI 辅助科研、创新理论与方法内容，点击卡片可直接阅读原文。</p>
+                    <span class="page-hero-number" aria-hidden="true">13</span>
+                </div>
             </div>
         </section>
 
-        <section class="page-content">
+        <section class="section works-section" aria-labelledby="xiaohongshu-title">
             <div class="container">
-                <div class="filters" id="category-nav">
+                <div class="section-heading">
+                    <div><p class="section-kicker">Xiaohongshu</p><h2 class="section-title" id="xiaohongshu-title">小红书精选</h2></div>
+                    <a class="button" href="https://www.xiaohongshu.com/user/profile/5f58cb96000000000101ebdc" target="_blank" rel="noopener noreferrer">更多小红书内容 <span aria-hidden="true">↗</span></a>
                 </div>
+                <div class="works-grid">
+                    <a class="work-link-card" href="http://xhslink.cn/o/E0CfWhloGY" target="_blank" rel="noopener noreferrer"><span class="work-platform">小红书 · 运筹学</span><h3>圣诞老人的物流管理</h3><p>平安夜运筹学：圣诞老人的旅行商问题与启发式算法</p><span class="work-arrow" aria-hidden="true">↗</span></a>
+                    <a class="work-link-card" href="http://xhslink.cn/o/7v4pyHT9Rez" target="_blank" rel="noopener noreferrer"><span class="work-platform">小红书 · AI 与社会</span><h3>爱只是一场梯度下降吗</h3><p>这届学术圈为什么开始用 AI 自比亲密关系中的自己？</p><span class="work-arrow" aria-hidden="true">↗</span></a>
+                    <a class="work-link-card" href="http://xhslink.cn/o/8fgGnYOZj3T" target="_blank" rel="noopener noreferrer"><span class="work-platform">小红书 · 文本分析</span><h3>社交媒体文本数据预处理</h3><p>如何在处理数据时保留 emoji 与 hashtag 的非语言特征</p><span class="work-arrow" aria-hidden="true">↗</span></a>
+                    <a class="work-link-card" href="http://xhslink.cn/o/8IXFdzGjidU" target="_blank" rel="noopener noreferrer"><span class="work-platform">小红书 · ABM</span><h3>为什么模拟社会是可能的</h3><p>从谢林实验讲起，聊聊涌现、仿真与 ABM 建模</p><span class="work-arrow" aria-hidden="true">↗</span></a>
+                    <a class="work-link-card" href="http://xhslink.cn/o/6CBKXeMIaeC" target="_blank" rel="noopener noreferrer"><span class="work-platform">小红书 · 质性研究</span><h3>质性分析工具 NVivo 入门指南</h3><p>一个强大的质性数据分析软件</p><span class="work-arrow" aria-hidden="true">↗</span></a>
+                    <a class="work-link-card" href="http://xhslink.cn/o/dFKfT2vFNB" target="_blank" rel="noopener noreferrer"><span class="work-platform">小红书 · 随笔</span><h3>2026，愿你拥有马尔可夫性质的勇气</h3><p>写在除夕夜：汤圆的 2026 新年寄语</p><span class="work-arrow" aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
 
-                <div class="blog-list" id="blog-posts">
-                    <div class="blog-row">
-                        <div class="blog-date">加载中...</div>
-                    </div>
+        <section class="section section-soft works-section" aria-labelledby="modelscope-title">
+            <div class="container">
+                <div class="section-heading">
+                    <div><p class="section-kicker">ModelScope</p><h2 class="section-title" id="modelscope-title">魔搭精选</h2></div>
+                    <a class="button" href="https://modelscope.cn/profile/HongMingfeng" target="_blank" rel="noopener noreferrer">更多魔搭内容 <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="works-grid works-grid-three">
+                    <a class="work-link-card" href="https://modelscope.cn/learn/434408" target="_blank" rel="noopener noreferrer"><span class="work-platform">魔搭 · 开源工作流</span><h3>我开源了自己的文献检索工作流：PaperSeek</h3><span class="work-arrow" aria-hidden="true">↗</span></a>
+                    <a class="work-link-card" href="https://modelscope.cn/learn/6806" target="_blank" rel="noopener noreferrer"><span class="work-platform">魔搭 · Claude Skill</span><h3>手把手教你构建计算社会科学科研工作流：从零打造 Claude Skill 完整指南</h3><span class="work-arrow" aria-hidden="true">↗</span></a>
+                    <a class="work-link-card" href="https://modelscope.cn/learn/434892" target="_blank" rel="noopener noreferrer"><span class="work-platform">魔搭 · BERT</span><h3>BERT for Computational Social Scientists：从文本表示到社会科学测量</h3><span class="work-arrow" aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section works-section" aria-labelledby="salon-title">
+            <div class="container">
+                <div class="section-heading"><div><p class="section-kicker">Academic salon</p><h2 class="section-title" id="salon-title">AI 学术沙龙活动回顾</h2></div></div>
+                <a class="work-link-card work-link-wide" href="https://mp.weixin.qq.com/s/gUitaqe9pyHa3Vb4ARIrXQ" target="_blank" rel="noopener noreferrer"><span class="work-platform">活动回顾 · 公众号</span><h3>AI 学术沙龙：六个不同学科的人，怎么用 Agent 做科研</h3><p>跨学科研究者共同分享与 Agent 协作开展科研的实践经验。</p><span class="work-arrow" aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section class="section section-yellow works-section" aria-labelledby="zhihu-title">
+            <div class="container">
+                <div class="section-heading"><div><p class="section-kicker">Zhihu</p><h2 class="section-title" id="zhihu-title">知乎精选</h2></div></div>
+                <a class="work-link-card work-link-wide" href="https://www.zhihu.com/question/1961021088269033662/answer/1961573905031488400" target="_blank" rel="noopener noreferrer"><span class="work-platform">知乎 · 创新经济学</span><h3>2025 年诺贝尔经济学奖授予创新驱动型经济增长，技术进步如何帮助经济成长？</h3><span class="work-arrow" aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section class="section works-section" aria-labelledby="wechat-title">
+            <div class="container">
+                <div class="section-heading"><div><p class="section-kicker">WeChat essays</p><h2 class="section-title" id="wechat-title">公众号精选</h2></div></div>
+                <div class="works-grid">
+                    <a class="work-link-card" href="https://mp.weixin.qq.com/s/8cubXTGrkMvmxCjs9CiRcQ" target="_blank" rel="noopener noreferrer"><span class="work-platform">Management Science 论文解读</span><h3>技术追赶中的交换：微软以自研换开源，得到了什么？</h3><span class="work-arrow" aria-hidden="true">↗</span></a>
+                    <a class="work-link-card" href="https://mp.weixin.qq.com/s/psI6qTz5IPrXIAv_JOIQng" target="_blank" rel="noopener noreferrer"><span class="work-platform">MISQ 论文解读</span><h3>拥抱开放还是制造壁垒？竞争动态如何重塑软件企业的开源策略</h3><span class="work-arrow" aria-hidden="true">↗</span></a>
                 </div>
             </div>
         </section>
     </main>
 
-    <div id="article-modal" style="display: none;">
-        <div class="modal-overlay" onclick="closeArticle()"></div>
-        <div class="modal">
-            <div class="modal-inner">
-                <button class="modal-close" onclick="closeArticle()">&times;</button>
-                <article class="article" id="article-content">
-                </article>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <p>2025 洪铭锋. Le vent se lève, il faut tenter de vivre.</p>
+    <footer class="site-footer">
+        <div class="container footer-shell">
+            <div><p class="footer-name">洪铭锋 · Mingfeng Hong</p><p class="footer-note">计算社会科学 · AI 辅助科研 · 创新理论</p></div>
+            <div class="footer-links"><a href="https://modelscope.cn/profile/HongMingfeng" target="_blank" rel="noopener noreferrer">魔搭社区</a><a href="https://www.xiaohongshu.com/user/profile/5f58cb96000000000101ebdc" target="_blank" rel="noopener noreferrer">小红书</a></div>
         </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="scripts/main.js"></script>
-    <script src="scripts/blog-dynamic.js"></script>
 </body>
 </html>

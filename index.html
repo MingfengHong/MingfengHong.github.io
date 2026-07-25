@@ -1,227 +1,203 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="洪铭锋的个人学术主页，研究科技政策与创新管理、开源创新与开源社区治理。">
+    <meta name="author" content="洪铭锋 Mingfeng Hong">
+    <meta property="og:title" content="洪铭锋 Mingfeng Hong">
+    <meta property="og:description" content="科技政策、开源创新与开源社区治理研究者。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mingfenghong.github.io/">
+    <meta property="og:image" content="https://mingfenghong.github.io/images/og.png">
+    <meta name="twitter:card" content="summary_large_image">
     <title>洪铭锋 Mingfeng Hong</title>
-    <meta name="description" content="中国科学院大学硕士研究生，专注于社会计算、开源创新、社会技术系统研究。">
-    <meta name="author" content="洪铭锋">
-
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
-
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <a href="index.html">HM</a>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link active">首页</a></li>
-                <li class="nav-item"><a href="publications.html" class="nav-link">出版物</a></li>
-                <li class="nav-item"><a href="portfolio.html" class="nav-link">作品集</a></li>
-                <li class="nav-item"><a href="projects.html" class="nav-link">项目</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">博客</a></li>
-            </ul>
-            <button class="nav-toggle" id="nav-toggle" aria-label="菜单">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+    <header class="site-header">
+        <nav class="nav-shell container" aria-label="主导航">
+            <a class="brand" href="index.html" aria-label="洪铭锋首页">
+                <span class="brand-mark" aria-hidden="true">洪</span>
+                <strong>Mingfeng Hong</strong>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="打开导航菜单">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a class="nav-link active" aria-current="page" href="index.html">首页</a></li>
+                <li><a class="nav-link" href="publications.html">研究成果</a></li>
+                <li><a class="nav-link" href="projects.html">研究项目</a></li>
+                <li><a class="nav-link" href="internships.html">实习经历</a></li>
+                <li><a class="nav-link" href="portfolio.html">开源与社区</a></li>
+                <li><a class="nav-link" href="blog.html">研究笔记</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="main">
-        <!-- Hero -->
+    <main class="main" id="main-content">
         <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <p class="eyebrow">Researcher · Open Source · CSS</p>
+                    <h1 class="identity-title">洪铭锋<span>Mingfeng Hong</span></h1>
+                    <p class="hero-lede">现为中国科学院大学管理科学与工程硕士研究生，关注科技政策与创新管理、开源创新与开源战略，以及开源社区治理。</p>
+                    <div class="hero-meta" aria-label="研究关键词">
+                        <span class="mini-tag">开源 AI 生态</span>
+                        <span class="mini-tag">创新组织</span>
+                        <span class="mini-tag">计算社会科学</span>
+                    </div>
+                    <div class="actions">
+                        <a class="button button-primary" href="publications.html">查看研究成果 <span aria-hidden="true">↗</span></a>
+                        <a class="button" href="files/Hong_Mingfeng_CV.pdf" download>下载简历 <span aria-hidden="true">↓</span></a>
+                    </div>
+                    <div class="hero-socials" aria-label="联系与社区主页">
+                        <a class="social-button" href="mailto:hongmingfeng@outlook.com"><span aria-hidden="true">@</span> Email</a>
+                        <a class="social-button" href="https://github.com/MingfengHong" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">GH</span> GitHub</a>
+                        <a class="social-button" href="https://www.xiaohongshu.com/user/profile/5f58cb96000000000101ebdc" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">小</span> 小红书</a>
+                        <a class="social-button" href="https://modelscope.cn/profile/HongMingfeng" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">魔</span> 魔搭社区</a>
+                    </div>
+                </div>
+
+                <figure class="portrait-card">
+                    <span class="sticker sticker-top">开放研究 · 共享方法</span>
+                    <span class="sticker sticker-side">科技政策 × 开源创新</span>
+                    <div class="portrait-frame">
+                        <img src="images/profile.jpg" alt="洪铭锋的个人照片" width="960" height="1440">
+                    </div>
+                    <figcaption class="portrait-caption">
+                        <span>洪铭锋 · Mingfeng Hong</span>
+                        <span>Research · Open Source</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="section section-soft" aria-labelledby="numbers-title">
             <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="hero-name">洪铭锋</h1>
-                        <p class="hero-name-en">Mingfeng Hong</p>
-                        <p class="hero-meta">
-                            <span>硕士研究生</span>
-                            <span>中国科学院科技战略咨询研究院</span>
-                        </p>
-                        <div class="hero-description">
-                            <p>中国科学院大学管理科学与工程专业硕士在读。研究兴趣集中于社会计算、开源创新与社会技术系统。</p>
-                            <p>探索文本分析、机器学习与大语言模型在社会科学中的应用，致力于用计算方法连接理论与数据。期待与各领域的学者合作交流。</p>
-                        </div>
+                <div class="section-heading">
+                    <div>
+                        <p class="section-kicker">At a glance</p>
+                        <h2 class="section-title" id="numbers-title">核心成果概览</h2>
                     </div>
-                    <div class="hero-image">
-                        <img src="images/profile.jpg" alt="洪铭锋" class="profile-image">
-                        <p class="image-caption">Le vent se lève, il faut tenter de vivre.</p>
-                    </div>
+                    <p class="section-note">聚焦研究、写作与社区共建，用公开成果呈现正在推进的工作。</p>
+                </div>
+                <div class="stats-grid">
+                    <article class="stat-card"><span class="stat-number">2</span><p class="stat-label">篇已发表论文</p></article>
+                    <article class="stat-card"><span class="stat-number">6</span><p class="stat-label">篇会议论文／工作论文</p></article>
+                    <article class="stat-card"><span class="stat-number">4</span><p class="stat-label">部参与编写的理论专著与书稿</p></article>
+                    <article class="stat-card"><span class="stat-number">4</span><p class="stat-label">项参与的科研／政府委托项目</p></article>
                 </div>
             </div>
         </section>
 
-        <!-- Info -->
-        <section class="section">
+        <section class="section" aria-labelledby="focus-title">
             <div class="container">
-                <div class="info-grid">
-                    <div class="info-block">
-                        <h3>教育背景</h3>
-                        <p><strong>硕士</strong> — 管理科学与工程，2024–2027</p>
-                        <p>中国科学院大学 · 中国科学院科技战略咨询研究院</p>
-                        <p><strong>学士</strong> — 市场营销，2020–2024</p>
-                        <p>西安电子科技大学 · 专业排名 1/19</p>
+                <div class="section-heading">
+                    <div>
+                        <p class="section-kicker">Research focus</p>
+                        <h2 class="section-title" id="focus-title">我关心的问题</h2>
                     </div>
-                    <div class="info-block">
-                        <h3>联系方式</h3>
-                        <p>hongmingfeng24@mails.ucas.ac.cn</p>
-                        <p>北京市</p>
-                        <p><a href="https://orcid.org/0009-0009-1199-4702" target="_blank">ORCID</a></p>
-                        <p><a href="https://github.com/MingfengHong" target="_blank">GitHub</a></p>
-                    </div>
+                </div>
+                <div class="card-grid">
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">01</div>
+                        <h3>科技政策与创新管理</h3>
+                        <p>关注前沿技术演进、创新平台网络与科研组织方式，连接技术趋势研判、组织机制分析和政策研究。</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">02</div>
+                        <h3>开源创新与开源战略</h3>
+                        <p>研究大模型开放策略、数字公共品与开放式创新，讨论企业战略选择与生态价值创造之间的关系。</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon" aria-hidden="true">03</div>
+                        <h3>开源社区治理</h3>
+                        <p>从多中心治理、数字劳动分工与社会信号出发，理解社区协作、贡献网络和生态韧性的形成机制。</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Stats -->
-        <section class="section">
+        <section class="section section-yellow" aria-labelledby="current-title">
             <div class="container">
-                <h2 class="section-title">出版物与经历</h2>
-                <div class="cards-grid">
-                    <div class="card">
-                        <h3>研究成果</h3>
-                        <ul>
-                            <li>期刊论文 2 篇（1 篇一作）</li>
-                            <li>在投/工作论文 4 篇</li>
-                            <li>会议论文 2 篇，获 2 项优秀论文奖</li>
-                            <li>研究方向：社会计算、开源创新、社会技术系统</li>
-                        </ul>
-                        <a href="publications.html" class="card-link">查看所有出版物 &rarr;</a>
+                <div class="section-heading">
+                    <div>
+                        <p class="section-kicker">Current chapter</p>
+                        <h2 class="section-title" id="current-title">学习与研究经历</h2>
                     </div>
-                    <div class="card">
-                        <h3>获奖荣誉</h3>
-                        <ul>
-                            <li><strong>国家奖学金</strong>，2023</li>
-                            <li><strong>优秀毕业生标兵</strong>，西安电子科技大学</li>
-                            <li><strong>最佳论文奖</strong>，2025 中国技术未来分析论坛</li>
-                            <li><strong>全国季军</strong>，微软 Youth-Storm 商业分析挑战赛</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h3>研究技能</h3>
-                        <ul>
-                            <li><strong>语言</strong>：Python、R、SQL、Cypher</li>
-                            <li><strong>方法</strong>：文本分析、机器学习、系统动力学</li>
-                            <li><strong>工具</strong>：Stata、Neo4j、Git、Docker</li>
-                            <li><strong>课程</strong>：预测理论、统计与机器学习、复杂系统仿真</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h3>项目与实践</h3>
-                        <ul>
-                            <li><strong>国家级大创（主持）</strong>：基于知识图谱的民营经济政策文本分析系统</li>
-                            <li><strong>国家级大创（参与）</strong>：开源创新生态系统演化机制研究</li>
-                            <li><strong>艾瑞数智</strong>：咨询实习生</li>
-                            <li><strong>和君咨询</strong>：研究助理</li>
-                        </ul>
-                    </div>
+                </div>
+                <div class="timeline">
+                    <article class="timeline-card">
+                        <span class="timeline-date">2024.09 — 2027.07</span>
+                        <h3>中国科学院大学 · 中国科学院科技战略咨询研究院</h3>
+                        <p>管理科学与工程硕士研究生。平均学分绩 3.95/4.00，获校级三好学生。</p>
+                    </article>
+                    <article class="timeline-card">
+                        <span class="timeline-date">2020.09 — 2024.07</span>
+                        <h3>西安电子科技大学 · 经济与管理学院</h3>
+                        <p>市场营销本科，专业排名第 1；获国家奖学金、优秀毕业生标兵、优秀毕业设计等奖项。</p>
+                    </article>
+                    <article class="timeline-card">
+                        <span class="timeline-date">Community</span>
+                        <h3>ModelScope 与 GitHub 开源社区</h3>
+                        <p>共建计算社会科学板块，持续发布方法教程，并维护智能文献检索与社会科学研究 Skills 等开源工具。</p>
+                    </article>
+                    <article class="timeline-card">
+                        <span class="timeline-date">Internships</span>
+                        <h3>三段研究与咨询实习经历</h3>
+                        <p>曾在上海人工智能实验室、艾瑞咨询与和君咨询参与研究和咨询项目。</p>
+                        <a class="inline-link" href="internships.html">查看实习经历 <span aria-hidden="true">→</span></a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Research -->
-        <section class="section">
+        <section class="section" aria-labelledby="selected-title">
             <div class="container">
-                <h2 class="section-title">研究兴趣与申博计划</h2>
-                <div class="research-grid">
-                    <div class="research-card">
-                        <h3>当前研究方向</h3>
-                        <ul>
-                            <li><strong>计算社会科学</strong>：文本分析、机器学习、大语言模型在社会科学中的应用</li>
-                            <li><strong>开源创新</strong>：开源生态系统治理、开源社区动力学、LLM 开源策略</li>
-                            <li><strong>社会技术系统</strong>：多主体协同机制、系统动力学仿真、创新管理</li>
-                        </ul>
+                <div class="section-heading">
+                    <div>
+                        <p class="section-kicker">Selected work</p>
+                        <h2 class="section-title" id="selected-title">近期代表工作</h2>
                     </div>
-                    <div class="research-card">
-                        <h3>博士研究计划</h3>
-                        <ul>
-                            <li><strong>研究主题</strong>：人机协同创新与智能系统治理</li>
-                            <li><strong>方法创新</strong>：整合计算方法与社会科学理论的跨学科研究</li>
-                            <li><strong>应用价值</strong>：为数字经济时代的创新管理提供理论支持和实践指导</li>
-                        </ul>
-                    </div>
-                    <div class="research-card">
-                        <h3>申博意向方向</h3>
-                        <ul>
-                            <li><strong>社会计算</strong>：Computational Social Science</li>
-                            <li><strong>信息系统管理</strong>：Information Systems Management</li>
-                            <li><strong>计算传播</strong>：Computational Communication</li>
-                        </ul>
-                    </div>
+                    <a class="button" href="publications.html">浏览全部成果 <span aria-hidden="true">→</span></a>
                 </div>
-
-                <div class="statement-block">
-                    <h3>研究哲学</h3>
-                    <p>我相信计算是洞察社会现象的全新透镜。我的研究目标是将前沿的计算方法作为连接社会科学理论与鲜活数据之间的桥梁。作为一名文科生探索技术边界的旅程中，我深知每一行不够优雅的代码，都代表着对未知领域真诚的探索。</p>
-                    <p>在未来的博士研究中，我希望深入探索人机协同背景下的创新与治理问题，特别关注开源生态系统、大语言模型应用和社会技术系统的动态演化。我非常期待与信息系统、创新管理、计算传播等领域的学者合作，相信我的管理学与计算方法的交叉背景能为研究团队带来独特视角。如果您正好看到这里，那可能就是缘分。</p>
-                </div>
-
-                <div class="proposal-block">
-                    <h3>博士研究计划</h3>
-                    <div class="proposal-card">
-                        <h4>计算传播方向</h4>
-                        <p class="proposal-title">Performativity of Openness: How Narratives of Anti-Monopoly and Democratization Reorganize Attention and Discursive Authority</p>
-                        <p class="proposal-desc">本研究聚焦于挑战者企业如何通过"述行性"构建"开放理论"，将 AI 领域的合法性标准从"模型能力"重塑为"开放程度"，从而实现竞争场域的结构性转变与权力中心化。</p>
-                        <div class="proposal-meta">
-                            <div class="proposal-meta-row">
-                                <span class="proposal-meta-label">核心问题</span>
-                                <span class="proposal-meta-value">开源 LLM 发布如何作为"述行性政治行动"重塑竞争规则</span>
-                            </div>
-                            <div class="proposal-meta-row">
-                                <span class="proposal-meta-label">理论框架</span>
-                                <span class="proposal-meta-value">制度创业 &times; 经济社会学述行性理论 &times; 注意力与社会信号</span>
-                            </div>
-                            <div class="proposal-meta-row">
-                                <span class="proposal-meta-label">研究方法</span>
-                                <span class="proposal-meta-value">计算文本分析 + 准实验因果推断 + 动态网络分析</span>
-                            </div>
-                            <div class="proposal-meta-row">
-                                <span class="proposal-meta-label">理论贡献</span>
-                                <span class="proposal-meta-value">实证检验"述行性"理论在 AI 战略中的应用，揭示话语作为引擎重塑场域的机制</span>
-                            </div>
-                        </div>
-                        <div class="proposal-download">
-                            <a href="#" class="btn" onclick="alert('PDF 文件准备中'); return false;">
-                                下载完整研究计划 (PDF)
-                            </a>
-                        </div>
-                    </div>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <span class="tag tag-accent">Best Paper · TFSC Workshop</span>
+                        <h3>From Stars to the Galaxy</h3>
+                        <p>从多中心治理、数字劳动分工与社会信号出发，研究开源 AI 生态中的组织代理机制。论文已完成 Technological Forecasting and Social Change 大修修回。</p>
+                        <a class="inline-link" href="publications.html">查看论文状态 <span aria-hidden="true">↗</span></a>
+                        <span class="feature-index" aria-hidden="true">01</span>
+                    </article>
+                    <article class="feature-card">
+                        <span class="tag">Open-source project</span>
+                        <h3>PaperSeek</h3>
+                        <p>面向科研工作流的开源智能文献检索引擎，简历记录项目在社区获得 200+ Stars。</p>
+                        <a class="inline-link" href="https://github.com/MingfengHong/paperseek" target="_blank" rel="noopener noreferrer">前往 GitHub <span aria-hidden="true">↗</span></a>
+                        <span class="feature-index" aria-hidden="true">02</span>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Social -->
-        <section class="section">
-            <div class="container">
-                <h2 class="section-title">学术网络与社交平台</h2>
-                <div class="social-list">
-                    <a href="https://github.com/MingfengHong" class="social-link" target="_blank">GitHub</a>
-                    <a href="https://orcid.org/0009-0009-1199-4702" class="social-link" target="_blank">ORCID</a>
-                    <a href="https://www.xiaohongshu.com/user/profile/5f58cb96000000000101ebdc" class="social-link" target="_blank">小红书</a>
-                    <a href="https://weibo.com/hongmingfeng" class="social-link" target="_blank">微博</a>
-                    <a href="mailto:hongmingfeng24@mails.ucas.ac.cn" class="social-link">Email</a>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>2025 洪铭锋. Le vent se lève, il faut tenter de vivre.</p>
+    <footer class="site-footer">
+        <div class="container footer-shell">
+            <div><p class="footer-name">洪铭锋 · Mingfeng Hong</p><p class="footer-note">Le vent se lève, il faut tenter de vivre.</p></div>
+            <div class="footer-links">
+                <a href="https://github.com/MingfengHong" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://orcid.org/0009-0009-1199-4702" target="_blank" rel="noopener noreferrer">ORCID</a>
+                <a href="mailto:hongmingfeng@outlook.com">Email</a>
+            </div>
         </div>
     </footer>
-
     <script src="scripts/main.js"></script>
 </body>
-
 </html>

@@ -1,36 +1,28 @@
-// Mobile nav toggle
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
 
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-        });
+    if (!navToggle || !navMenu) return;
 
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
-        });
-    }
-});
+    const closeMenu = () => {
+        navMenu.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navToggle.setAttribute('aria-label', '打开导航菜单');
+    };
 
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+    navToggle.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('active');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+        navToggle.setAttribute('aria-label', isOpen ? '关闭导航菜单' : '打开导航菜单');
     });
-});
 
-// Close mobile menu on resize above breakpoint
-window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-        const navMenu = document.getElementById('nav-menu');
-        if (navMenu) navMenu.classList.remove('active');
-    }
+    navMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 940) closeMenu();
+    });
 });
