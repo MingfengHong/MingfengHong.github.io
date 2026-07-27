@@ -524,7 +524,7 @@ button {
 }
 
 .stat-unit {
-    font-size: 0.38em;
+    font-size: clamp(0.78rem, 1.2vw, 1rem);
     letter-spacing: 0;
     line-height: 1;
 }
