@@ -4,17 +4,17 @@
 }
 
 :root {
-    --ink: #0b0b0b;
-    --paper: #fffdf8;
+    --ink: #1a1611;
+    --paper: #fdfaf2;
     --white: #ffffff;
-    --muted: #5f5f5f;
-    --line: #0b0b0b;
-    --yellow: #ffc533;
-    --coral: #ff6675;
-    --blue: #377cf6;
-    --purple: #6c5ce7;
-    --mint: #89dfc0;
-    --soft: #f3f1ec;
+    --muted: #5c5546;
+    --line: #1a1611;
+    --yellow: #ffc233;
+    --coral: #ff6f6f;
+    --blue: #2f66e8;
+    --purple: #6558e0;
+    --mint: #7fd9b6;
+    --soft: #f3efe5;
     --shadow: 7px 7px 0 var(--ink);
     --shadow-small: 4px 4px 0 var(--ink);
     --radius: 22px;
@@ -43,7 +43,7 @@ body::before {
     pointer-events: none;
     content: "";
     opacity: 0.42;
-    background-image: radial-gradient(#0b0b0b 0.55px, transparent 0.55px);
+    background-image: radial-gradient(#1a1611 0.55px, transparent 0.55px);
     background-size: 18px 18px;
 }
 
@@ -254,7 +254,7 @@ button {
 .hero-lede {
     max-width: 680px;
     margin: 30px 0 0;
-    color: #252525;
+    color: #2c2620;
     font-size: clamp(1.05rem, 1.7vw, 1.26rem);
     font-weight: 500;
 }
@@ -338,7 +338,7 @@ button {
 }
 
 .social-button:hover {
-    background: var(--mint);
+    background: var(--yellow);
     transform: translateY(-2px);
 }
 
@@ -499,6 +499,10 @@ button {
     box-shadow: var(--shadow);
 }
 
+.stat-card:nth-child(1) {
+    background: var(--yellow);
+}
+
 .stat-card:nth-child(2) {
     background: var(--coral);
 }
@@ -557,6 +561,28 @@ button {
     padding: 26px;
 }
 
+.card:nth-child(1) {
+    background: var(--yellow);
+}
+
+.card:nth-child(2) {
+    background: var(--coral);
+}
+
+.card:nth-child(3) {
+    color: var(--white);
+    background: var(--blue);
+}
+
+.card:nth-child(1) p,
+.card:nth-child(2) p {
+    color: var(--ink);
+}
+
+.card:nth-child(3) p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
 .card-icon {
     display: grid;
     width: 52px;
@@ -567,15 +593,6 @@ button {
     border-radius: 14px;
     background: var(--yellow);
     font-weight: 900;
-}
-
-.card:nth-child(2) .card-icon {
-    background: var(--coral);
-}
-
-.card:nth-child(3) .card-icon {
-    color: var(--white);
-    background: var(--purple);
 }
 
 .card h3,
@@ -614,7 +631,7 @@ button {
 
 .feature-card:first-child {
     color: var(--white);
-    background: var(--purple);
+    background: var(--ink);
 }
 
 .feature-card:first-child p {
@@ -689,20 +706,6 @@ button {
     border-radius: 24px;
     background: var(--yellow);
     box-shadow: 7px 7px 0 var(--ink);
-}
-
-.page-hero-panel.coral {
-    background: var(--coral);
-}
-
-.page-hero-panel.blue {
-    color: var(--white);
-    background: var(--blue);
-}
-
-.page-hero-panel.purple {
-    color: var(--white);
-    background: var(--purple);
 }
 
 .page-hero-panel .eyebrow {
@@ -903,9 +906,14 @@ button {
     background: var(--purple);
 }
 
+.project-card p,
+.project-card .project-meta {
+    color: var(--ink);
+}
+
 .project-card:nth-child(4n + 4) p,
 .project-card:nth-child(4n + 4) .project-meta {
-    color: rgba(255, 255, 255, 0.82);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .project-no {
@@ -916,8 +924,7 @@ button {
     place-items: center;
     border: 3px solid var(--ink);
     border-radius: 50%;
-    color: var(--ink);
-    background: var(--white);
+    background: var(--yellow);
     font-weight: 900;
 }
 
@@ -948,12 +955,17 @@ button {
     background: var(--blue);
 }
 
-.book-card:nth-child(3) p {
-    color: rgba(255, 255, 255, 0.84);
-}
-
 .book-card:nth-child(4) {
     background: var(--mint);
+}
+
+.book-card:nth-child(2) p,
+.book-card:nth-child(4) p {
+    color: var(--ink);
+}
+
+.book-card:nth-child(3) p {
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .book-label {
@@ -962,8 +974,7 @@ button {
     padding: 0.3rem 0.6rem;
     border: 2px solid var(--ink);
     border-radius: 999px;
-    color: var(--ink);
-    background: var(--white);
+    background: var(--yellow);
     font-size: 0.76rem;
     font-weight: 900;
 }
@@ -1062,7 +1073,7 @@ button {
     transform: translate(3px, 3px);
 }
 
-.repo-card:first-child {
+.repo-card:nth-child(1) {
     background: var(--yellow);
 }
 
@@ -1071,16 +1082,20 @@ button {
     background: var(--purple);
 }
 
-.repo-card:nth-child(2) p {
-    color: rgba(255, 255, 255, 0.82);
-}
-
 .repo-card:nth-child(3) {
     background: var(--coral);
 }
 
 .repo-card:nth-child(4) {
     background: var(--mint);
+}
+
+.repo-card p {
+    color: var(--ink);
+}
+
+.repo-card:nth-child(2) p {
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .repo-name {
@@ -1163,7 +1178,7 @@ button {
 }
 
 .internship-index {
-    color: rgba(11, 11, 11, 0.16);
+    color: rgba(26, 22, 17, 0.16);
     font-size: 5.5rem;
     font-weight: 900;
     letter-spacing: -0.08em;
@@ -1240,8 +1255,13 @@ button {
     background: var(--blue);
 }
 
+.work-link-card:nth-child(4n + 2) p,
+.work-link-card:nth-child(4n + 3) p {
+    color: var(--ink);
+}
+
 .work-link-card:nth-child(4n + 4) p {
-    color: rgba(255, 255, 255, 0.84);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .work-link-card:hover {
