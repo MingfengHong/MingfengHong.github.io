@@ -42,6 +42,8 @@ jobs:
 
   # 部署作业
   deploy:
+    # PR 只验证构建；仅 main/master 推送或手动触发时发布到 Pages。
+    if: github.event_name != 'pull_request'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
