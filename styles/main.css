@@ -119,6 +119,7 @@ button {
 }
 
 .brand {
+    order: 1;
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -140,10 +141,11 @@ button {
 }
 
 .nav-menu {
+    order: 2;
     display: flex;
     align-items: center;
     gap: 4px;
-    margin: 0;
+    margin: 0 0 0 auto;
     padding: 0;
     list-style: none;
 }
@@ -168,6 +170,7 @@ button {
 }
 
 .nav-toggle {
+    order: 4;
     display: none;
     width: 48px;
     height: 48px;
@@ -176,6 +179,44 @@ button {
     border-radius: 12px;
     background: var(--yellow);
     cursor: pointer;
+}
+
+.language-switcher {
+    order: 3;
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+    gap: 2px;
+    margin-left: 10px;
+    padding: 3px;
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    background: var(--white);
+    white-space: nowrap;
+}
+
+.language-option {
+    min-width: 38px;
+    min-height: 30px;
+    padding: 0.18rem 0.5rem;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    font-size: 0.75rem;
+    font-weight: 900;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.language-option:hover,
+.language-option.active {
+    background: var(--yellow);
+}
+
+.language-divider {
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-weight: 900;
 }
 
 .bar {
@@ -827,6 +868,20 @@ button {
     line-height: 1.5;
 }
 
+.pub-title-translation {
+    display: block;
+    margin-top: 0.45rem;
+    color: var(--muted);
+    font-size: 0.68em;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.55;
+}
+
+.feature-card:first-child .pub-title-translation {
+    color: rgba(255, 255, 255, 0.68);
+}
+
 .pub-authors,
 .pub-venue,
 .pub-note {
@@ -1387,7 +1442,7 @@ button {
     }
 }
 
-@media (max-width: 940px) {
+@media (max-width: 1080px) {
     .site-header {
         padding-top: 10px;
     }
@@ -1404,6 +1459,11 @@ button {
 
     .nav-toggle {
         display: block;
+        margin-left: 10px;
+    }
+
+    .language-switcher {
+        margin-left: auto;
     }
 
     .nav-menu {
@@ -1413,6 +1473,7 @@ button {
         left: 0;
         display: none;
         align-items: stretch;
+        margin-left: 0;
         padding: 10px;
         border: 3px solid var(--ink);
         border-radius: 18px;

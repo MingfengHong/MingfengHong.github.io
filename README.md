@@ -31,12 +31,13 @@
 
 ## 视觉与交互
 
-网站使用高对比度的纸张式视觉语言：白色或暖白背景、黑色粗描边、偏移硬阴影，以及黄色、珊瑚红、蓝色和紫色强调色。全部页面共享同一套响应式导航、卡片和排版系统，并支持键盘焦点、移动端菜单与减少动画偏好。
+网站使用高对比度的纸张式视觉语言：白色或暖白背景、黑色粗描边、偏移硬阴影，以及黄色、珊瑚红、蓝色和紫色强调色。全部页面共享同一套响应式导航、卡片和排版系统，并支持中英文切换、键盘焦点、移动端菜单与减少动画偏好。语言选择会在页面间保留；论文标题始终显示原文，仅在界面语言与论文原语言不一致时于下方显示小字号译名。
 
 ## 技术实现
 
 - 纯 HTML、CSS 与原生 JavaScript，无前端框架和运行时依赖；
 - 主要样式集中在 [`styles/main.css`](styles/main.css)；
+- 中英文翻译、语言记忆与论文标题译名逻辑位于 [`scripts/i18n.js`](scripts/i18n.js)；
 - 通用导航逻辑位于 [`scripts/main.js`](scripts/main.js)；
 - 研究成果筛选逻辑位于 [`scripts/publications.js`](scripts/publications.js)；
 - 使用 Jekyll 构建，并由 GitHub Pages 托管；
@@ -84,6 +85,7 @@ python -m http.server 8000
 
 - 更新个人简介与首页内容：编辑 [`index.html`](index.html)。
 - 更新论文与政策研究：编辑 [`publications.html`](publications.html)。
+- 为新增论文标题标注 `data-paper-title`、`data-paper-lang` 及另一语言的 `data-title-zh` 或 `data-title-en`，即可沿用原题与小字译名规则。
 - 更新科研项目和专著：编辑 [`projects.html`](projects.html)。
 - 更新实践经历：编辑 [`internships.html`](internships.html)。
 - 更新开源项目与社区作品外链：编辑 [`portfolio.html`](portfolio.html)。

@@ -4,16 +4,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!navToggle || !navMenu) return;
 
+    const translate = (key) => window.siteI18n?.t(key) || key;
+
+    const updateToggleLabel = (isOpen = navMenu.classList.contains('active')) => {
+        navToggle.setAttribute('aria-label', translate(isOpen ? '关闭导航菜单' : '打开导航菜单'));
+    };
+
     const closeMenu = () => {
         navMenu.classList.remove('active');
         navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.setAttribute('aria-label', '打开导航菜单');
+        updateToggleLabel(false);
     };
 
     navToggle.addEventListener('click', () => {
         const isOpen = navMenu.classList.toggle('active');
         navToggle.setAttribute('aria-expanded', String(isOpen));
-        navToggle.setAttribute('aria-label', isOpen ? '关闭导航菜单' : '打开导航菜单');
+        updateToggleLabel(isOpen);
     });
 
     navMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
@@ -23,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 940) closeMenu();
+        if (window.innerWidth > 1080) closeMenu();
     });
+
+    window.addEventListener('site:languagechange', () => updateToggleLabel());
+    updateToggleLabel();
 });
