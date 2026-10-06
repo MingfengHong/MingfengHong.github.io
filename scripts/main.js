@@ -4,16 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!navToggle || !navMenu) return;
 
+    const menuLabel = (isOpen) => document.documentElement.lang === 'en'
+        ? (isOpen ? 'Close navigation menu' : 'Open navigation menu')
+        : (isOpen ? '关闭导航菜单' : '打开导航菜单');
+
     const closeMenu = () => {
         navMenu.classList.remove('active');
         navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.setAttribute('aria-label', '打开导航菜单');
+        navToggle.setAttribute('aria-label', menuLabel(false));
     };
 
     navToggle.addEventListener('click', () => {
         const isOpen = navMenu.classList.toggle('active');
         navToggle.setAttribute('aria-expanded', String(isOpen));
-        navToggle.setAttribute('aria-label', isOpen ? '关闭导航菜单' : '打开导航菜单');
+        navToggle.setAttribute('aria-label', menuLabel(isOpen));
     });
 
     navMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));

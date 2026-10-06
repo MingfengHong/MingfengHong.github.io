@@ -14,83 +14,66 @@
     <title>洪铭锋 Mingfeng Hong</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css?v=notebook-2">
 </head>
 <body>
+    <div class="drawing-frame" aria-hidden="true">
+        <div class="ruler ruler-top"><span>000</span><span>100</span><span>200</span><span>300</span><span>400</span><span>500</span><span>600</span><span>700</span><span>800</span></div>
+        <div class="ruler ruler-left"><span>000</span><span>100</span><span>200</span><span>300</span><span>400</span><span>500</span><span>600</span><span>700</span></div>
+        <div class="margin-caption">MINGFENG HONG / PERSONAL ARCHIVE</div>
+    </div>
     <a class="skip-link" href="#main-content">跳到主要内容</a>
 
     <header class="site-header">
         <nav class="nav-shell container" aria-label="主导航">
             <a class="brand" href="index.html" aria-label="洪铭锋首页">
-                <span class="brand-mark" aria-hidden="true">洪</span>
-                <strong>Mingfeng Hong</strong>
+                <svg class="icon" aria-hidden="true"><use href="images/icons.svg#book"></use></svg>
+                <strong>Mingfeng</strong><span class="brand-separator" aria-hidden="true">/</span><span class="brand-page">个人主页</span>
             </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a class="nav-link active" aria-current="page" href="index.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#home"></use></svg>首页</a></li>
+                <li><a class="nav-link" href="publications.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#file"></use></svg>研究成果</a></li>
+                <li><a class="nav-link" href="projects.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#folder"></use></svg>研究项目</a></li>
+                <li><a class="nav-link" href="internships.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#briefcase"></use></svg>实践经历</a></li>
+                <li><a class="nav-link" href="portfolio.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#code"></use></svg>社区作品</a></li>
+            </ul>
+            <button class="language-toggle" id="language-toggle" type="button" data-language="zh" aria-label="Switch to English" title="Switch to English"><span lang="zh-CN">中</span><span class="language-divider" aria-hidden="true">/</span><span lang="en">EN</span></button>
             <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="打开导航菜单">
                 <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </button>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a class="nav-link active" aria-current="page" href="index.html">首页</a></li>
-                <li><a class="nav-link" href="publications.html">研究成果</a></li>
-                <li><a class="nav-link" href="projects.html">研究项目</a></li>
-                <li><a class="nav-link" href="internships.html">实践经历</a></li>
-                <li><a class="nav-link" href="portfolio.html">社区作品</a></li>
-            </ul>
         </nav>
     </header>
 
     <main class="main" id="main-content">
         <section class="hero">
-            <div class="container hero-grid">
+            <div class="container">
+                <div class="page-heading"><p class="page-label">PERSONAL PORTFOLIO</p><h1 class="page-title">个人主页<span class="title-en">Portfolio</span></h1></div>
+                <div class="hero-grid">
                 <div>
-                    <p class="eyebrow">Researcher · Open Source · CSS</p>
-                    <h1 class="identity-title">洪铭锋<span>Mingfeng Hong</span></h1>
-                    <p class="hero-lede">现为中国科学院大学管理科学与工程硕士研究生，关注科技政策与创新管理、开源创新与开源战略，以及开源社区治理。</p>
+                    <h2 class="identity-title">你好，我是洪铭锋。<span>Mingfeng Hong</span></h2>
+                    <p class="hero-lede">现为中国科学院大学管理科学与工程硕士研究生。<br>关注科技政策与创新管理、开源创新与开源战略，以及开源社区治理。</p>
                     <div class="hero-meta" aria-label="研究关键词">
                         <span class="mini-tag">开源 AI 生态</span>
                         <span class="mini-tag">创新组织</span>
                         <span class="mini-tag">计算社会科学</span>
                     </div>
                     <div class="actions">
-                        <a class="button button-primary" href="publications.html">查看研究成果 <span aria-hidden="true">↗</span></a>
-                        <a class="button" href="files/Hong_Mingfeng_CV.pdf" download>下载简历 <span aria-hidden="true">↓</span></a>
+                        <a class="button button-primary" href="publications.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#file"></use></svg>查看研究成果 <span aria-hidden="true">↗</span></a>
+                        <a class="button" href="files/Hong_Mingfeng_CV.pdf" download><svg class="icon" aria-hidden="true"><use href="images/icons.svg#download"></use></svg>下载简历 <span aria-hidden="true">↓</span></a>
                     </div>
                     <div class="hero-socials" aria-label="联系与社区主页">
-                        <a class="social-button" href="mailto:hongmingfeng@outlook.com"><span aria-hidden="true">@</span> Email</a>
-                        <a class="social-button" href="https://github.com/MingfengHong" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">GH</span> GitHub</a>
-                        <a class="social-button" href="https://www.xiaohongshu.com/user/profile/5f58cb96000000000101ebdc" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">小</span> 小红书</a>
-                        <a class="social-button" href="https://modelscope.cn/profile/HongMingfeng" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">魔</span> 魔搭社区</a>
+                        <a class="social-button" href="mailto:hongmingfeng@outlook.com"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#mail"></use></svg> Email</a>
+                        <a class="social-button" href="https://github.com/MingfengHong" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#github"></use></svg> GitHub</a>
+                        <a class="social-button" href="https://www.xiaohongshu.com/user/profile/5f58cb96000000000101ebdc" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#book"></use></svg> 小红书</a>
+                        <a class="social-button" href="https://modelscope.cn/profile/HongMingfeng" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#globe"></use></svg> 魔搭社区</a>
                     </div>
                 </div>
 
                 <figure class="portrait-card">
-                    <span class="sticker sticker-top">开放研究 · 共享方法</span>
-                    <span class="sticker sticker-side">科技政策 × 开源创新</span>
-                    <div class="portrait-frame">
-                        <img src="images/profile.jpg" alt="洪铭锋的个人照片" width="960" height="1440">
-                    </div>
-                    <figcaption class="portrait-caption">
-                        <span>洪铭锋 · Mingfeng Hong</span>
-                        <span>Research · Open Source</span>
-                    </figcaption>
+                    <img src="images/illustrations/mingfeng-portrait.png" alt="黑发、戴眼镜、手持电脑的简笔人物插图" width="1120" height="1400">
+                    <figcaption>Researcher &amp; open-source builder</figcaption>
                 </figure>
-            </div>
-        </section>
-
-        <section class="section section-soft" aria-labelledby="numbers-title">
-            <div class="container">
-                <div class="section-heading">
-                    <div>
-                        <p class="section-kicker">At a glance</p>
-                        <h2 class="section-title" id="numbers-title">核心成果概览</h2>
-                    </div>
-                    <p class="section-note">聚焦研究、写作与社区共建，用公开成果呈现正在推进的工作。</p>
-                </div>
-                <div class="stats-grid">
-                    <article class="stat-card"><span class="stat-number">2 <span class="stat-unit">篇</span></span><p class="stat-label">已发表论文</p></article>
-                    <article class="stat-card"><span class="stat-number">6 <span class="stat-unit">篇</span></span><p class="stat-label">会议论文／工作论文</p></article>
-                    <article class="stat-card"><span class="stat-number">4 <span class="stat-unit">部</span></span><p class="stat-label">参与编写的理论专著与书稿</p></article>
-                    <article class="stat-card"><span class="stat-number">4 <span class="stat-unit">项</span></span><p class="stat-label">参与的科研／政府委托项目</p></article>
                 </div>
             </div>
         </section>
@@ -103,21 +86,66 @@
                         <h2 class="section-title" id="focus-title">我关心的问题</h2>
                     </div>
                 </div>
+                <nav class="database-toolbar" aria-label="研究相关页面"><a class="current" href="#focus-title"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#grid"></use></svg>研究方向</a><a href="projects.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#folder"></use></svg>相关项目</a><a href="publications.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#file"></use></svg>研究成果</a></nav>
                 <div class="card-grid">
                     <article class="card">
-                        <div class="card-icon" aria-hidden="true">01</div>
+                        <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#globe"></use></svg></div>
                         <h3>科技政策与创新管理</h3>
                         <p>关注前沿技术演进、创新平台网络与科研组织方式，连接技术趋势研判、组织机制分析和政策研究。</p>
                     </article>
                     <article class="card">
-                        <div class="card-icon" aria-hidden="true">02</div>
+                        <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#code"></use></svg></div>
                         <h3>开源创新与开源战略</h3>
                         <p>研究大模型开放策略、数字公共品与开放式创新，讨论企业战略选择与生态价值创造之间的关系。</p>
                     </article>
                     <article class="card">
-                        <div class="card-icon" aria-hidden="true">03</div>
+                        <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#users"></use></svg></div>
                         <h3>开源社区治理</h3>
                         <p>从多中心治理、数字劳动分工与社会信号出发，理解社区协作、贡献网络和生态韧性的形成机制。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-soft" aria-labelledby="numbers-title">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-kicker">At a glance</p>
+                        <h2 class="section-title" id="numbers-title">核心成果概览</h2>
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <article class="stat-card"><span class="stat-number">2 <span class="stat-unit">篇</span></span><p class="stat-label">已发表论文</p></article>
+                    <article class="stat-card"><span class="stat-number">6 <span class="stat-unit">篇</span></span><p class="stat-label">会议论文／工作论文</p></article>
+                    <article class="stat-card"><span class="stat-number">4 <span class="stat-unit">部</span></span><p class="stat-label">参与编写的理论专著与书稿</p></article>
+                    <article class="stat-card"><span class="stat-number">4 <span class="stat-unit">项</span></span><p class="stat-label">参与的科研／政府委托项目</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="selected-title">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-kicker">Selected work</p>
+                        <h2 class="section-title" id="selected-title">近期代表工作</h2>
+                    </div>
+                    <a class="button" href="publications.html">浏览全部成果 <span aria-hidden="true">→</span></a>
+                </div>
+                <nav class="database-toolbar" aria-label="代表工作分类"><a class="current" href="#selected-title"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#star"></use></svg>精选</a><a href="publications.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#file"></use></svg>论文</a><a href="portfolio.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#code"></use></svg>开源项目</a></nav>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <span class="tag tag-accent">Best Paper · TFSC Workshop</span>
+                        <h3 data-paper-title data-paper-lang="en" data-title-zh="从星辰到银河" lang="en"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#folder"></use></svg>From Stars to the Galaxy</h3>
+                        <p>从多中心治理、数字劳动分工与社会信号出发，研究开源 AI 生态中的组织代理机制。论文已完成 Technological Forecasting and Social Change 大修修回。</p>
+                        <a class="inline-link" href="publications.html">查看论文状态 <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="feature-card">
+                        <span class="tag">Open-source project</span>
+                        <h3><svg class="icon" aria-hidden="true"><use href="images/icons.svg#folder"></use></svg>PaperSeek</h3>
+                        <p>面向科研工作流的开源文献发现工具，支持自然语言检索、引用扩展与结果导出。</p>
+                        <a class="inline-link" href="https://github.com/MingfengHong/paperseek" target="_blank" rel="noopener noreferrer">前往 GitHub <span aria-hidden="true">↗</span></a>
                     </article>
                 </div>
             </div>
@@ -131,6 +159,7 @@
                         <h2 class="section-title" id="current-title">学习与研究经历</h2>
                     </div>
                 </div>
+                <div class="database-toolbar"><span class="current"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#graduate"></use></svg>教育与实践</span></div>
                 <div class="timeline">
                     <article class="timeline-card">
                         <span class="timeline-date">2024.09 — 2027.07</span>
@@ -157,34 +186,6 @@
             </div>
         </section>
 
-        <section class="section" aria-labelledby="selected-title">
-            <div class="container">
-                <div class="section-heading">
-                    <div>
-                        <p class="section-kicker">Selected work</p>
-                        <h2 class="section-title" id="selected-title">近期代表工作</h2>
-                    </div>
-                    <a class="button" href="publications.html">浏览全部成果 <span aria-hidden="true">→</span></a>
-                </div>
-                <div class="feature-grid">
-                    <article class="feature-card">
-                        <span class="tag tag-accent">Best Paper · TFSC Workshop</span>
-                        <h3>From Stars to the Galaxy</h3>
-                        <p>从多中心治理、数字劳动分工与社会信号出发，研究开源 AI 生态中的组织代理机制。论文已完成 Technological Forecasting and Social Change 大修修回。</p>
-                        <a class="inline-link" href="publications.html">查看论文状态 <span aria-hidden="true">↗</span></a>
-                        <span class="feature-index" aria-hidden="true">01</span>
-                    </article>
-                    <article class="feature-card">
-                        <span class="tag">Open-source project</span>
-                        <h3>PaperSeek</h3>
-                        <p>面向科研工作流的开源智能文献检索引擎，简历记录项目在社区获得 200+ Stars。</p>
-                        <a class="inline-link" href="https://github.com/MingfengHong/paperseek" target="_blank" rel="noopener noreferrer">前往 GitHub <span aria-hidden="true">↗</span></a>
-                        <span class="feature-index" aria-hidden="true">02</span>
-                    </article>
-                </div>
-            </div>
-        </section>
-
     </main>
 
     <footer class="site-footer">
@@ -197,6 +198,7 @@
             </div>
         </div>
     </footer>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js?v=notebook-2"></script>
+    <script src="scripts/i18n.js?v=notebook-2"></script>
 </body>
 </html>

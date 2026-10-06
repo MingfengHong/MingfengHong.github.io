@@ -31,13 +31,16 @@
 
 ## 视觉与交互
 
-网站使用高对比度的纸张式视觉语言：白色或暖白背景、黑色粗描边、偏移硬阴影，以及黄色、珊瑚红、蓝色和紫色强调色。全部页面共享同一套响应式导航、卡片和排版系统，并支持键盘焦点、移动端菜单与减少动画偏好。
+网站使用 Notion 风格的黑白笔记式视觉语言：白色画布、紧凑排版、细描边卡片、轻阴影、单色小图标和下划线分类导航。低对比度边缘刻度与黑白人物线稿提供辅助视觉细节。五个独立分页共享响应式布局，并支持键盘焦点、移动端菜单、成果筛选与减少动画偏好。
+
+插图依据 [anthropic-art](https://github.com/HalfAI1102/anthropic-art) 的手绘线条规范、结合本人照片生成；按页面参考将默认彩色背景调整为黑白透明背景。生成提示词与素材说明见 [`images/illustrations/README.md`](images/illustrations/README.md)。
 
 ## 技术实现
 
 - 纯 HTML、CSS 与原生 JavaScript，无前端框架和运行时依赖；
 - 主要样式集中在 [`styles/main.css`](styles/main.css)；
 - 通用导航逻辑位于 [`scripts/main.js`](scripts/main.js)；
+- 中英文内容与切换逻辑位于 [`scripts/i18n.js`](scripts/i18n.js)，语言选择会保存在浏览器本地，首次访问跟随浏览器语言；论文、书稿标题与作者列表保留原文，论文语言与界面语言不同时在原标题下显示小字号译名；
 - 研究成果筛选逻辑位于 [`scripts/publications.js`](scripts/publications.js)；
 - 使用 Jekyll 构建，并由 GitHub Pages 托管；
 - 推送到 `main` 后，通过 [GitHub Actions](.github/workflows/deploy.yml) 自动部署。
@@ -58,6 +61,7 @@
 │   └── main.css               # 当前视觉系统与响应式样式
 ├── scripts/
 │   ├── main.js                # 通用导航交互
+│   ├── i18n.js                # 全站中英文切换与译文
 │   └── publications.js        # 成果筛选
 ├── images/
 │   ├── profile.jpg            # 个人照片
@@ -88,6 +92,8 @@ python -m http.server 8000
 - 更新实践经历：编辑 [`internships.html`](internships.html)。
 - 更新开源项目与社区作品外链：编辑 [`portfolio.html`](portfolio.html)。
 - 更新简历：替换 [`files/Hong_Mingfeng_CV.pdf`](files/Hong_Mingfeng_CV.pdf)，并保持文件名不变。
+- 更新页面中文文案时，同步维护 [`scripts/i18n.js`](scripts/i18n.js) 中对应的英文译文。
+- 新增论文使用 `data-paper-title`、`data-paper-lang` 及 `data-title-zh` 或 `data-title-en` 标注原文与译名。
 
 ## 联系方式
 

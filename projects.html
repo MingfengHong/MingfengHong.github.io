@@ -11,35 +11,43 @@
     <title>研究项目 · 洪铭锋 Mingfeng Hong</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css?v=notebook-2">
 </head>
 <body>
+    <div class="drawing-frame" aria-hidden="true">
+        <div class="ruler ruler-top"><span>000</span><span>100</span><span>200</span><span>300</span><span>400</span><span>500</span><span>600</span><span>700</span><span>800</span></div>
+        <div class="ruler ruler-left"><span>000</span><span>100</span><span>200</span><span>300</span><span>400</span><span>500</span><span>600</span><span>700</span></div>
+        <div class="margin-caption">MINGFENG HONG / PERSONAL ARCHIVE</div>
+    </div>
     <a class="skip-link" href="#main-content">跳到主要内容</a>
     <header class="site-header">
         <nav class="nav-shell container" aria-label="主导航">
-            <a class="brand" href="index.html" aria-label="洪铭锋首页"><span class="brand-mark" aria-hidden="true">洪</span><strong>Mingfeng Hong</strong></a>
-            <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="打开导航菜单"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+            <a class="brand" href="index.html" aria-label="洪铭锋首页"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#book"></use></svg><strong>Mingfeng</strong><span class="brand-separator" aria-hidden="true">/</span><span class="brand-page">研究项目</span></a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a class="nav-link" href="index.html">首页</a></li>
-                <li><a class="nav-link" href="publications.html">研究成果</a></li>
-                <li><a class="nav-link active" aria-current="page" href="projects.html">研究项目</a></li>
-                <li><a class="nav-link" href="internships.html">实践经历</a></li>
-                <li><a class="nav-link" href="portfolio.html">社区作品</a></li>
+                <li><a class="nav-link" href="index.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#home"></use></svg>首页</a></li>
+                <li><a class="nav-link" href="publications.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#file"></use></svg>研究成果</a></li>
+                <li><a class="nav-link active" aria-current="page" href="projects.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#folder"></use></svg>研究项目</a></li>
+                <li><a class="nav-link" href="internships.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#briefcase"></use></svg>实践经历</a></li>
+                <li><a class="nav-link" href="portfolio.html"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#code"></use></svg>社区作品</a></li>
             </ul>
+            <button class="language-toggle" id="language-toggle" type="button" data-language="zh" aria-label="Switch to English" title="Switch to English"><span lang="zh-CN">中</span><span class="language-divider" aria-hidden="true">/</span><span lang="en">EN</span></button>
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="打开导航菜单"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
         </nav>
     </header>
 
     <main class="main" id="main-content">
         <section class="page-hero">
             <div class="container">
-                <div class="page-hero-panel blue">
-                    <p class="eyebrow">Research projects</p>
+                <div class="page-hero-panel illustrated blue">
+                    <p class="page-label"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#folder"></use></svg>Research projects</p>
                     <h1 class="page-title">研究项目</h1>
                     <p class="page-lede">在国家社科基金、高端智库与政府委托课题中，围绕用户创新、创新平台网络、技术趋势和公共服务开展研究。</p>
                     <div class="quick-stats" aria-label="项目统计"><span class="quick-stat">1 项国家社科基金项目</span><span class="quick-stat">1 项国家高端智库重点课题</span><span class="quick-stat">2 项政府委托研究</span></div>
-                    <span class="page-hero-number" aria-hidden="true">04</span>
+                    <img class="page-illustration" src="images/illustrations/research-notebook.png" alt="" width="1536" height="1024">
+                    <span class="sheet-number">03 / 05</span>
                 </div>
+                <nav class="page-index" aria-label="本页目录"><a href="#project-list-title"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#folder"></use></svg>科研与委托项目</a><a href="#books-title"><svg class="icon" aria-hidden="true"><use href="images/icons.svg#book"></use></svg>理论专著与书稿</a></nav>
             </div>
         </section>
 
@@ -47,11 +55,10 @@
             <div class="container">
                 <div class="section-heading">
                     <div><p class="section-kicker">Selected engagements</p><h2 class="section-title" id="project-list-title">项目经历</h2></div>
-                    <p class="section-note">以下职责与时间均依据当前两页简历整理。</p>
                 </div>
                 <div class="project-grid">
                     <article class="project-card">
-                        <span class="project-no" aria-hidden="true">01</span>
+                        <svg class="icon" aria-hidden="true"><use href="images/icons.svg#folder"></use></svg><span class="project-no">项目 01</span>
                         <h2>数智技术赋能下用户创新的协作模式、组织变革与公共价值研究</h2>
                         <p class="project-meta">国家社会科学基金一般项目 · 参与者 · 2025 — 预计 2028</p>
                         <ul>
@@ -61,7 +68,7 @@
                         </ul>
                     </article>
                     <article class="project-card">
-                        <span class="project-no" aria-hidden="true">02</span>
+                        <svg class="icon" aria-hidden="true"><use href="images/icons.svg#folder"></use></svg><span class="project-no">项目 02</span>
                         <h2>优化创新平台网络、促进科技创新与产业创新深度融合</h2>
                         <p class="project-meta">2025 年度国家高端智库重点课题 · 参与者 · 2025.04 — 2025.11</p>
                         <ul>
@@ -71,7 +78,7 @@
                         </ul>
                     </article>
                     <article class="project-card">
-                        <span class="project-no" aria-hidden="true">03</span>
+                        <svg class="icon" aria-hidden="true"><use href="images/icons.svg#folder"></use></svg><span class="project-no">项目 03</span>
                         <h2>新一轮科技革命和产业变革趋势及对我国农业农村发展影响研究</h2>
                         <p class="project-meta">农业农村部发展规划司“十五五”规划前期研究 · 参与者 · 2024.07 — 2025.03</p>
                         <ul>
@@ -81,7 +88,7 @@
                         </ul>
                     </article>
                     <article class="project-card">
-                        <span class="project-no" aria-hidden="true">04</span>
+                        <svg class="icon" aria-hidden="true"><use href="images/icons.svg#folder"></use></svg><span class="project-no">项目 04</span>
                         <h2>新时期人口发展背景下西藏自治区养老服务模式与政策研究</h2>
                         <p class="project-meta">西藏自治区发展和改革委员会委托课题 · 参与者 · 2024.07 — 2025.03</p>
                         <ul>
@@ -99,22 +106,22 @@
                 <div class="section-heading"><div><p class="section-kicker">Long-form research</p><h2 class="section-title" id="books-title">理论专著与书稿</h2></div></div>
                 <div class="book-grid">
                     <article class="book-card">
-                        <span class="book-label">广东人民出版社系列丛书</span>
+                        <svg class="icon" aria-hidden="true"><use href="images/icons.svg#book"></use></svg><span class="book-label">广东人民出版社系列丛书</span>
                         <h3>现代化新征程与科技创新</h3>
                         <p>负责“历次科技革命下发达国家的现代化进程”与“科技创新与公共服务”两章。</p>
                     </article>
                     <article class="book-card">
-                        <span class="book-label">战略 · 理论 · 实践</span>
+                        <svg class="icon" aria-hidden="true"><use href="images/icons.svg#book"></use></svg><span class="book-label">战略 · 理论 · 实践</span>
                         <h3>创新驱动引领高质量发展：新质生产力战略、理论与实践</h3>
                         <p>负责“新型工业化与现代化产业体系”章节。</p>
                     </article>
                     <article class="book-card">
-                        <span class="book-label">Open-source LLM</span>
+                        <svg class="icon" aria-hidden="true"><use href="images/icons.svg#book"></use></svg><span class="book-label">Open-source LLM</span>
                         <h3>开放的力量：大模型开源创新范式变革</h3>
                         <p>负责理论篇第 4-6 章与实践篇第 14-17 章，讨论开放式创新、数字公共品、社区治理与我国开源大模型生态。</p>
                     </article>
                     <article class="book-card">
-                        <span class="book-label">AI4S</span>
+                        <svg class="icon" aria-hidden="true"><use href="images/icons.svg#book"></use></svg><span class="book-label">AI4S</span>
                         <h3>AGI for Science：开启科学发现的智能时代</h3>
                         <p>负责框架篇章写作，梳理 AI 基础设施在数据表征、计算架构与人机交互层面的技术瓶颈及演进路径。</p>
                     </article>
@@ -129,6 +136,7 @@
             <div class="footer-links"><a href="files/Hong_Mingfeng_CV.pdf" download>下载简历</a><a href="mailto:hongmingfeng@outlook.com">Email</a></div>
         </div>
     </footer>
-    <script src="scripts/main.js"></script>
+    <script src="scripts/main.js?v=notebook-2"></script>
+    <script src="scripts/i18n.js?v=notebook-2"></script>
 </body>
 </html>
