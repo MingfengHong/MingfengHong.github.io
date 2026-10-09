@@ -310,7 +310,7 @@
         }
     };
     const storageKey = 'mingfeng-site-language';
-    let locale = navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en';
+    let locale = 'en';
     try {
         const saved = localStorage.getItem(storageKey) || localStorage.getItem('portfolio-language');
         if (saved === 'zh' || saved === 'en') locale = saved;

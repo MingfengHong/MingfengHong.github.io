@@ -40,7 +40,7 @@
 - 纯 HTML、CSS 与原生 JavaScript，无前端框架和运行时依赖；
 - 主要样式集中在 [`styles/main.css`](styles/main.css)；
 - 通用导航逻辑位于 [`scripts/main.js`](scripts/main.js)；
-- 中英文内容与切换逻辑位于 [`scripts/i18n.js`](scripts/i18n.js)，语言选择会保存在浏览器本地，首次访问跟随浏览器语言；论文、书稿标题与作者列表保留原文，论文语言与界面语言不同时在原标题下显示小字号译名；
+- 中英文内容与切换逻辑位于 [`scripts/i18n.js`](scripts/i18n.js)，首次访问默认英文，手动切换的语言选择会保存在浏览器本地；论文、书稿标题与作者列表保留原文，论文语言与界面语言不同时在原标题下显示小字号译名；
 - 研究成果筛选逻辑位于 [`scripts/publications.js`](scripts/publications.js)；
 - 使用 Jekyll 构建，并由 GitHub Pages 托管；
 - 推送到 `main` 后，通过 [GitHub Actions](.github/workflows/deploy.yml) 自动部署。

@@ -27,6 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 940) closeMenu();
+        if (window.innerWidth > 1080) closeMenu();
     });
 });
