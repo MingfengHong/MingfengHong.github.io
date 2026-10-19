@@ -56,7 +56,7 @@
         "学习与研究经历": "Education & background",
         "教育与实践": "Education & experience",
         "中国科学院大学 · 中国科学院科技战略咨询研究院": "University of Chinese Academy of Sciences · Institutes of Science and Development, CAS",
-        "管理科学与工程硕士研究生。平均学分绩 3.95/4.00，获校级三好学生。": "Master's student in Management Science and Engineering. GPA: 3.95/4.00; university-level merit student award.",
+        "管理科学与工程硕士研究生。平均学分绩 3.95/4.00，获研究生国家奖学金（2026）、校级三好学生。": "Master's student in Management Science and Engineering. GPA: 3.95/4.00; recipient of the National Scholarship for Graduate Students (2026) and the university-level merit student award.",
         "西安电子科技大学 · 经济与管理学院": "Xidian University · School of Economics and Management",
         "市场营销本科，专业排名第 1；获国家奖学金、优秀毕业生标兵、优秀毕业设计等奖项。": "Bachelor's degree in Marketing, ranked first in the program. Awards include the National Scholarship, outstanding graduate honors, and an outstanding graduation thesis award.",
         "ModelScope 与 GitHub 开源社区": "ModelScope & GitHub communities",
